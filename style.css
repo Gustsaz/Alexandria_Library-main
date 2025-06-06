@@ -261,16 +261,15 @@ header input {
 .book-list {
   display: flex;
   flex-direction: row;
-  overflow-x: scroll;     /* permite rolagem horizontal */
+  overflow-x: scroll;     
   scroll-behavior: smooth;
-  padding-bottom: 10px;   /* espaço para não colar na borda */
-  gap: 10px;              /* espaço entre livros */
-  scrollbar-width: auto;  /* Firefox */
-  scrollbar-color: #ccc transparent; /* Firefox */
+  padding-bottom: 10px;   
+  gap: 10px;             
+  scrollbar-width: auto;  
+  scrollbar-color: #d3c3b6 transparent; 
   
 }
 
-/* Mostrar sempre a barra de rolagem no Chrome/Safari */
 .book-list::-webkit-scrollbar {
   height: 8px;
 }
@@ -508,12 +507,13 @@ header input {
   }
 
   .book-list {
-    /* mostra scrollbar */
     scrollbar-width: auto;
     -ms-overflow-style: auto;
   }
   .book-list::-webkit-scrollbar {
     display: block;
-    height: 6px; /* ajuste o tamanho se quiser */
+    height: 6px; 
+    color: aqua;
   }
+
 }

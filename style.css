@@ -267,7 +267,6 @@ header input {
   gap: 10px;             
   scrollbar-width: auto;  
   scrollbar-color: #d3c3b6 transparent; 
-  
 }
 
 .book-list::-webkit-scrollbar {
@@ -293,7 +292,7 @@ header input {
   border: solid 1px;
   cursor: pointer;
   transition: transform 0.3s ease;
-    flex: 0 0 auto; /* impede que os livros se redimensionem e quebrem linha */
+  flex: 0 0 auto;
 
 }
 

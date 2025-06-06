@@ -61,15 +61,14 @@ const userForm = document.getElementById('userForm');
 userBtn.addEventListener('click', () => {
   userForm.classList.toggle('hidden');
 });
-
-// Ocultar ao clicar fora
+// fecha o formulário se clicar fora dele
 document.addEventListener('click', function(e) {
   if (!userForm.contains(e.target) && !userBtn.contains(e.target)) {
     userForm.classList.add('hidden');
   }
 });
 
-// book list
+// book list scroll
 const bookList = document.querySelector('.book-list');
 
 let isDown = false;
@@ -97,6 +96,6 @@ bookList.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - bookList.offsetLeft;
-  const walk = (x - startX) * 1.5; // Aumente esse valor para mover mais rápido
+  const walk = (x - startX) * 1.5;
   bookList.scrollLeft = scrollLeft - walk;
 });

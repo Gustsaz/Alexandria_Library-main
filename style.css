@@ -10,6 +10,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Instrument Sans", sans-serif;
+  -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 body {
@@ -248,6 +253,11 @@ header input {
   object-fit: contain;
 }
 
+.category img:hover {
+  transform: scale(1.5);
+  transition: transform 0.1s ease;
+}
+
 .category.active {
   font-weight: bold;
 }
@@ -260,26 +270,15 @@ header input {
 
 .book-list {
   display: flex;
-  flex-direction: row;
-  overflow-x: scroll;     
-  scroll-behavior: smooth;
-  padding-bottom: 10px;   
-  gap: 10px;             
-  scrollbar-width: auto;  
-  scrollbar-color: #d3c3b6 transparent; 
+  gap: 16px; 
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
 .book-list::-webkit-scrollbar {
-  height: 8px;
-}
-
-.book-list::-webkit-scrollbar-thumb {
-  background: #bbb;
-  border-radius: 4px;
-}
-
-.book-list::-webkit-scrollbar-track {
-  background: transparent;
+  display: none;
 }
 
 .book {
@@ -293,7 +292,7 @@ header input {
   cursor: pointer;
   transition: transform 0.3s ease;
   flex: 0 0 auto;
-
+  will-change: transform;
 }
 
 .book img {

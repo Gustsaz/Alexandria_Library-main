@@ -27,6 +27,8 @@ const themeIcon = document.getElementById("theme-icon");
 const Logo = document.querySelector(".logo-sidebar");
 const Info = document.getElementById("info-icon");
 const Down = document.getElementById("download-icon");
+const Visu = document.getElementById("visua-icon");
+const Salvo = document.getElementById("saved-icon");
 
 function applyTheme(theme) {
   if (theme === "dark") {
@@ -35,12 +37,16 @@ function applyTheme(theme) {
     Logo.src = "img/LogoClaro.png";
     Info.src = "img/InfoClaro.png";
     Down.src = "img/DownloadClaro.png";
+    Visu.src = "img/EyeClaro.png";
+    Salvo.src = "img/SavedClaro.png";
   } else {
     document.body.classList.remove("dark-mode");
     themeIcon.src = "img/Escuro.png";
     Logo.src = "img/LogoEscuro.png";
     Info.src = "img/InfoEscuro.png";
     Down.src = "img/DownloadEscuro.png";
+    Visu.src = "img/EyeEscuro.png";
+    Salvo.src = "img/SavedEscuro.png";
   }
 }
 

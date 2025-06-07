@@ -66,6 +66,7 @@ body.dark-mode .category img {
   height: 100vh;
   position: sticky;
   top: 0;
+  gap: 15px;
 }
 
 .page-layout {
@@ -74,9 +75,10 @@ body.dark-mode .category img {
   align-items: flex-start;
   width: 100%;
 }
+/*BOTÃO LOGO*/
 
 .logo-sidebar {
-  width: 80%;
+  width: 100%;
   max-width: 150px;
   height: auto;
   margin-bottom: 20px;
@@ -96,7 +98,7 @@ body.dark-mode .category img {
   font-size: 24px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  opacity: 50%;
+  opacity: 30%;
   width: 80%;
   max-width: 150px;
 }
@@ -109,11 +111,6 @@ body.dark-mode .category img {
 .mode-toggle img {
   width: 40px;
   height: 40px;
-}
-
-.mode-toggle.expanded {
-  opacity: 100%;
-
 }
 
 .toggle-btnL {
@@ -178,6 +175,50 @@ body.dark-mode .category img {
   opacity: 100%;
 }
 
+/*BOTÃO LIDOS*/
+
+.visua-button{
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  opacity: 30%;
+  width: 80%;
+  max-width: 150px;
+}
+
+.visua-button:hover{
+  transform: scale(1.2);
+  opacity: 100%;
+}
+
+.visua-icon{
+  width: 60%;
+  }
+
+/*BOTÃO SALVOS*/
+
+.saved-button{
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  opacity: 30%;
+  width: 80%;
+  max-width: 150px;
+}
+
+.saved-button:hover{
+  transform: scale(1.2);
+  opacity: 100%;
+}
+
+.saved-icon{
+  width: 60%;
+  }
+
 /*SIDEBAR DIREITA*/
 
 .sidebar-right {
@@ -228,6 +269,11 @@ header input {
   border: none;
   font-size: 20px;
   cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.user-btn:hover {
+  transform: scale(1.2);
 }
 
 .categories {
@@ -245,17 +291,18 @@ header input {
   justify-content: center;
   cursor: pointer;
   gap: 5px;
+  
 }
 
 .category img {
   width: 70px;
   height: 70px;
   object-fit: contain;
+  transition: transform 0.1s ease;
 }
 
 .category img:hover {
   transform: scale(1.5);
-  transition: transform 0.1s ease;
 }
 
 .category.active {

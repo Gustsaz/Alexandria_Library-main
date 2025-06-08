@@ -11,10 +11,10 @@
   box-sizing: border-box;
   font-family: "Instrument Sans", sans-serif;
   -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -23,8 +23,6 @@ body {
   color: #333;
   height: auto;
 }
-
-/*MODO ESCURO*/
 
 body.dark-mode {
   background: #1e1e1e;
@@ -50,7 +48,6 @@ body.dark-mode .category img {
   filter: brightness(0.8);
 }
 
-/*SIDEBARS*/
 .container {
   display: flex;
 }
@@ -67,6 +64,7 @@ body.dark-mode .category img {
   position: sticky;
   top: 0;
   gap: 15px;
+  z-index: 1001;
 }
 
 .page-layout {
@@ -75,7 +73,6 @@ body.dark-mode .category img {
   align-items: flex-start;
   width: 100%;
 }
-/*BOTÃO LOGO*/
 
 .logo-sidebar {
   width: 100%;
@@ -85,14 +82,11 @@ body.dark-mode .category img {
   opacity: 100%;
 }
 
-.logo-sidebar :hover {
+.logo-sidebar:hover {
   cursor: pointer;
 }
 
-/*BOTÃO TROCAR COR*/
-
 .mode-toggle {
-
   background: none;
   border: none;
   font-size: 24px;
@@ -118,13 +112,11 @@ body.dark-mode .category img {
   border: none;
 }
 
-.toggle-btnL :hover {
+.toggle-btnL:hover {
   cursor: pointer;
 }
 
-/*BOTÃO INFO*/
-
-.info-button{
+.info-button {
   background: none;
   border: none;
   font-size: 24px;
@@ -135,22 +127,21 @@ body.dark-mode .category img {
   max-width: 150px;
 }
 
-.info-button:hover{
+.info-button:hover {
   transform: scale(1.2);
   opacity: 100%;
 }
 
-.info-icon{
+.info-icon {
   width: 60%;
   opacity: 50%;
 }
 
-.info-icon:hover{
+.info-icon:hover {
   opacity: 100%;
 }
 
-/*BOTÃO DOWNLOAD*/
-.download-button{
+.download-button {
   background: none;
   border: none;
   font-size: 24px;
@@ -161,45 +152,21 @@ body.dark-mode .category img {
   max-width: 150px;
 }
 
-.download-button:hover{
+.download-button:hover {
   transform: scale(1.2);
   opacity: 100%;
 }
 
-.download-icon{
+.download-icon {
   width: 60%;
   opacity: 50%;
 }
 
-.download-icon:hover{
+.download-icon:hover {
   opacity: 100%;
 }
 
-/*BOTÃO LIDOS*/
-
-.visua-button{
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  opacity: 30%;
-  width: 80%;
-  max-width: 150px;
-}
-
-.visua-button:hover{
-  transform: scale(1.2);
-  opacity: 100%;
-}
-
-.visua-icon{
-  width: 60%;
-  }
-
-/*BOTÃO SALVOS*/
-
-.saved-button{
+.visua-button {
   background: none;
   border: none;
   font-size: 24px;
@@ -210,18 +177,36 @@ body.dark-mode .category img {
   max-width: 150px;
 }
 
-.saved-button:hover{
+.visua-button:hover {
   transform: scale(1.2);
   opacity: 100%;
 }
 
-.saved-icon{
+.visua-icon {
   width: 60%;
-  }
+}
 
-/*SIDEBAR DIREITA*/
+.saved-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  opacity: 30%;
+  width: 80%;
+  max-width: 150px;
+}
 
-.sidebar-right {
+.saved-button:hover {
+  transform: scale(1.2);
+  opacity: 100%;
+}
+
+.saved-icon {
+  width: 60%;
+}
+
+.right-sidebar {
   width: 3%;
   background-color: #d3c3b6;
   height: 100vh;
@@ -236,8 +221,8 @@ body.dark-mode .category img {
   z-index: 1000;
 }
 
-.sidebar-right.expanded {
-  width: calc(100vw - 115px);
+.right-sidebar.expanded {
+  width: 400px;
 }
 
 .main-content {
@@ -269,7 +254,7 @@ header input {
   border: none;
   font-size: 20px;
   cursor: pointer;
-    transition: transform 0.1s ease;
+  transition: transform 0.1s ease;
 }
 
 .user-btn:hover {
@@ -291,7 +276,6 @@ header input {
   justify-content: center;
   cursor: pointer;
   gap: 5px;
-  
 }
 
 .category img {
@@ -309,19 +293,17 @@ header input {
   font-weight: bold;
 }
 
-/* LIVROS */
-
 .highlight h2 {
   margin-bottom: 20px;
 }
 
 .book-list {
   display: flex;
-  gap: 16px; 
+  gap: 16px;
   overflow-x: auto;
   padding: 10px 0;
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .book-list::-webkit-scrollbar {
@@ -344,7 +326,7 @@ header input {
 
 .book img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
@@ -380,8 +362,6 @@ header input {
   transform: scale(1.05);
 }
 
-/*cadastro*/
-
 .user-form-bubble {
   position: absolute;
   top: 70px;
@@ -391,12 +371,12 @@ header input {
   border-radius: 12px;
   padding: 15px;
   width: 250px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   z-index: 3000;
 }
 
 .user-form-bubble::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   right: 20px;
@@ -442,7 +422,7 @@ header input {
   }
 
   .sidebar,
-  .sidebar-right {
+  .right-sidebar {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
@@ -452,7 +432,7 @@ header input {
     border-bottom: 1px solid #ddd;
   }
 
-  .sidebar-right {
+  .right-sidebar {
     display: none;
   }
 
@@ -490,7 +470,7 @@ header input {
     align-self: flex-end;
   }
 
-  .logo-sidebar{
+  .logo-sidebar {
     width: 100px;
     height: 100px;
   }
@@ -506,7 +486,6 @@ header input {
   }
 }
 
-/*CELULARE */
 @media (max-width: 600px) {
   .book-list {
     display: grid;
@@ -528,7 +507,7 @@ header input {
     margin-bottom: 10px;
   }
 
-  .logo-sidebar{
+  .logo-sidebar {
     width: 30px;
     height: 30px;
   }
@@ -540,13 +519,13 @@ header input {
     height: 30px;
   }
 
-  .toggle-btnL{
+  .toggle-btnL {
     align-items: center;
     display: flex;
     height: 100%;
   }
 
-  .logo-sidebar{
+  .logo-sidebar {
     width: 100px;
     height: 100px;
   }
@@ -555,10 +534,46 @@ header input {
     scrollbar-width: auto;
     -ms-overflow-style: auto;
   }
+
   .book-list::-webkit-scrollbar {
     display: block;
-    height: 6px; 
+    height: 6px;
     color: aqua;
   }
+}
 
+.user-info-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-info-container .welcome-message {
+  font-weight: bold;
+  color: inherit;
+}
+
+.user-form-bubble#logoutBubble {
+  top: 50px;
+  right: 0;
+  width: auto;
+  text-align: center;
+}
+
+.user-form-bubble#logoutBubble p {
+  margin-bottom: 10px;
+}
+
+.user-form-bubble#logoutBubble button {
+  background-color: #dc3545;
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.user-form-bubble#logoutBubble button:hover {
+  background-color: #c82333;
 }

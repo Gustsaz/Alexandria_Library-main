@@ -205,7 +205,6 @@ body.dark-mode .category img {
 .saved-icon {
   width: 60%;
 }
-
 .right-sidebar {
   width: 3%;
   background-color: #d3c3b6;
@@ -222,7 +221,7 @@ body.dark-mode .category img {
 }
 
 .right-sidebar.expanded {
-  width: 400px;
+  width: calc(100vw - 115px);
 }
 
 .main-content {
@@ -856,4 +855,172 @@ header input {
 
 .dark-mode .social-icons img {
   filter: brightness(0) invert(1);
+}
+
+.search-container {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-left: none;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    height: 100%;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.search-results div {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-results div:hover {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.search-results .result-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.search-results .result-item:hover {
+    background-color: #f0f0f0;
+}
+
+.search-results ul li:hover {
+    background-color: #f0f0f0;
+}
+
+#resultados {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .search-container input {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+body.dark-mode .search-results {
+  background-color: #2b2b2b;
+  color: #f0f0f0;
+  border-color: #444;
+}
+
+body.dark-mode .search-results .result-item:hover {
+  background-color: #3a3a3a;
+}
+/* Estilos base do formulário */
+.login-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+  max-width: 320px;
+  margin: auto;
+  color: #333;
+}
+
+/* Inputs e botões base */
+.login-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #333;
+  background: #fff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #987654;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #7a5d4c;
+}
+
+/* Modo escuro ativado */
+body.dark-mode .login-form {
+  background: #2e2e2e;
+  color: #f0f0f0;
+  box-shadow: 0 0 15px rgb(255 255 255 / 0.15);
+}
+
+body.dark-mode .login-form input {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.dark-mode .login-form input::placeholder {
+  color: #bbb;
+}
+
+body.dark-mode .login-form button {
+  background-color: #555;
+  color: #f0f0f0;
+}
+
+body.dark-mode .login-form button:hover {
+  background-color: #777;
+}
+
+body.dark-mode .login-container {
+  background-color: #1e1e1e; /* cor de fundo escura */
+  color: #f0f0f0; /* texto claro */
+}
+
+body.dark-mode .user-form-bubble {
+  background-color: #1e1e1e;
 }

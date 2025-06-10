@@ -24,6 +24,7 @@ const nomeField = document.getElementById("nome-field");
 const submitButton = document.getElementById("submit-button");
 const nomeInput = document.querySelector("#nome-field input[name='nome']");
 
+
 function applyTheme(theme) {
     if (theme === "dark") {
         document.body.classList.add("dark-mode");
@@ -44,13 +45,14 @@ function applyTheme(theme) {
     }
 }
 
+
 function openRightSidebar() {
     if (sidebarR) sidebarR.classList.add("expanded");
 }
-
 function closeRightSidebar() {
     if (sidebarR) sidebarR.classList.remove("expanded");
 }
+
 
 function toggleForm() {
     if (userForm && !userForm.classList.contains("hidden")) {
@@ -61,6 +63,7 @@ function toggleForm() {
     }
 }
 
+
 if (toggleThemeBtn) {
     toggleThemeBtn.addEventListener("click", () => {
         const isDarkMode = document.body.classList.toggle("dark-mode");
@@ -70,11 +73,13 @@ if (toggleThemeBtn) {
     });
 }
 
+
 if (sidebarR) {
     sidebarR.addEventListener("click", () => {
         sidebarR.classList.remove("expanded");
     });
 }
+
 
 if (userBtn) {
     userBtn.addEventListener("click", () => {
@@ -85,6 +90,7 @@ if (userBtn) {
     });
 }
 
+
 if (logoutBtn) {
     logoutBtn.addEventListener("click", () => {
         if (logoutBubble) logoutBubble.classList.toggle("hidden");
@@ -94,6 +100,7 @@ if (logoutBtn) {
     });
 }
 
+
 if (alternarFormularioBtn) {
     alternarFormularioBtn.addEventListener("click", () => {
         if (acaoInput.value === "cadastrar") {
@@ -102,24 +109,51 @@ if (alternarFormularioBtn) {
             if (nomeField) nomeField.style.display = "none";
             if (nomeInput) nomeInput.removeAttribute("required");
             if (submitButton) submitButton.textContent = "Entrar";
-            if (alternarFormularioBtn) alternarFormularioBtn.textContent = "Não tem uma conta? Cadastre-se";
+            alternarFormularioBtn.textContent = "Não tem uma conta? Cadastre-se";
         } else {
             formTitle.textContent = "Cadastro";
             acaoInput.value = "cadastrar";
             if (nomeField) nomeField.style.display = "block";
             if (nomeInput) nomeInput.setAttribute("required", "required");
             if (submitButton) submitButton.textContent = "Cadastrar";
-            if (alternarFormularioBtn) alternarFormularioBtn.textContent = "Já tem uma conta? Entrar";
+            alternarFormularioBtn.textContent = "Já tem uma conta? Entrar";
         }
     });
 }
 
+
 categories.forEach((cat) => {
-    cat.addEventListener("click", () => {
+    cat.addEventListener("click", async () => {
         categories.forEach((c) => c.classList.remove("active"));
         cat.classList.add("active");
+
+        const categoria = cat.dataset.category;
+        const container = document.querySelector(".book-list");
+
+        if (categoria && container) {
+            try {
+                const response = await fetch(`buscar_categoria.php?categoria=${encodeURIComponent(categoria)}`);
+                const livros = await response.json();
+
+                if (livros.length > 0) {
+                    container.innerHTML = livros.map(livro => `
+                        <div class="livro">
+                            <img src="${livro.capa}" alt="${livro.nome}">
+                            <div class="livro-titulo">${livro.nome}</div>
+                            <div class="livro-autor">${livro.autor}</div>
+                        </div>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<p class="mensagem-vazia">Nenhum livro encontrado para essa categoria.</p>';
+                }
+            } catch (error) {
+                console.error("Erro ao buscar livros:", error);
+                container.innerHTML = '<p class="mensagem-erro">Erro ao carregar livros.</p>';
+            }
+        }
     });
 });
+
 
 window.onload = function () {
     const successMessage = document.querySelector(".message.success");
@@ -139,6 +173,7 @@ window.onload = function () {
         }, 5000);
     }
 
+    
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         applyTheme(savedTheme);
@@ -156,6 +191,7 @@ window.onload = function () {
         }
     }
 };
+
 
 const bookList = document.querySelector('.book-list');
 
@@ -190,7 +226,7 @@ if (bookList) {
     });
 }
 
-//Animação de descida até os baixados
+
 const baixados = document.querySelector(".download-button");
 const baixadosContainer = document.querySelector(".highlight-Baixados");
 
@@ -200,32 +236,109 @@ if (baixados && baixadosContainer) {
     });
 }
 
-//Animação de descida até os Lista de Leitura
 const lista = document.querySelector(".saved-button");
 const listaContainer = document.querySelector(".highlight-saved");
 
-if (lista && baixadosContainer) {
+if (lista && listaContainer) {
     lista.addEventListener("click", () => {
         listaContainer.scrollIntoView({ behavior: "smooth" });
     });
 }
 
-//Animação de descida até os Já Lidos
 const lidos = document.querySelector(".visua-button");
 const lidosContainer = document.querySelector(".highlight-Lidos");
 
-if (lidos && baixadosContainer) {
+if (lidos && lidosContainer) {
     lidos.addEventListener("click", () => {
         lidosContainer.scrollIntoView({ behavior: "smooth" });
     });
 }
 
-//Animação de descida até os creditos
-const infoButton = document.querySelector(".info-button");
-const creditosContainer = document.querySelector(".creditos-container");
+const info = document.querySelector(".info-button");
+const infoContainer = document.querySelector(".highlight-info");
 
-if (infoButton && creditosContainer) {
-    infoButton.addEventListener("click", () => {
-        creditosContainer.scrollIntoView({ behavior: "smooth" });
+if (info && infoContainer) {
+    info.addEventListener("click", () => {
+        infoContainer.scrollIntoView({ behavior: "smooth" });
     });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector("input[type='text']");
+  const resultsContainer = document.querySelector(".search-results");
+
+  if (!searchInput || !resultsContainer) {
+    console.error("Elemento de busca não encontrado!");
+    return;
+  }
+
+  let livros = [];
+
+ 
+  fetch("data/livros.json")
+    .then(response => response.json())
+    .then(data => {
+      livros = data;
+    })
+    .catch(error => {
+      console.error("Erro ao carregar livros.json:", error);
+    });
+
+
+  function atualizarResultados(query) {
+    resultsContainer.innerHTML = "";
+
+    if (query.trim() === "") {
+      resultsContainer.classList.add("hidden");
+      return;
+    }
+
+    const filtrados = livros.filter(livro =>
+      livro.nome.toLowerCase().includes(query.toLowerCase())
+    );
+
+    if (filtrados.length === 0) {
+      const vazio = document.createElement("div");
+      vazio.classList.add("result-item");
+      vazio.textContent = "Nenhum livro encontrado";
+      resultsContainer.appendChild(vazio);
+    } else {
+      filtrados.forEach(livro => {
+        const item = document.createElement("div");
+        item.classList.add("result-item");
+
+        item.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="${livro.capa}" alt="${livro.nome}" style="width: 40px; height: 60px; object-fit: cover; border: 1px solid #ccc;">
+            <div>
+              <strong>${livro.nome}</strong><br>
+              <small>${livro.autor}</small>
+            </div>
+          </div>
+        `;
+
+        item.addEventListener("click", () => {
+          searchInput.value = livro.nome;
+          resultsContainer.classList.add("hidden");
+        });
+
+        resultsContainer.appendChild(item);
+      });
+    }
+
+    resultsContainer.classList.remove("hidden");
+  }
+
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value;
+    atualizarResultados(query);
+  });
+
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".search-container")) {
+      resultsContainer.classList.add("hidden");
+    }
+  });
+});

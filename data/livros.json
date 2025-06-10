@@ -19,7 +19,7 @@
     "id": "3",
     "nome": "O Ultimo Desejo",
     "autor": "Andrzej Sapkowski",
-    "categoria": "Romance",
+    "categoria": "Fantasia",
     "editora": "WMF Martins Fontes",
     "capa": "../img/livros/livro3.jpg"
   },
@@ -27,7 +27,7 @@
     "id": "4",
     "nome": "Depois",
     "autor": "Stephen King",
-    "categoria": "Ação",
+    "categoria": "Suspense",
     "editora": "Editora Suma",
     "capa": "../img/livros/livro4.jpg"
   },
@@ -72,35 +72,140 @@
     "capa": "../img/livros/livro7.jpg"
   },
   {
-    "id": "4",
-    "nome": "Depois",
-    "autor": "Stephen King",
-    "categoria": "Ação",
-    "editora": "Editora Suma",
-    "capa": "../img/livros/livro4.jpg"
+    "id": "10",
+    "nome": "Tempestade de Ônix",
+    "autor": "Rebecca Yarros",
+    "categoria": "Fantasia",
+    "editora": "Planeta Minotauro",
+    "capa": "../img/livros/livro10.jpg"
   },
   {
-    "id": "4",
-    "nome": "Depois",
-    "autor": "Stephen King",
-    "categoria": "Ação",
-    "editora": "Editora Suma",
-    "capa": "../img/livros/livro4.jpg"
+    "id": "11",
+    "nome": "Chama de Ferro",
+    "autor": "Rebecca Yarros",
+    "categoria": "Fantasia",
+    "editora": "Planeta Minotauro",
+    "capa": "../img/livros/livro11.jpg"
   },
   {
-    "id": "4",
-    "nome": "Depois",
-    "autor": "Stephen King",
-    "categoria": "Ação",
-    "editora": "Editora Suma",
-    "capa": "../img/livros/livro4.jpg"
+    "id": "12",
+    "nome": "Caçador sem Coração",
+    "autor": "Kristen Ciccarelli",
+    "categoria": "Fantasia",
+    "editora": "Editora Arqueiro",
+    "capa": "../img/livros/livro12.jpg"
   },
   {
-    "id": "4",
-    "nome": "Depois",
+    "id": "13",
+    "nome": "Bruxa Rebelde",
+    "autor": "Kristen Ciccarelli",
+    "categoria": "Fantasia",
+    "editora": "Editora Arqueiro",
+    "capa": "../img/livros/livro13.jpg"
+  },
+    {
+    "id": "14",
+    "nome": "O Príncipe Cruel",
+    "autor": "Holly Black",
+    "categoria": "Fantasia",
+    "editora": "Galera",
+    "capa": "../img/livros/livro14.jpg"
+  },
+    {
+    "id": "15",
+    "nome": "O Rei Perverso",
+    "autor": "Holly Black",
+    "categoria": "Fantasia",
+    "editora": "Galera",
+    "capa": "../img/livros/livro15.jpg"
+  },
+    {
+    "id": "16",
+    "nome": "A Rainha do Nada",
+    "autor": "Holly Black",
+    "categoria": "Fantasia",
+    "editora": "Galera",
+    "capa": "../img/livros/livro16.jpg"
+  },
+  {
+    "id": "17",
+    "nome": "Não Pisque",
     "autor": "Stephen King",
-    "categoria": "Ação",
+    "categoria": "Suspense",
     "editora": "Editora Suma",
-    "capa": "../img/livros/livro4.jpg"
+    "capa": "../img/livros/livro20.jpg"
+  },
+
+{
+    "id": "18",
+    "nome": "O Intuíto",
+    "autor": "Stephen King",
+    "categoria": "Suspense",
+    "editora": "Editora Suma",
+    "capa": "../img/livros/livro19.jpg"
+  },
+{
+    "id": "19",
+    "nome": "O Massacre da Família Hope",
+    "autor": "Riley Sager",
+    "categoria": "Suspense",
+    "editora": "Intrínseca",
+    "capa": "../img/livros/livro17.jpg"
+  },
+    {   
+    "id": "20",
+    "nome": "Verity",
+    "autor": "Collen Hoover",
+    "categoria": "Suspense",
+    "editora": "Galera",
+    "capa": "../img/livros/livro18.jpg"
+  },
+  {   
+    "id": "21",
+    "nome": "A Paciente Silenciosa",
+    "autor": "Alex Michaelides",
+    "categoria": "Suspense",
+    "editora": "Record",
+    "capa": "../img/livros/livro21.jpg"
+  },
+  {   
+    "id": "22",
+    "nome": "A Cirurgiã",
+    "autor": "Leslie Wolfe",
+    "categoria": "Suspense",
+    "editora": "Fato Editoral",
+    "capa": "../img/livros/livro22.jpg"
+  },
+  {   
+    "id": "23",
+    "nome": "Precisamos Falar Sobre o Kevin",
+    "autor": "Lionel Shriver",
+    "categoria": "Suspense",
+    "editora": "Intrínseca",
+    "capa": "../img/livros/livro23.jpg"
+  },
+  {   
+    "id": "24",
+    "nome": "Homem de Giz",
+    "autor": "C. J. Tudor",
+    "categoria": "Suspense",
+    "editora": "Intrínseca",
+    "capa": "../img/livros/livro24.jpg"
+  },
+  {   
+    "id": "25",
+    "nome": "A Garota do Lago",
+    "autor": "Charlie Donle",
+    "categoria": "Suspense",
+    "editora": "Galera",
+    "capa": "../img/livros/livro25.jpg"
+  },
+  {   
+    "id": "26",
+    "nome": "Pecados Mortais",
+    "autor": "Maria Grund",
+    "categoria": "Suspense",
+    "editora": "Galera",
+    "capa": "../img/livros/livro26.jpg"
   }
 ]

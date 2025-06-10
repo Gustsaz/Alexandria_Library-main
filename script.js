@@ -8,8 +8,6 @@ const Salvo = document.getElementById("saved-icon");
 const toggleThemeBtn = document.querySelector(".mode-toggle");
 const themeIcon = document.getElementById("theme-icon");
 
-const sidebarR = document.getElementById("rightSidebar");
-
 const categories = document.querySelectorAll(".category");
 
 const userBtn = document.getElementById("userBtn");
@@ -44,12 +42,16 @@ function applyTheme(theme) {
     }
 }
 
-function openRightSidebar() {
-    if (sidebarR) sidebarR.classList.add("expanded");
-}
+/*abrir sidebars*/
+const sidebarR = document.querySelector(".right-sidebar");
 
-function closeRightSidebar() {
-    if (sidebarR) sidebarR.classList.remove("expanded");
+sidebarR.addEventListener("click", () => {
+  sidebarR.classList.toggle("expanded");
+});
+
+function openRightSidebar() {
+  const sidebar = document.getElementById("rightSidebar");
+  sidebar.classList.add("expanded");
 }
 
 function toggleForm() {
@@ -67,12 +69,6 @@ if (toggleThemeBtn) {
         const newTheme = isDarkMode ? "dark" : "light";
         localStorage.setItem("theme", newTheme);
         applyTheme(newTheme);
-    });
-}
-
-if (sidebarR) {
-    sidebarR.addEventListener("click", () => {
-        sidebarR.classList.remove("expanded");
     });
 }
 

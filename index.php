@@ -251,7 +251,7 @@ function livrosPorCategoria($livros, $categoria) {
             </div>
             <br>
 
-    </div> <div class="sidebar-right" id="rightSidebar">
+   <div class="right-sidebar" id="rightSidebar"></div>
         </div>
 
     <?php if (!empty($mensagem_sucesso)): ?>

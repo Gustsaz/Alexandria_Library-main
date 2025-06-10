@@ -205,7 +205,6 @@ body.dark-mode .category img {
 .saved-icon {
   width: 60%;
 }
-
 .right-sidebar {
   width: 3%;
   background-color: #d3c3b6;
@@ -222,7 +221,7 @@ body.dark-mode .category img {
 }
 
 .right-sidebar.expanded {
-  width: 400px;
+  width: calc(100vw - 115px);
 }
 
 .main-content {

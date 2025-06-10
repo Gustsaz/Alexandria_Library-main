@@ -189,3 +189,43 @@ if (bookList) {
         bookList.scrollLeft = scrollLeft - walk;
     });
 }
+
+//Animação de descida até os baixados
+const baixados = document.querySelector(".download-button");
+const baixadosContainer = document.querySelector(".highlight-Baixados");
+
+if (baixados && baixadosContainer) {
+    baixados.addEventListener("click", () => {
+        baixadosContainer.scrollIntoView({ behavior: "smooth" });
+    });
+}
+
+//Animação de descida até os Lista de Leitura
+const lista = document.querySelector(".saved-button");
+const listaContainer = document.querySelector(".highlight-saved");
+
+if (lista && baixadosContainer) {
+    lista.addEventListener("click", () => {
+        listaContainer.scrollIntoView({ behavior: "smooth" });
+    });
+}
+
+//Animação de descida até os Já Lidos
+const lidos = document.querySelector(".visua-button");
+const lidosContainer = document.querySelector(".highlight-Lidos");
+
+if (lidos && baixadosContainer) {
+    lidos.addEventListener("click", () => {
+        lidosContainer.scrollIntoView({ behavior: "smooth" });
+    });
+}
+
+//Animação de descida até os creditos
+const infoButton = document.querySelector(".info-button");
+const creditosContainer = document.querySelector(".creditos-container");
+
+if (infoButton && creditosContainer) {
+    infoButton.addEventListener("click", () => {
+        creditosContainer.scrollIntoView({ behavior: "smooth" });
+    });
+}

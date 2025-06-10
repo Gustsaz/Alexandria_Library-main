@@ -19,10 +19,10 @@ $nome_usuario = $logado ? $_SESSION['nome_usuario'] : '';
 
 $messageHtml = '';
 if (isset($_SESSION['message'])) {
-    $type = $_SESSION['message']['type']; 
+    $type = $_SESSION['message']['type'];
     $text = htmlspecialchars($_SESSION['message']['text']);
     $messageHtml = "<div class='message $type'>$text</div>";
-    unset($_SESSION['message']); 
+    unset($_SESSION['message']);
 }
 
 ?>
@@ -41,15 +41,20 @@ if (isset($_SESSION['message'])) {
 <body>
 
     <div class="sidebar">
-        <button class="toggle-btnL"><img draggable="false" src="img/LogoEscuro.png" alt="Logo Alexandria" class="logo-sidebar"></button>
+        <button class="toggle-btnL"><img draggable="false" src="img/LogoEscuro.png" alt="Logo Alexandria"
+                class="logo-sidebar"></button>
 
         <button class="mode-toggle">
             <img draggable="false" id="theme-icon" src="img/Escuro.png" alt="Tema" class="tema-icone">
         </button>
-        <button class="download-button"><img draggable="false" id="download-icon" src="img/DownloadEscuro.png" class="download-icon" alt="Baixados"></button>
-        <button class="saved-button"><img draggable="false" id="saved-icon" src="img/SavedEscuro.png" class="saved-icon" alt="salvos"></button>
-        <button class="visua-button"><img draggable="false" id="visua-icon" src="img/EyeEscuro.png" class="visua-icon" alt="já lidos"></button>
-        <button class="info-button"><img draggable="false" id="info-icon" src="img/infoEscuro.png" class="info-icon" alt="informação"></button>
+        <button class="download-button"><img draggable="false" id="download-icon" src="img/DownloadEscuro.png"
+                class="download-icon" alt="Baixados"></button>
+        <button class="saved-button"><img draggable="false" id="saved-icon" src="img/SavedEscuro.png" class="saved-icon"
+                alt="salvos"></button>
+        <button class="visua-button"><img draggable="false" id="visua-icon" src="img/EyeEscuro.png" class="visua-icon"
+                alt="já lidos"></button>
+        <button class="info-button"><img draggable="false" id="info-icon" src="img/infoEscuro.png" class="info-icon"
+                alt="informação"></button>
 
     </div>
 
@@ -112,18 +117,90 @@ if (isset($_SESSION['message'])) {
         <section class="highlight">
             <h2>Em Alta</h2>
             <div class="book-list">
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png" alt="Livro 1"><div class="detalhes"><p class="title">A Revolução dos Bichos</p><p class="author">George Orwell</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png" alt="Livro 1"><div class="detalhes"><p class="title">A Revolução dos Bichos</p><p class="author">George Orwell</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png" alt="Livro 1"><div class="detalhes"><p class="title">A Revolução dos Bichos</p><p class="author">George Orwell</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png"
+                        alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png"
+                        alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png"
+                        alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -132,15 +209,69 @@ if (isset($_SESSION['message'])) {
         <section class="highlight">
             <h2>Novos</h2>
             <div class="book-list">
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png" alt="Livro 1"><div class="detalhes"><p class="title">A Revolução dos Bichos</p><p class="author">George Orwell</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro1.png"
+                        alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img draggable="false" src="img/livro2.png"
+                        alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -149,15 +280,60 @@ if (isset($_SESSION['message'])) {
         <section class="highlight">
             <h2>Ação</h2>
             <div class="book-list">
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1"><div class="detalhes"><p class="title">A Revolução dos Bichos</p><p class="author">George Orwell</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -166,37 +342,297 @@ if (isset($_SESSION['message'])) {
         <section class="highlight">
             <h2>Romance</h2>
             <div class="book-list">
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1"><div class="detalhes"><p class="title">A Revolução dos Bichos</p><p class="author">George Orwell</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <br>
 
-        <section class="highlight">
+        <section class="highlight-Baixados">
             <h2>Baixados</h2>
             <div class="book-list">
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1"><div class="detalhes"><p class="title">A Revolução dos Bichos</p><p class="author">George Orwell</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
-                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2"><div class="detalhes"><p class="title">É Assim Que Acaba</p><p class="author">Colleen Hoover</p></div></div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-    </div> <div class="sidebar-right" id="rightSidebar">
+        <br>
+
+        <section class="highlight-saved">
+            <h2>Lista de Leitura</h2>
+            <div class="book-list">
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <section class="highlight-Lidos">
+            <h2>Já Lidos</h2>
+            <div class="book-list">
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro1.png" alt="Livro 1">
+                    <div class="detalhes">
+                        <p class="title">A Revolução dos Bichos</p>
+                        <p class="author">George Orwell</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+                <div class="book" onclick="openRightSidebar()"><img src="img/livro2.png" alt="Livro 2">
+                    <div class="detalhes">
+                        <p class="title">É Assim Que Acaba</p>
+                        <p class="author">Colleen Hoover</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <div class="creditos-container">
+            <div class="criador">
+                <img src="img/flavio.jpg" alt="Flávio H.">
+                <span>Flávio H.</span>
+            </div>
+            <div class="criador">
+                <img src="img/gabriel.png" alt="Gabriel S.">
+                <span>Gabriel S.</span>
+            </div>
+            <div class="criador">
+                <img src="img/gustavo.png" alt="Gustavo A.">
+                <span>Gustavo A.</span>
+            </div>
+            <div class="criador">
+                <img src="img/luiz.png" alt="Luiz F.">
+                <span>Luiz F.</span>
+            </div>
         </div>
+
+        <br>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h2>Alexandria Biblioteca</h2>
+                    <p>Explore uma vasta coleção de livros em PDF gratuitamente. Conhecimento ao alcance de todos.</p>
+                    <br>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Nos siga</h3>
+                    <br>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/faceClaro.png" alt="Facebook" /></a>
+                        <a href="#"><img src="img/instaClaro.png" alt="Instagram" /></a>
+                        <a href="#"><img src="img/XClaro.png" alt="Twitter" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alexandria Biblioteca. Todos os direitos reservados.</p>
+            </div>
+            <br>
+        </footer>
+
+    </div>
+
+    <div class="sidebar-right" id="rightSidebar"></div>
 
     <?php if (!empty($mensagem_sucesso)): ?>
         <div class="message success">
@@ -212,4 +648,5 @@ if (isset($_SESSION['message'])) {
 
     <script src="script.js"></script>
 </body>
+
 </html>

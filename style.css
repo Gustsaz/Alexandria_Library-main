@@ -577,3 +577,143 @@ header input {
 .user-form-bubble#logoutBubble button:hover {
   background-color: #c82333;
 }
+
+/*CRÉDITOS*/
+.creditos-container {
+  width: 90%;
+  border-top: 2px solid #444;
+  border-bottom: 2px solid #444;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.criador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.criador:hover {
+  transform: scale(1.09);
+  
+}
+
+.criador img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid #666;
+  object-fit: cover;
+  background: #e0e0e0;
+   transition: transform 0.3s ease;
+}
+
+.criador span {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #444;
+}
+
+.criador span.dark-mode {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/*FOOTER*/
+
+.footer {
+  background-color: #f5f5f5;
+  color: #222;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h2, .footer h3 {
+  color: #222;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #444;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0);
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+  font-size: 14px;
+  color: #555;
+}
+
+
+.dark-mode .footer {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.dark-mode .footer h2,
+.dark-mode .footer h3 {
+  color: #ffffff;
+}
+
+.dark-mode .footer-links ul li a {
+  color: #bbbbbb;
+}
+
+.dark-mode .footer-bottom {
+  color: #888;
+  border-top: 1px solid #333;
+}
+
+.dark-mode .social-icons img {
+  filter: brightness(0) invert(1);
+}

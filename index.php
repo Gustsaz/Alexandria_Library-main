@@ -617,9 +617,9 @@ if (isset($_SESSION['message'])) {
                     <h3>Nos siga</h3>
                     <br>
                     <div class="social-icons">
-                        <a href="#"><img src="img/faceClaro.png" alt="Facebook" /></a>
-                        <a href="#"><img src="img/instaClaro.png" alt="Instagram" /></a>
-                        <a href="#"><img src="img/XClaro.png" alt="Twitter" /></a>
+                        <a href="https://www.facebook.com/profile.php?id=61576951933968"><img src="img/faceClaro.png" alt="Facebook" /></a>
+                        <a href="https://www.instagram.com/bibl.iotecaalexandria/"><img src="img/instaClaro.png" alt="Instagram" /></a>
+                        <a href="https://x.com/_Alexandria_Lib"><img src="img/XClaro.png" alt="Twitter" /></a>
                     </div>
                 </div>
             </div>

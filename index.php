@@ -87,7 +87,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
         <header>
             <div class="search-container">
-  <input type="text" placeholder="Buscar livro...">
+  <input type="text" placeholder="Buscar livro..." />
   <div class="search-results hidden"></div>
 </div>
 
@@ -316,6 +316,54 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     }
                     ?>
                 </div>
+
+<div class="creditos-container">
+            <div class="criador">
+                <img src="img/flavio.jpg" alt="Flávio H.">
+                <span>Flávio H.</span>
+            </div>
+            <div class="criador">
+                <img src="img/gabriel.png" alt="Gabriel S.">
+                <span>Gabriel S.</span>
+            </div>
+            <div class="criador">
+                <img src="img/gustavo.png" alt="Gustavo A.">
+                <span>Gustavo A.</span>
+            </div>
+            <div class="criador">
+                <img src="img/luiz.png" alt="Luiz F.">
+                <span>Luiz F.</span>
+            </div>
+        </div>
+
+        <br>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <h2>Alexandria Biblioteca</h2>
+                    <p>Explore uma vasta coleção de livros em PDF gratuitamente. Conhecimento ao alcance de todos.</p>
+                    <br>
+                </div>
+
+                <div class="footer-social">
+                    <h3>Nos siga</h3>
+                    <br>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=61576951933968"><img src="img/faceClaro.png" alt="Facebook" /></a>
+                        <a href="https://www.instagram.com/bibl.iotecaalexandria/"><img src="img/instaClaro.png" alt="Instagram" /></a>
+                        <a href="https://x.com/_Alexandria_Lib"><img src="img/XClaro.png" alt="Twitter" /></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alexandria Biblioteca. Todos os direitos reservados.</p>
+            </div>
+            <br>
+        </footer>
+
+
             </section>
         <?php endif; ?>
 
@@ -323,6 +371,9 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
     </div>
 
+    <br>
+
+        
     <script src="script.js"></script>
 
 </body>

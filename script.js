@@ -8,8 +8,6 @@ const Salvo = document.getElementById("saved-icon");
 const toggleThemeBtn = document.querySelector(".mode-toggle");
 const themeIcon = document.getElementById("theme-icon");
 
-const sidebarR = document.getElementById("rightSidebar");
-
 const categories = document.querySelectorAll(".category");
 
 const userBtn = document.getElementById("userBtn");
@@ -46,13 +44,6 @@ function applyTheme(theme) {
 }
 
 
-function openRightSidebar() {
-    if (sidebarR) sidebarR.classList.add("expanded");
-}
-function closeRightSidebar() {
-    if (sidebarR) sidebarR.classList.remove("expanded");
-}
-
 
 function toggleForm() {
     if (userForm && !userForm.classList.contains("hidden")) {
@@ -70,13 +61,6 @@ if (toggleThemeBtn) {
         const newTheme = isDarkMode ? "dark" : "light";
         localStorage.setItem("theme", newTheme);
         applyTheme(newTheme);
-    });
-}
-
-
-if (sidebarR) {
-    sidebarR.addEventListener("click", () => {
-        sidebarR.classList.remove("expanded");
     });
 }
 
@@ -274,7 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let livros = [];
 
- 
+  // Carregar os livros
   fetch("data/livros.json")
     .then(response => response.json())
     .then(data => {
@@ -284,7 +268,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Erro ao carregar livros.json:", error);
     });
 
-
+  // Função para atualizar a lista de resultados
   function atualizarResultados(query) {
     resultsContainer.innerHTML = "";
 
@@ -329,13 +313,13 @@ document.addEventListener("DOMContentLoaded", () => {
     resultsContainer.classList.remove("hidden");
   }
 
-
+  // Evento de digitação
   searchInput.addEventListener("input", () => {
     const query = searchInput.value;
     atualizarResultados(query);
   });
 
-
+  // Fechar dropdown ao clicar fora
   document.addEventListener("click", (e) => {
     if (!e.target.closest(".search-container")) {
       resultsContainer.classList.add("hidden");

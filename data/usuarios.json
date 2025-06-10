@@ -1,2 +1,9 @@
-
-[]
+[
+    {
+        "ID_usuario": 1,
+        "nome_usuario": "joao",
+        "email_usuario": "messytails4@gmail.com",
+        "senha_usuario": "$2y$12$sjoD05PIyldD7U55qJ5eu.3xumFauHZ1E6vp7xxVyD7leCnbMp1vK",
+        "livros_baixados": []
+    }
+]

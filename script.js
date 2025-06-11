@@ -117,40 +117,6 @@ if (alternarFormularioBtn) {
     });
 }
 
-
-categories.forEach((cat) => {
-    cat.addEventListener("click", async () => {
-        categories.forEach((c) => c.classList.remove("active"));
-        cat.classList.add("active");
-
-        const categoria = cat.dataset.category;
-        const container = document.querySelector(".book-list");
-
-        if (categoria && container) {
-            try {
-                const response = await fetch(`buscar_categoria.php?categoria=${encodeURIComponent(categoria)}`);
-                const livros = await response.json();
-
-                if (livros.length > 0) {
-                    container.innerHTML = livros.map(livro => `
-                        <div class="livro">
-                            <img src="${livro.capa}" alt="${livro.nome}">
-                            <div class="livro-titulo">${livro.nome}</div>
-                            <div class="livro-autor">${livro.autor}</div>
-                        </div>
-                    `).join('');
-                } else {
-                    container.innerHTML = '<p class="mensagem-vazia">Nenhum livro encontrado para essa categoria.</p>';
-                }
-            } catch (error) {
-                console.error("Erro ao buscar livros:", error);
-                container.innerHTML = '<p class="mensagem-erro">Erro ao carregar livros.</p>';
-            }
-        }
-    });
-});
-
-
 window.onload = function () {
     const successMessage = document.querySelector(".message.success");
     const errorMessage = document.querySelector(".message.error");
@@ -222,6 +188,7 @@ if (bookList) {
     });
 }
 
+// Scroll suave para as seções
 
 const baixados = document.querySelector(".download-button");
 const baixadosContainer = document.querySelector(".highlight-Baixados");
@@ -251,7 +218,7 @@ if (lidos && lidosContainer) {
 }
 
 const info = document.querySelector(".info-button");
-const infoContainer = document.querySelector(".highlight-info");
+const infoContainer = document.querySelector(".creditos-container");
 
 if (info && infoContainer) {
     info.addEventListener("click", () => {
@@ -336,5 +303,34 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!e.target.closest(".search-container")) {
             resultsContainer.classList.add("hidden");
         }
+    });
+});
+
+//categorias para mostrar só as que tem livros
+document.querySelectorAll('.category').forEach(cat => {
+    cat.addEventListener('click', () => {
+        const categoriaSelecionada = cat.dataset.category;
+
+        // Remove destaque anterior e aplica ao atual
+        document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
+        cat.classList.add('active');
+
+        // Mostra ou esconde seções
+        document.querySelectorAll('.highlight[data-category]').forEach(section => {
+            const listaLivros = section.querySelector('.book-list');
+
+            if (categoriaSelecionada === "Todos") {
+                section.style.display = "block";
+                if (listaLivros) listaLivros.classList.remove("catalogo-grid"); // remove grid
+            } else {
+                if (section.dataset.category === categoriaSelecionada) {
+                    section.style.display = "block";
+                    if (listaLivros) listaLivros.classList.add("catalogo-grid"); // ativa grid
+                } else {
+                    section.style.display = "none";
+                    if (listaLivros) listaLivros.classList.remove("catalogo-grid"); // limpa grid
+                }
+            }
+        });
     });
 });

@@ -140,31 +140,37 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
         <?php if (!$busca_ativa): ?>
             <nav class="categories">
-                <div class="category active">
+                <div class="category active" data-category="Todos">
                     <img draggable="false" src="icons/todos.png" alt="Todos">
                     Todos (<?php echo contarLivrosPorCategoria($livros, 'Todos'); ?>)
                 </div>
-                <div class="category">
+
+                <div class="category" data-category="Em Alta">
                     <img draggable="false" src="icons/em-alta.png" alt="Em alta">
                     Em alta (<?php echo contarLivrosPorCategoria($livros, 'Em Alta'); ?>)
                 </div>
-                <div class="category">
+
+                <div class="category" data-category="Novos">
                     <img draggable="false" src="icons/novos.png" alt="Novos">
                     Novos (<?php echo contarLivrosPorCategoria($livros, 'Novos'); ?>)
                 </div>
-                <div class="category">
+
+                <div class="category" data-category="Ação">
                     <img draggable="false" src="icons/acao.png" alt="Ação">
                     Ação (<?php echo contarLivrosPorCategoria($livros, 'Ação'); ?>)
                 </div>
-                <div class="category">
+
+                <div class="category" data-category="Fantasia">
                     <img draggable="false" src="icons/fantasia.png" alt="Fantasia">
                     Fantasia (<?php echo contarLivrosPorCategoria($livros, 'Fantasia'); ?>)
                 </div>
-                <div class="category">
+
+                <div class="category" data-category="Romance">
                     <img draggable="false" src="icons/romance.png" alt="Romance">
                     Romance (<?php echo contarLivrosPorCategoria($livros, 'Romance'); ?>)
                 </div>
-                <div class="category">
+
+                <div class="category" data-category="Suspense">
                     <img draggable="false" src="icons/ficcao.png" alt="Ficcao">
                     Suspense (<?php echo contarLivrosPorCategoria($livros, 'Suspense'); ?>)
                 </div>
@@ -192,7 +198,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 <?php endif; ?>
             </section>
         <?php else: ?>
-            <section class="highlight">
+            <section class="highlight" data-category="Todos">
                 <h2>Todos</h2>
                 <div class="book-list">
                     <?php
@@ -214,7 +220,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight">
+            <section class="highlight" data-category="Em Alta">
                 <h2>Em Alta</h2>
                 <div class="book-list">
                     <?php
@@ -235,7 +241,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight">
+            <section class="highlight" data-category="Novos">
                 <h2>Novos</h2>
                 <div class="book-list">
                     <?php
@@ -256,7 +262,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight">
+            <section class="highlight" data-category="Ação">
                 <h2>Ação</h2>
                 <div class="book-list">
                     <?php
@@ -277,7 +283,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight">
+            <section class="highlight" data-category="Fantasia">
                 <h2>Fantasia</h2>
                 <div class="book-list">
                     <?php
@@ -298,7 +304,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight">
+            <section class="highlight" data-category="Romance">
                 <h2>Romance</h2>
                 <div class="book-list">
                     <?php
@@ -319,7 +325,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight">
+            <section class="highlight" data-category="Suspense">
                 <h2>Suspense</h2>
                 <div class="book-list">
                     <?php
@@ -337,57 +343,59 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     ?>
                 </div>
 
-                <div class="creditos-container">
-                    <div class="criador">
-                        <img src="img/flavio.jpg" alt="Flávio H.">
-                        <span>Flávio H.</span>
+            </section>
+
+            <br>
+
+            <div class="creditos-container">
+                <div class="criador">
+                    <img src="img/flavio.jpg" alt="Flávio H.">
+                    <span>Flávio H.</span>
+                </div>
+                <div class="criador">
+                    <img src="img/gabriel.png" alt="Gabriel S.">
+                    <span>Gabriel S.</span>
+                </div>
+                <div class="criador">
+                    <img src="img/gustavo.png" alt="Gustavo A.">
+                    <span>Gustavo A.</span>
+                </div>
+                <div class="criador">
+                    <img src="img/luiz.png" alt="Luiz F.">
+                    <span>Luiz F.</span>
+                </div>
+            </div>
+
+            <br>
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-about">
+                        <h2>Alexandria Biblioteca</h2>
+                        <p>Explore uma vasta coleção de livros em PDF gratuitamente. Conhecimento ao alcance de todos.
+                        </p>
+                        <br>
                     </div>
-                    <div class="criador">
-                        <img src="img/gabriel.png" alt="Gabriel S.">
-                        <span>Gabriel S.</span>
-                    </div>
-                    <div class="criador">
-                        <img src="img/gustavo.png" alt="Gustavo A.">
-                        <span>Gustavo A.</span>
-                    </div>
-                    <div class="criador">
-                        <img src="img/luiz.png" alt="Luiz F.">
-                        <span>Luiz F.</span>
+
+                    <div class="footer-social">
+                        <h3>Nos siga</h3>
+                        <br>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/profile.php?id=61576951933968"><img src="img/faceClaro.png"
+                                    alt="Facebook" /></a>
+                            <a href="https://www.instagram.com/bibl.iotecaalexandria/"><img src="img/instaClaro.png"
+                                    alt="Instagram" /></a>
+                            <a href="https://x.com/_Alexandria_Lib"><img src="img/XClaro.png" alt="Twitter" /></a>
+                        </div>
                     </div>
                 </div>
 
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Alexandria Biblioteca. Todos os direitos reservados.</p>
+                </div>
                 <br>
+            </footer>
 
-                <footer class="footer">
-                    <div class="footer-container">
-                        <div class="footer-about">
-                            <h2>Alexandria Biblioteca</h2>
-                            <p>Explore uma vasta coleção de livros em PDF gratuitamente. Conhecimento ao alcance de todos.
-                            </p>
-                            <br>
-                        </div>
-
-                        <div class="footer-social">
-                            <h3>Nos siga</h3>
-                            <br>
-                            <div class="social-icons">
-                                <a href="https://www.facebook.com/profile.php?id=61576951933968"><img
-                                        src="img/faceClaro.png" alt="Facebook" /></a>
-                                <a href="https://www.instagram.com/bibl.iotecaalexandria/"><img src="img/instaClaro.png"
-                                        alt="Instagram" /></a>
-                                <a href="https://x.com/_Alexandria_Lib"><img src="img/XClaro.png" alt="Twitter" /></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer-bottom">
-                        <p>&copy; 2025 Alexandria Biblioteca. Todos os direitos reservados.</p>
-                    </div>
-                    <br>
-                </footer>
-
-
-            </section>
         <?php endif; ?>
 
         <?php echo $messageHtml; ?>

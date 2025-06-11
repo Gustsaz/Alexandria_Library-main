@@ -207,7 +207,7 @@ body.dark-mode .category img {
 }
 
 .right-sidebar {
-  width: 3%;
+  width: 1.5%;
   background-color: #d3c3b6;
   height: 100vh;
   transition: width 0.3s ease;
@@ -315,8 +315,16 @@ header input {
   display: none;
 }
 
+.book-list.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 10px 0;
+}
+
 .book {
   position: relative;
+  height: 250px;
   overflow: hidden;
   background: #fff;
   width: 150px;
@@ -327,11 +335,12 @@ header input {
   transition: transform 0.3s ease;
   flex: 0 0 auto;
   will-change: transform;
+  border-radius: 2%;
 }
 
 .book img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -350,6 +359,16 @@ header input {
 
 .book:hover .detalhes {
   bottom: 0;
+}
+
+.book .detalhes h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.book .detalhes p {
+  margin: 5px 0;
+  font-size: 14px;
 }
 
 .book .title {
@@ -452,6 +471,7 @@ header input {
     overflow-x: auto;
     gap: 10px;
     padding: 10px 0;
+    width: 100%;
   }
 
   .category {

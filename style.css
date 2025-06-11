@@ -205,6 +205,7 @@ body.dark-mode .category img {
 .saved-icon {
   width: 60%;
 }
+
 .right-sidebar {
   width: 3%;
   background-color: #d3c3b6;
@@ -254,6 +255,11 @@ header input {
   font-size: 20px;
   cursor: pointer;
   transition: transform 0.1s ease;
+}
+
+.user-btn {
+  margin-left: -100px;
+
 }
 
 .user-btn:hover {
@@ -334,10 +340,12 @@ header input {
   bottom: -100%;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   padding: 10px;
   box-sizing: border-box;
-  transition: bottom 0.3s ease;
+  transition: bottom 0.4s ease;
+  z-index: 2;
+  color: black;
 }
 
 .book:hover .detalhes {
@@ -598,7 +606,7 @@ header input {
 
 .criador:hover {
   transform: scale(1.09);
-  
+
 }
 
 .criador img {
@@ -608,7 +616,7 @@ header input {
   border: 1px solid #666;
   object-fit: cover;
   background: #e0e0e0;
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .criador span {
@@ -641,7 +649,8 @@ header input {
   margin: 0 auto;
 }
 
-.footer h2, .footer h3 {
+.footer h2,
+.footer h3 {
   color: #222;
 }
 
@@ -728,7 +737,7 @@ header input {
 }
 
 .dark-mode .creditos-container span {
-  
+
   color: white;
 }
 
@@ -863,81 +872,82 @@ header input {
 }
 
 .search-container {
-    position: relative;
-    max-width: 600px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-left: -5px;
+  align-items: center;
 }
 
 .search-bar {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    outline: none;
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
 }
 
 .search-btn {
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-left: none;
-    background-color: #eee;
-    cursor: pointer;
-    border-radius: 0 4px 4px 0;
-    height: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  height: 100%;
 }
 
 .search-results {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-top: none;
-    max-height: 250px;
-    overflow-y: auto;
-    z-index: 10;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 10;
 }
 
 .search-results div {
-    padding: 10px;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
 }
 
 .search-results div:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 
 .search-results .result-item {
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 1px solid #eee;
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
 }
 
 .search-results .result-item:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .search-results ul li:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 #resultados {
-    position: absolute;
-    background-color: white;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode .search-container input {
@@ -976,8 +986,8 @@ body.dark-mode .user-form-bubble {
   background-color: #1e1e1e;
 }
 
-.dark-mode .search-results :hover{
-background-color: rgb(255, 255, 255);
-color: black;
+.dark-mode .search-results :hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
 
 }

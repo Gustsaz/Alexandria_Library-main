@@ -200,10 +200,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     foreach ($todos as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
                         echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
                         echo '</div>';
+                        echo '</div>';
+
                     }
                     ?>
                 </div>
@@ -219,9 +222,11 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     foreach ($emAlta as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
                         echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
                         echo '</div>';
                     }
                     ?>
@@ -238,9 +243,11 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     foreach ($novos as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
                         echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
                         echo '</div>';
                     }
                     ?>
@@ -257,9 +264,11 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     foreach ($acao as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
                         echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
                         echo '</div>';
                     }
                     ?>
@@ -276,9 +285,11 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     foreach ($fantasia as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
                         echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
                         echo '</div>';
                     }
                     ?>
@@ -295,9 +306,11 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     foreach ($romance as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
                         echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
                         echo '</div>';
                     }
                     ?>
@@ -314,9 +327,11 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     foreach ($suspense as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
                         echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
                         echo '</div>';
                     }
                     ?>

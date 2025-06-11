@@ -53,8 +53,8 @@ sidebarR.addEventListener("click", () => {
 });
 
 function openRightSidebar() {
-  const sidebar = document.getElementById("rightSidebar");
-  sidebar.classList.add("expanded");
+    const sidebar = document.getElementById("rightSidebar");
+    sidebar.classList.add("expanded");
 }
 
 function toggleForm() {
@@ -188,7 +188,7 @@ if (bookList) {
     });
 }
 
-// Scroll suave para as seções
+//scroll bunitin pras secao
 
 const baixados = document.querySelector(".download-button");
 const baixadosContainer = document.querySelector(".highlight-Baixados");
@@ -218,7 +218,7 @@ if (lidos && lidosContainer) {
 }
 
 const info = document.querySelector(".info-button");
-const infoContainer = document.querySelector(".creditos-container");
+const infoContainer = document.querySelector(".footer");
 
 if (info && infoContainer) {
     info.addEventListener("click", () => {
@@ -237,7 +237,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let livros = [];
 
-    // Carregar os livros
+    //caregano os livros do JSON
     fetch("data/livros.json")
         .then(response => response.json())
         .then(data => {
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Erro ao carregar livros.json:", error);
         });
 
-    // Função para atualizar a lista de resultados
+    //update nos resultados
     function atualizarResultados(query) {
         resultsContainer.innerHTML = "";
 
@@ -292,13 +292,13 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsContainer.classList.remove("hidden");
     }
 
-    // Evento de digitação
+    //digitando
     searchInput.addEventListener("input", () => {
         const query = searchInput.value;
         atualizarResultados(query);
     });
 
-    // Fechar dropdown ao clicar fora
+    //fechando dropwdown clicando forta 
     document.addEventListener("click", (e) => {
         if (!e.target.closest(".search-container")) {
             resultsContainer.classList.add("hidden");
@@ -311,11 +311,11 @@ document.querySelectorAll('.category').forEach(cat => {
     cat.addEventListener('click', () => {
         const categoriaSelecionada = cat.dataset.category;
 
-        // Remove destaque anterior e aplica ao atual
+        // remove atual e mostra outro
         document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
         cat.classList.add('active');
 
-        // Mostra ou esconde seções
+        // mostra/esconde as seções
         document.querySelectorAll('.highlight[data-category]').forEach(section => {
             const listaLivros = section.querySelector('.book-list');
 
@@ -334,3 +334,20 @@ document.querySelectorAll('.category').forEach(cat => {
         });
     });
 });
+
+// Animação scroll
+
+const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-delay, .scroll-reveal-cascade');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+revealElements.forEach(el => observer.observe(el));

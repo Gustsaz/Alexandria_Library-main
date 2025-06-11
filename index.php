@@ -139,38 +139,65 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
         </header>
 
         <?php if (!$busca_ativa): ?>
+
+            <div class="citacao-container">
+
+                <div class="citacao-imagem scroll-reveal-cascade delay-1">
+                    <img src="img/platao.png" alt="Platão">
+                </div>
+                <!-- Citação -->
+                <div class="citacao-texto scroll-reveal-cascade delay-2">
+                    <p class="citacao-frase">“O livro é um mestre que fala, mas que não responde”</p>
+                    <p class="citacao-autor">- Platão</p>
+                </div>
+
+                <div class="citacao-livros">
+                    <div class="livro livro-1 scroll-reveal-cascade delay-1">
+                        <img src="/img/livros/livro19.jpg" alt="A Revolução dos Bichos">
+                    </div>
+                    <div class="livro livro-2 scroll-reveal-cascade delay-2">
+                        <img src="/img/livros/livro20.jpg" alt="Livro 2">
+                    </div>
+                    <div class="livro livro-3 scroll-reveal-cascade delay-3">
+                        <img src="/img/livros/livro22.jpg" alt="Livro 3">
+                    </div>
+                </div>
+            </div>
+
+            <div style="width: 98%; background-color: #efe5da; height: 5px;"></div>
+
             <nav class="categories">
-                <div class="category active" data-category="Todos">
+                <div class="category active scroll-reveal-cascade delay-1" data-category="Todos">
                     <img draggable="false" src="icons/todos.png" alt="Todos">
                     Todos (<?php echo contarLivrosPorCategoria($livros, 'Todos'); ?>)
                 </div>
 
-                <div class="category" data-category="Em Alta">
+                <div class="category scroll-reveal-cascade delay-2" data-category="Em Alta">
                     <img draggable="false" src="icons/em-alta.png" alt="Em alta">
                     Em alta (<?php echo contarLivrosPorCategoria($livros, 'Em Alta'); ?>)
                 </div>
 
-                <div class="category" data-category="Novos">
+                <div class="category scroll-reveal-cascade delay-3" data-category="Novos">
                     <img draggable="false" src="icons/novos.png" alt="Novos">
                     Novos (<?php echo contarLivrosPorCategoria($livros, 'Novos'); ?>)
                 </div>
 
-                <div class="category" data-category="Ação">
+                <div class="category scroll-reveal-cascade delay-4" data-category="Ação">
                     <img draggable="false" src="icons/acao.png" alt="Ação">
                     Ação (<?php echo contarLivrosPorCategoria($livros, 'Ação'); ?>)
                 </div>
 
-                <div class="category" data-category="Fantasia">
+                <div class="category scroll-reveal-cascade delay-5" data-category="Fantasia">
                     <img draggable="false" src="icons/fantasia.png" alt="Fantasia">
                     Fantasia (<?php echo contarLivrosPorCategoria($livros, 'Fantasia'); ?>)
                 </div>
 
-                <div class="category" data-category="Romance">
+                <div class="category scroll-reveal-cascade delay-6" data-category="Romance">
                     <img draggable="false" src="icons/romance.png" alt="Romance">
                     Romance (<?php echo contarLivrosPorCategoria($livros, 'Romance'); ?>)
                 </div>
 
-                <div class="category" data-category="Suspense">
+                <div class="category scroll-reveal-cascade delay-7" data-category="Suspense">
                     <img draggable="false" src="icons/ficcao.png" alt="Ficcao">
                     Suspense (<?php echo contarLivrosPorCategoria($livros, 'Suspense'); ?>)
                 </div>
@@ -198,7 +225,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 <?php endif; ?>
             </section>
         <?php else: ?>
-            <section class="highlight" data-category="Todos">
+            <section class="highlight scroll-reveal" data-category="Todos">
                 <h2>Todos</h2>
                 <div class="book-list">
                     <?php
@@ -220,7 +247,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight" data-category="Em Alta">
+            <section class="highlight scroll-reveal" data-category="Em Alta">
                 <h2>Em Alta</h2>
                 <div class="book-list">
                     <?php
@@ -241,7 +268,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight" data-category="Novos">
+            <section class="highlight scroll-reveal" data-category="Novos">
                 <h2>Novos</h2>
                 <div class="book-list">
                     <?php
@@ -262,7 +289,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight" data-category="Ação">
+            <section class="highlight scroll-reveal" data-category="Ação">
                 <h2>Ação</h2>
                 <div class="book-list">
                     <?php
@@ -283,7 +310,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight" data-category="Fantasia">
+            <section class="highlight scroll-reveal" data-category="Fantasia">
                 <h2>Fantasia</h2>
                 <div class="book-list">
                     <?php
@@ -304,7 +331,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight" data-category="Romance">
+            <section class="highlight scroll-reveal" data-category="Romance">
                 <h2>Romance</h2>
                 <div class="book-list">
                     <?php
@@ -325,7 +352,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight" data-category="Suspense">
+            <section class="highlight scroll-reveal" data-category="Suspense">
                 <h2>Suspense</h2>
                 <div class="book-list">
                     <?php
@@ -344,27 +371,6 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 </div>
 
             </section>
-
-            <br>
-
-            <div class="creditos-container">
-                <div class="criador">
-                    <img src="img/flavio.jpg" alt="Flávio H.">
-                    <span>Flávio H.</span>
-                </div>
-                <div class="criador">
-                    <img src="img/gabriel.png" alt="Gabriel S.">
-                    <span>Gabriel S.</span>
-                </div>
-                <div class="criador">
-                    <img src="img/gustavo.png" alt="Gustavo A.">
-                    <span>Gustavo A.</span>
-                </div>
-                <div class="criador">
-                    <img src="img/luiz.png" alt="Luiz F.">
-                    <span>Luiz F.</span>
-                </div>
-            </div>
 
             <br>
 

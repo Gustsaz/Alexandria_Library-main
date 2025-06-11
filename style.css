@@ -285,7 +285,7 @@ header input {
 }
 
 .category img:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 .category.active {
@@ -974,4 +974,10 @@ body.dark-mode .login-form button:hover {
 
 body.dark-mode .user-form-bubble {
   background-color: #1e1e1e;
+}
+
+.dark-mode .search-results :hover{
+background-color: rgb(255, 255, 255);
+color: black;
+
 }

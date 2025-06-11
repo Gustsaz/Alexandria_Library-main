@@ -44,6 +44,18 @@ function applyTheme(theme) {
 }
 
 
+/*abrir sidebars*/
+const sidebarR = document.querySelector(".right-sidebar");
+
+sidebarR.addEventListener("click", () => {
+
+    sidebarR.classList.toggle("expanded");
+});
+
+function openRightSidebar() {
+  const sidebar = document.getElementById("rightSidebar");
+  sidebar.classList.add("expanded");
+}
 
 function toggleForm() {
     if (userForm && !userForm.classList.contains("hidden")) {
@@ -157,7 +169,7 @@ window.onload = function () {
         }, 5000);
     }
 
-    
+
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         applyTheme(savedTheme);
@@ -248,50 +260,50 @@ if (info && infoContainer) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.querySelector("input[type='text']");
-  const resultsContainer = document.querySelector(".search-results");
+    const searchInput = document.querySelector("input[type='text']");
+    const resultsContainer = document.querySelector(".search-results");
 
-  if (!searchInput || !resultsContainer) {
-    console.error("Elemento de busca não encontrado!");
-    return;
-  }
-
-  let livros = [];
-
-  // Carregar os livros
-  fetch("data/livros.json")
-    .then(response => response.json())
-    .then(data => {
-      livros = data;
-    })
-    .catch(error => {
-      console.error("Erro ao carregar livros.json:", error);
-    });
-
-  // Função para atualizar a lista de resultados
-  function atualizarResultados(query) {
-    resultsContainer.innerHTML = "";
-
-    if (query.trim() === "") {
-      resultsContainer.classList.add("hidden");
-      return;
+    if (!searchInput || !resultsContainer) {
+        console.error("Elemento de busca não encontrado!");
+        return;
     }
 
-    const filtrados = livros.filter(livro =>
-      livro.nome.toLowerCase().includes(query.toLowerCase())
-    );
+    let livros = [];
 
-    if (filtrados.length === 0) {
-      const vazio = document.createElement("div");
-      vazio.classList.add("result-item");
-      vazio.textContent = "Nenhum livro encontrado";
-      resultsContainer.appendChild(vazio);
-    } else {
-      filtrados.forEach(livro => {
-        const item = document.createElement("div");
-        item.classList.add("result-item");
+    // Carregar os livros
+    fetch("data/livros.json")
+        .then(response => response.json())
+        .then(data => {
+            livros = data;
+        })
+        .catch(error => {
+            console.error("Erro ao carregar livros.json:", error);
+        });
 
-        item.innerHTML = `
+    // Função para atualizar a lista de resultados
+    function atualizarResultados(query) {
+        resultsContainer.innerHTML = "";
+
+        if (query.trim() === "") {
+            resultsContainer.classList.add("hidden");
+            return;
+        }
+
+        const filtrados = livros.filter(livro =>
+            livro.nome.toLowerCase().includes(query.toLowerCase())
+        );
+
+        if (filtrados.length === 0) {
+            const vazio = document.createElement("div");
+            vazio.classList.add("result-item");
+            vazio.textContent = "Nenhum livro encontrado";
+            resultsContainer.appendChild(vazio);
+        } else {
+            filtrados.forEach(livro => {
+                const item = document.createElement("div");
+                item.classList.add("result-item");
+
+                item.innerHTML = `
           <div style="display: flex; align-items: center; gap: 10px;">
             <img src="${livro.capa}" alt="${livro.nome}" style="width: 40px; height: 60px; object-fit: cover; border: 1px solid #ccc;">
             <div>
@@ -301,28 +313,28 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
 
-        item.addEventListener("click", () => {
-          searchInput.value = livro.nome;
-          resultsContainer.classList.add("hidden");
-        });
+                item.addEventListener("click", () => {
+                    searchInput.value = livro.nome;
+                    resultsContainer.classList.add("hidden");
+                });
 
-        resultsContainer.appendChild(item);
-      });
+                resultsContainer.appendChild(item);
+            });
+        }
+
+        resultsContainer.classList.remove("hidden");
     }
 
-    resultsContainer.classList.remove("hidden");
-  }
+    // Evento de digitação
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value;
+        atualizarResultados(query);
+    });
 
-  // Evento de digitação
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value;
-    atualizarResultados(query);
-  });
-
-  // Fechar dropdown ao clicar fora
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".search-container")) {
-      resultsContainer.classList.add("hidden");
-    }
-  });
+    // Fechar dropdown ao clicar fora
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".search-container")) {
+            resultsContainer.classList.add("hidden");
+        }
+    });
 });

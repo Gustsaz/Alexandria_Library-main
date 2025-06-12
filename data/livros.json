@@ -3,7 +3,7 @@
         "id": "1",
         "nome": "A Revolução dos Bichos",
         "autor": "George Orwell",
-        "categoria": "Romance",
+        "categoria": "Suspense",
         "editora": "Companhia de Letras",
         "capa": "..\/img\/livros\/livro1.png"
     },
@@ -171,7 +171,7 @@
         "id": "22",
         "nome": "A Cirurgiã",
         "autor": "Leslie Wolfe",
-        "categoria": "Suspense",
+        "categoria": "Horror",
         "editora": "Fato Editoral",
         "capa": "..\/img\/livros\/livro22.jpg"
     },
@@ -195,7 +195,7 @@
         "id": "25",
         "nome": "A Garota do Lago",
         "autor": "Charlie Donle",
-        "categoria": "Suspense",
+        "categoria": "Horror",
         "editora": "Galera",
         "capa": "..\/img\/livros\/livro25.jpg"
     },
@@ -294,5 +294,230 @@
         "categoria": "Suspense",
         "editora": "Companhia de Letras",
         "capa": "..\/img\/livros\/livro37.jpg"
+    },
+    {
+        "id": "38",
+        "nome": "Os Jogos dos Deuses",
+        "autor": "Abigail Owen",
+        "categoria": "Fantasia",
+        "editora": "Editora Paralela",
+        "capa": "..\/img\/livros\/livro38.jpg"
+    },
+    {
+        "id": "39",
+        "nome": "Batalha pela Terra Sagrada",
+        "autor": "A. O. Martins",
+        "categoria": "Fantasia",
+        "editora": "Daiane Duarte",
+        "capa": "..\/img\/livros\/livro39.jpg"
+    },{
+        "id": "40",
+        "nome": "Uma Sombra na Brasa",
+        "autor": "Jennifer L. Armentrout",
+        "categoria": "Fantasia",
+        "editora": "Galera",
+        "capa": "..\/img\/livros\/livro40.jpg"
+    },{
+        "id": "41",
+        "nome": "Um Reino de Carne e Fogo",
+        "autor": "Jennifer L. Armentrout",
+        "categoria": "Fantasia",
+        "editora": "Galera",
+        "capa": "..\/img\/livros\/livro41.jpg"
+    },{
+        "id": "42",
+        "nome": "A Coroa de Ossos Dourados",
+        "autor": "Jennifer L. Armentrout",
+        "categoria": "Fantasia",
+        "editora": "Galera",
+        "capa": "..\/img\/livros\/livro42.jpg"
+    },{
+        "id": "43",
+        "nome": "A Guerra das Duas Rainhas",
+        "autor": "Jennifer L. Armentrout",
+        "categoria": "Fantasia",
+        "editora": "Galera",
+        "capa": "..\/img\/livros\/livro43.jpg"
+    },{
+        "id": "44",
+        "nome": "Uma Alma de Cinzas e Sangue",
+        "autor": "Jennifer L. Armentrout",
+        "categoria": "Fantasia",
+        "editora": "Galera",
+        "capa": "..\/img\/livros\/livro44.jpg"
+    },{
+        "id": "45",
+        "nome": "O Legado do Fogo",
+        "autor": "Gustavo Machado",
+        "categoria": "Fantasia",
+        "editora": "Editora Viseu",
+        "capa": "..\/img\/livros\/livro45.jpg"
+    },{
+        "id": "46",
+        "nome": "As Cinzas e o Rei Maldito Pelas Estrelas",
+        "autor": "Carissa Broadbent",
+        "categoria": "Fantasia",
+        "editora": "Editora Suma",
+        "capa": "..\/img\/livros\/livro46.jpg"
+    },{
+        "id": "47",
+        "nome": "A Serpente e as Asas Feitas de Noite",
+        "autor": "Carissa Broadbent",
+        "categoria": "Fantasia",
+        "editora": "Editora Suma",
+        "capa": "..\/img\/livros\/livro47.jpg"
+    },{
+        "id": "48",
+        "nome": "Duna",
+        "autor": "Frank Herbert",
+        "categoria": "Fantasia",
+        "editora": "Editora Aleph",
+        "capa": "..\/img\/livros\/livro48.jpg"
+    },
+    {
+        "id": "49",
+        "nome": "Sinta o Medo",
+        "autor": "Edgar Allan Poe",
+        "categoria": "Horror",
+        "editora": "Darkside Books",
+        "capa": "..\/img\/livros\/livro49.jpg"
+    },
+    {
+        "id": "50",
+        "nome": "Deueses de Neon",
+        "autor": "Katee Robert",
+        "categoria": "Fantasia",
+        "editora": "Astral Cultural",
+        "capa": "..\/img\/livros\/livro50.jpg"
+    },
+    {
+        "id": "51",
+        "nome": "Corte de Asas e Ruína",
+        "autor": "Sarah J. Maas",
+        "categoria": "Fantasia",
+        "editora": "Galera",
+        "capa": "..\/img\/livros\/livro51.jpg"
+    },
+    {
+        "id": "52",
+        "nome": "Drácula",
+        "autor": "Bram Stoker",
+        "categoria": "Horror",
+        "editora": "Principis",
+        "capa": "..\/img\/livros\/livro52.jpg"
+    },
+    {
+        "id": "53",
+        "nome": "Pisque Duas Vezes para Morrer",
+        "autor": "Vagner Neubert",
+        "categoria": "Horror",
+        "editora": "Neubert Books",
+        "capa": "..\/img\/livros\/livro53.jpg"
+    },
+    {
+        "id": "54",
+        "nome": "A Arte do Terror",
+        "autor": "Elemental Editoriação",
+        "categoria": "Horror",
+        "editora": "Elemental Editoriação",
+        "capa": "..\/img\/livros\/livro54.jpg"
+    },
+    {
+        "id": "55",
+        "nome": "A Arte do Terror 2",
+        "autor": "Elemental Editoriação",
+        "categoria": "Horror",
+        "editora": "Elemental Editoriação",
+        "capa": "..\/img\/livros\/livro55.jpg"
+    },
+    {
+        "id": "56",
+        "nome": "O Médico e o Monstro",
+        "autor": "Robert Louis Stevenson",
+        "categoria": "Horror",
+        "editora": "Principis",
+        "capa": "..\/img\/livros\/livro56.jpg"
+    },
+    {
+        "id": "57",
+        "nome": "Sexta-feira 13",
+        "autor": "Donnefar Skedar",
+        "categoria": "Horror",
+        "editora": "Elemental Editoriação",
+        "capa": "..\/img\/livros\/livro57.jpg"
+    },
+    {
+        "id": "58",
+        "nome": "Sexta-feira 13 - Parte 2",
+        "autor": "Donnefar Skedar",
+        "categoria": "Horror",
+        "editora": "Obook",
+        "capa": "..\/img\/livros\/livro60.jpg"
+    },
+    {
+        "id": "59",
+        "nome": "Nínguem Vai Te Ouvir Gritar",
+        "autor": "Mark Miller",
+        "categoria": "Horror",
+        "editora": "Companhia Editora Nacional",
+        "capa": "..\/img\/livros\/livro61.jpg"
+    },
+    {
+        "id": "60",
+        "nome": "Nínguem Sai Vivo Daqui",
+        "autor": "Mark Miller",
+        "categoria": "Horror",
+        "editora": "Companhia Editora Nacional",
+        "capa": "..\/img\/livros\/livro60.jpg"
+    },
+    {
+        "id": "61",
+        "nome": "O Vilarejo",
+        "autor": "Raphael Montes",
+        "categoria": "Horror",
+        "editora": "Editora Suma",
+        "capa": "..\/img\/livros\/livro59.jpg"
+    },
+    {
+        "id": "62",
+        "nome": "O Morro dos Ventos Uivantes",
+        "autor": "Emily Bronte",
+        "categoria": "Romance",
+        "editora": "Principis",
+        "capa": "..\/img\/livros\/livro62.jpg"
+    },
+    {
+        "id": "63",
+        "nome": "Amor, Teoricamente",
+        "autor": "Ali Hazelwood",
+        "categoria": "Romance",
+        "editora": "Editora Arqueiro",
+        "capa": "..\/img\/livros\/livro63.jpg"
+    },
+    {
+        "id": "64",
+        "nome": "Todas as suas Perfeições",
+        "autor": "Collen Hoover",
+        "categoria": "Romance",
+        "editora": "Galera",
+        "capa": "..\/img\/livros\/livro64.jpg"
+    },
+    {
+        "id": "65",
+        "nome": "No Fundo é Amor",
+        "autor": "Ali Hazelwood",
+        "categoria": "Romance",
+        "editora": "Editora Arqueiro",
+        "capa": "..\/img\/livros\/livro65.jpg"
+    },
+    {
+        "id": "65",
+        "nome": "Terra Partida",
+        "autor": "Clare Leslie Hall",
+        "categoria": "Romance",
+        "editora": "Intrínseca",
+        "capa": "..\/img\/livros\/livro65.jpg"
     }
+
+
 ]

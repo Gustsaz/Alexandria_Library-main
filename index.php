@@ -388,12 +388,12 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight scroll-reveal" data-category="Terror">
-                <h2>Terror</h2>
+            <section class="highlight scroll-reveal" data-category="Horror">
+                <h2>Horror</h2>
                 <div class="book-list">
                     <?php
-                    $terror = livrosPorCategoria($livros, 'Terror');
-                    foreach ($terror as $livro) {
+                    $horror = livrosPorCategoria($livros, 'Horror');
+                    foreach ($horror as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';

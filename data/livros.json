@@ -513,13 +513,118 @@
         "capa": "..\/img\/livros\/livro65.jpg"
     },
     {
-        "id": "65",
+        "id": "66",
         "nome": "Terra Partida",
         "autor": "Clare Leslie Hall",
         "categoria": "Romance",
         "editora": "Intrínseca",
-        "capa": "..\/img\/livros\/livro65.jpg"
+        "capa": "..\/img\/livros\/livro66.jpg"
+    },
+    {
+        "id": "67",
+        "nome": "O Nome do Vento",
+        "autor": "Patrick Rothfuss",
+        "categoria": "Aventura",
+        "editora": "Editora Arqueiro",
+        "capa": "..\/img\/livros\/livro67.jpg"
+    },
+    {
+        "id": "68",
+        "nome": "O Tempo do Sábio",
+        "autor": "Patrick Rothfuss",
+        "categoria": "Aventura",
+        "editora": "Editora Arqueiro",
+        "capa": "..\/img\/livros\/livro68.jpg"
+    },
+    {
+        "id": "69",
+        "nome": "A Música do Silêncio",
+        "autor": "Patrick Rothfuss",
+        "categoria": "Aventura",
+        "editora": "Editora Arqueiro",
+        "capa": "..\/img\/livros\/livro69.jpg"
+    },
+    {
+        "id": "70",
+        "nome": "Beren e Lúthien",
+        "autor": "J. R. R. Tolkien",
+        "categoria": "Aventura",
+        "editora": "HarperCollins",
+        "capa": "..\/img\/livros\/livro70.jpg"
+    },
+    {
+        "id": "71",
+        "nome": "A Sombra do Torturador",
+        "autor": "Gene Wolfe",
+        "categoria": "Aventura",
+        "editora": "Morro Branco",
+        "capa": "..\/img\/livros\/livro71.jpg"
+    },
+    {
+        "id": "72",
+        "nome": "Rambo",
+        "autor": "Col Ashutosh Kale",
+        "categoria": "Aventura",
+        "editora": "Srishti Publishers & Distributors",
+        "capa": "..\/img\/livros\/livro72.jpg"
+    },
+    {
+        "id": "73",
+        "nome": "The Rambo Report",
+        "autor": "Nat Segalof",
+        "categoria": "Aventura",
+        "editora": "Citadel Press",
+        "capa": "..\/img\/livros\/livro73.jpg"
+    },
+    {
+        "id": "74",
+        "nome": "Santo Guerreiro - Ventos do Norte",
+        "autor": "Eduardo Spohr",
+        "categoria": "Aventura",
+        "editora": "Editora Verus",
+        "capa": "..\/img\/livros\/livro74.jpg"
+    },
+    {
+        "id": "75",
+        "nome": "Santo Guerreiro - O Império do Leste",
+        "autor": "Eduardo Spohr",
+        "categoria": "Aventura",
+        "editora": "Editora Verus",
+        "capa": "..\/img\/livros\/livro75.jpg"
+    },
+    {
+        "id": "76",
+        "nome": "Santo Guerreiro - Roma Invicta",
+        "autor": "Eduardo Spohr",
+        "categoria": "Aventura",
+        "editora": "Editora Verus",
+        "capa": "..\/img\/livros\/livro76.jpg"
+    },
+    {
+        "id": "77",
+        "nome": "Indiana Jones and the Army of the Dead",
+        "autor": "Steve Perry",
+        "categoria": "Aventura",
+        "editora": "Random House Worlds",
+        "capa": "..\/img\/livros\/livro77.jpg"
+    },
+
+    {
+        "id": "78",
+        "nome": "Indiana Jones and the Last Crusade",
+        "autor": "Rob MacGregor",
+        "categoria": "Aventura",
+        "editora": "Random House Worlds",
+        "capa": "..\/img\/livros\/livro78.jpg"
+    },{
+        "id": "79",
+        "nome": "Indiana Jones and the Temple of Doom",
+        "autor": "James Kahn",
+        "categoria": "Aventura",
+        "editora": "Random House Worlds",
+        "capa": "..\/img\/livros\/livro79.jpg"
     }
+
 
 
 ]

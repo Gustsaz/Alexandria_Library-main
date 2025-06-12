@@ -298,12 +298,12 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
-            <section class="highlight scroll-reveal" data-category="Ação">
-                <h2>Ação</h2>
+            <section class="highlight scroll-reveal" data-category="Aventura">
+                <h2>Aventura</h2>
                 <div class="book-list">
                     <?php
-                    $acao = livrosPorCategoria($livros, 'Ação');
-                    foreach ($acao as $livro) {
+                    $aventura = livrosPorCategoria($livros, 'Aventura');
+                    foreach ($aventura as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
@@ -367,6 +367,50 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $suspense = livrosPorCategoria($livros, 'Suspense');
                     foreach ($suspense as $livro) {
+                        echo '<div onclick="openRightSidebar()" class="book">';
+                        echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
+                        echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                        echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                        echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+
+            </section>
+
+            <br>
+
+            <section class="highlight scroll-reveal" data-category="Terror">
+                <h2>Terror</h2>
+                <div class="book-list">
+                    <?php
+                    $terror = livrosPorCategoria($livros, 'Terror');
+                    foreach ($terror as $livro) {
+                        echo '<div onclick="openRightSidebar()" class="book">';
+                        echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
+                        echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                        echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                        echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+
+            </section>
+
+            <br>
+
+            <section class="highlight scroll-reveal" data-category="Técnico">
+                <h2>Técnico</h2>
+                <div class="book-list">
+                    <?php
+                    $tecnico = livrosPorCategoria($livros, 'Técnico');
+                    foreach ($tecnico as $livro) {
                         echo '<div onclick="openRightSidebar()" class="book">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';

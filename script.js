@@ -354,3 +354,40 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 revealElements.forEach(el => observer.observe(el));
+
+function applyDraggableScroll(bookListElement) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    bookListElement.addEventListener('mousedown', (e) => {
+        isDown = true;
+        bookListElement.classList.add('active');
+        startX = e.pageX - bookListElement.offsetLeft;
+        scrollLeft = bookListElement.scrollLeft;
+    });
+
+    bookListElement.addEventListener('mouseleave', () => {
+        isDown = false;
+        bookListElement.classList.remove('active');
+    });
+
+    bookListElement.addEventListener('mouseup', () => {
+        isDown = false;
+        bookListElement.classList.remove('active');
+    });
+
+    bookListElement.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - bookListElement.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        bookListElement.scrollLeft = scrollLeft - walk;
+    });
+}
+
+// Seleciona todos os elementos com a classe .book-list
+const allBookLists = document.querySelectorAll('.book-list');
+
+// Aplica a função de scroll dragável a cada um deles
+allBookLists.forEach(applyDraggableScroll);

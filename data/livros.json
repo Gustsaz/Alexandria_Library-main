@@ -17,7 +17,7 @@
   },
   {
     "id": "3",
-    "nome": "O Ultimo Desejo",
+    "nome": "O Último Desejo",
     "autor": "Andrzej Sapkowski",
     "categoria": "Fantasia",
     "editora": "WMF Martins Fontes",
@@ -207,5 +207,93 @@
     "categoria": "Suspense",
     "editora": "Galera",
     "capa": "../img/livros/livro26.jpg"
+  },
+  {   
+    "id": "27",
+    "nome": "O Último Jantar",
+    "autor": "Shari Lapena",
+    "categoria": "Suspense",
+    "editora": "Record",
+    "capa": "../img/livros/livro27.jpg"
+  },
+  {   
+    "id": "28",
+    "nome": "A Empregada",
+    "autor": "Freida McFadden",
+    "categoria": "Suspense",
+    "editora": "Editora Arqueiro",
+    "capa": "../img/livros/livro28.jpg"
+  },
+  {   
+    "id": "29",
+    "nome": "O Segredo da Empregada",
+    "autor": "Freida McFadden",
+    "categoria": "Suspense",
+    "editora": "Editora Arqueiro",
+    "capa": "../img/livros/livro29.jpg"
+  },
+  {   
+    "id": "30",
+    "nome": "O Casamento da Empregada",
+    "autor": "Freida McFadden",
+    "categoria": "Suspense",
+    "editora": "Editora Arqueiro",
+    "capa": "../img/livros/livro31.jpg"
+  },
+  {   
+    "id": "31",
+    "nome": "Nunca Minta",
+    "autor": "Freida McFadden",
+    "categoria": "Suspense",
+    "editora": "Record",
+    "capa": "../img/livros/livro30.jpg"
+  },
+  {   
+    "id": "32",
+    "nome": "Até o Último de Nós",
+    "autor": "Freida McFadden",
+    "categoria": "Suspense",
+    "editora": "Editora Arqueiro",
+    "capa": "../img/livros/livro32.jpg"
+  },
+  {   
+    "id": "33",
+    "nome": "O Detento",
+    "autor": "Freida McFadden",
+    "categoria": "Suspense",
+    "editora": "Editora Arqueiro",
+    "capa": "../img/livros/livro33.jpg"
+  },
+  {   
+    "id": "34",
+    "nome": "Layla",
+    "autor": "Collen Hoover",
+    "categoria": "Suspense",
+    "editora": "Galera",
+    "capa": "../img/livros/livro34.jpg"
+  },
+   {   
+    "id": "35",
+    "nome": "Uma Família Feliz",
+    "autor": "Raphael Montes",
+    "categoria": "Suspense",
+    "editora": "Companhia de Letras",
+    "capa": "../img/livros/livro35.jpg"
+  },
+   {   
+    "id": "36",
+    "nome": "Suicidas",
+    "autor": "Raphael Montes",
+    "categoria": "Suspense",
+    "editora": "Companhia de Letras",
+    "capa": "../img/livros/livro36.jpg"
+  },
+   {   
+    "id": "37",
+    "nome": "Jantar Secreto",
+    "autor": "Raphael Montes",
+    "categoria": "Suspense",
+    "editora": "Companhia de Letras",
+    "capa": "../img/livros/livro37.jpg"
   }
 ]

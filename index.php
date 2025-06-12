@@ -183,7 +183,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-4" data-category="Aventura">
-                    <img draggable="false" src="icons/acao.png" alt="Aventura">
+                    <img draggable="false" src="icons/aventura.png" alt="Aventura">
                     Aventura (<?php echo contarLivrosPorCategoria($livros, 'Aventura'); ?>)
                 </div>
 
@@ -207,9 +207,14 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     Horror (<?php echo contarLivrosPorCategoria($livros, 'Horror'); ?>)
                 </div>
 
-                <div class="category scroll-reveal-cascade delay-7" data-category="Técnico">
+                <div class="category scroll-reveal-cascade delay-7" data-category="Tecnico">
                     <img draggable="false" src="icons/tecnico.png" alt="Técnico">
-                    Técnico (<?php echo contarLivrosPorCategoria($livros, 'Técnico'); ?>)
+                    Técnico (<?php echo contarLivrosPorCategoria($livros, 'Tecnico'); ?>)
+                </div>
+
+                <div class="category scroll-reveal-cascade delay-7" data-category="Gutenberg">
+                    <img draggable="false" src="icons/gutenberg.png" alt="Gutenberg">
+                    Clássicos (<?php echo contarLivrosPorCategoria($livros, 'Gutenberg'); ?>)
                 </div>
             </nav>
         <?php endif; ?>
@@ -423,6 +428,25 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     ?>
                 </div>
 
+            </section>
+
+            <section class="highlight scroll-reveal" data-category="Gutenberg">
+                <h2>Clássicos (Gutenberg)</h2>
+                <div class="book-list">
+                    <?php
+                    $gutenberg = livrosPorCategoria($livros, 'Gutenberg');
+                    foreach ($gutenberg as $livro) {
+                        echo '<div onclick="openRightSidebar()" class="book">';
+                        echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                        echo '<div class="detalhes">';
+                        echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                        echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                        echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
             </section>
 
             <br>

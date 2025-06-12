@@ -34,14 +34,33 @@ body.dark-mode .book {
   border-color: #555;
 }
 
-body.dark-mode .sidebar,
-body.dark-mode .sidebar-right {
-  background: #333;
+body.dark-mode .barra-feia{
+  background-color: #444;
+}
+
+body.dark-mode .sidebar{
+  background-color: #333;
+}
+
+body.dark-mode .right-sidebar {
+  background-color: #444;
 }
 
 body.dark-mode header input {
   background-color: #555;
   color: #f0f0f0;
+}
+
+body.dark-mode .citacao-container {
+  background-color: #444;
+}
+
+body.dark-mode .citacao-frase {
+  color: white;
+}
+
+body.dark-mode .citacao-autor {
+  color: #ffffff8c;
 }
 
 body.dark-mode .category img {
@@ -281,6 +300,12 @@ header input {
   width: 98%;
 }
 
+.barra-feia{
+  width: 98%; 
+  background-color: #efe5da; 
+  height: 5px;
+}
+
 .citacao-imagem img {
   width: 300px;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
@@ -291,13 +316,13 @@ header input {
 }
 
 .citacao-frase {
-  font-size: 24px;
+  font-size: 40px;
   color: #111;
   margin-bottom: 10px;
 }
 
 .citacao-autor {
-  font-size: 14px;
+  font-size: 20px;
   color: #666;
 }
 

@@ -102,7 +102,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 <?php if ($logado): ?>
                     <span class="welcome-message">Olá, <?php echo htmlspecialchars($nome_usuario); ?>!</span>
                     <button class="user-btn" id="logoutBtn">
-                        <img draggable="false" src="img/Conta.png" style="width: 25px; height: 25px;">
+                        <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
                     </button>
                     <div class="user-form-bubble hidden" id="logoutBubble">
                         <p>Você está logado como: <strong><?php echo htmlspecialchars($nome_usuario); ?></strong></p>
@@ -110,7 +110,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     </div>
                 <?php else: ?>
                     <button class="user-btn" id="userBtn">
-                        <img draggable="false" src="img/Conta.png" style="width: 25px; height: 25px;">
+                        <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
                     </button>
                     <div class="user-form-bubble hidden" id="userForm">
                         <h2 id="form-title">Cadastro</h2>
@@ -164,7 +164,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 </div>
             </div>
 
-            <div style="width: 98%; background-color: #efe5da; height: 5px;"></div>
+            <div class="barra-feia"></div>
 
             <nav class="categories">
                 <div class="category active scroll-reveal-cascade delay-1" data-category="Todos">
@@ -182,9 +182,9 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     Novos (<?php echo contarLivrosPorCategoria($livros, 'Novos'); ?>)
                 </div>
 
-                <div class="category scroll-reveal-cascade delay-4" data-category="Ação">
-                    <img draggable="false" src="icons/acao.png" alt="Ação">
-                    Ação (<?php echo contarLivrosPorCategoria($livros, 'Ação'); ?>)
+                <div class="category scroll-reveal-cascade delay-4" data-category="Aventura">
+                    <img draggable="false" src="icons/acao.png" alt="Aventura">
+                    Aventura (<?php echo contarLivrosPorCategoria($livros, 'Aventura'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-5" data-category="Fantasia">
@@ -198,8 +198,18 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Suspense">
-                    <img draggable="false" src="icons/ficcao.png" alt="Ficcao">
+                    <img draggable="false" src="icons/ficcao.png" alt="Suspense">
                     Suspense (<?php echo contarLivrosPorCategoria($livros, 'Suspense'); ?>)
+                </div>
+
+                <div class="category scroll-reveal-cascade delay-7" data-category="Horror">
+                    <img draggable="false" src="icons/horror.png" alt="Horror">
+                    Horror (<?php echo contarLivrosPorCategoria($livros, 'Horror'); ?>)
+                </div>
+
+                <div class="category scroll-reveal-cascade delay-7" data-category="Técnico">
+                    <img draggable="false" src="icons/tecnico.png" alt="Técnico">
+                    Técnico (<?php echo contarLivrosPorCategoria($livros, 'Técnico'); ?>)
                 </div>
             </nav>
         <?php endif; ?>
@@ -239,7 +249,6 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
                         echo '</div>';
                         echo '</div>';
-
                     }
                     ?>
                 </div>

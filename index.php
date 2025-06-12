@@ -194,7 +194,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="terror">
                     <img draggable="false" src="icons/horror.png" alt="Terror">
-                    Torror (<?php echo contarLivrosPorCategoria($livros, 'terror'); ?>)
+                    Terror (<?php echo contarLivrosPorCategoria($livros, 'terror'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Tecnico">
@@ -345,7 +345,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 <h2>Terror</h2>
                 <div class="book-list">
                     <?php
-                    $terror = livrosPorCategoria($livros, 'Terror');
+                    $terror = livrosPorCategoria($livros, 'terror');
                     foreach ($terror as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
                         echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';

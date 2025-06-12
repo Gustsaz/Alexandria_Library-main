@@ -34,6 +34,7 @@ function applyTheme(theme) {
         if (Down) Down.src = "img/DownloadClaro.png";
         if (Visu) Visu.src = "img/EyeClaro.png";
         if (Salvo) Salvo.src = "img/SavedClaro.png";
+        if (Conta) Conta.src = "img/ContaClaro.png";
         if (Fechar) Fechar.src = "img/FecharClaro.png";
     } else {
         document.body.classList.remove("dark-mode");

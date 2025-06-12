@@ -5,6 +5,7 @@ const Down = document.getElementById("download-icon");
 const Visu = document.getElementById("visua-icon");
 const Salvo = document.getElementById("saved-icon");
 const Conta = document.getElementById("conta-icon");
+const Fechar = document.getElementById("fechar-icon");
 
 const toggleThemeBtn = document.querySelector(".mode-toggle");
 const themeIcon = document.getElementById("theme-icon");
@@ -33,7 +34,7 @@ function applyTheme(theme) {
         if (Down) Down.src = "img/DownloadClaro.png";
         if (Visu) Visu.src = "img/EyeClaro.png";
         if (Salvo) Salvo.src = "img/SavedClaro.png";
-        if (Conta) Conta.src = "img/ContaClaro.png";
+        if (Fechar) Fechar.src = "img/FecharClaro.png";
     } else {
         document.body.classList.remove("dark-mode");
         if (themeIcon) themeIcon.src = "img/Escuro.png";
@@ -43,6 +44,7 @@ function applyTheme(theme) {
         if (Visu) Visu.src = "img/EyeEscuro.png";
         if (Salvo) Salvo.src = "img/SavedEscuro.png";
         if (Conta) Conta.src = "img/ContaEscuro.png";
+        if (Fechar) Fechar.src = "img/FecharEscuro.png";
     }
 }
 
@@ -50,15 +52,39 @@ function applyTheme(theme) {
 /*abrir sidebars*/
 const sidebarR = document.querySelector(".right-sidebar");
 
-sidebarR.addEventListener("click", () => {
 
-    sidebarR.classList.toggle("expanded");
-});
 
-function openRightSidebar() {
+function openRightSidebar(pdfUrl) {
     const sidebar = document.getElementById("rightSidebar");
     sidebar.classList.add("expanded");
+
+    sidebar.innerHTML = `
+        <div style="display: flex; justify-content: flex-end; width: 100%;">
+            <button onclick="closeRightSidebar()" style="
+                border: none;
+                background: none;
+                cursor: pointer;
+                padding: 10px;
+            "><img draggable="false" src="img/FecharEscuro.png" style=" width= 30px;height: 30px;" id="fechar-icon"></button>
+        </div>
+        ${pdfUrl ? `
+        <div style="width: 100%; height: calc(100% - 50px);">
+            <iframe src="${pdfUrl}" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+        </div>` : `
+        <p style="padding: 1rem;">Este livro não possui PDF disponível.</p>
+        `}
+    `;
 }
+
+function closeRightSidebar() {
+    const sidebar = document.getElementById("rightSidebar");
+    sidebar.classList.remove("expanded");
+    sidebar.innerHTML = ""; // limpa o iframe ou mensagem
+}
+
+
+
+
 
 function toggleForm() {
     if (userForm && !userForm.classList.contains("hidden")) {

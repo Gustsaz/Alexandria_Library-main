@@ -172,16 +172,6 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     Todos (<?php echo contarLivrosPorCategoria($livros, 'Todos'); ?>)
                 </div>
 
-                <div class="category scroll-reveal-cascade delay-2" data-category="Em Alta">
-                    <img draggable="false" src="icons/em-alta.png" alt="Em alta">
-                    Em alta (<?php echo contarLivrosPorCategoria($livros, 'Em Alta'); ?>)
-                </div>
-
-                <div class="category scroll-reveal-cascade delay-3" data-category="Novos">
-                    <img draggable="false" src="icons/novos.png" alt="Novos">
-                    Novos (<?php echo contarLivrosPorCategoria($livros, 'Novos'); ?>)
-                </div>
-
                 <div class="category scroll-reveal-cascade delay-4" data-category="Aventura">
                     <img draggable="false" src="icons/aventura.png" alt="Aventura">
                     Aventura (<?php echo contarLivrosPorCategoria($livros, 'Aventura'); ?>)
@@ -202,9 +192,9 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     Suspense (<?php echo contarLivrosPorCategoria($livros, 'Suspense'); ?>)
                 </div>
 
-                <div class="category scroll-reveal-cascade delay-7" data-category="Horror">
-                    <img draggable="false" src="icons/horror.png" alt="Horror">
-                    Horror (<?php echo contarLivrosPorCategoria($livros, 'Horror'); ?>)
+                <div class="category scroll-reveal-cascade delay-7" data-category="terror">
+                    <img draggable="false" src="icons/horror.png" alt="Terror">
+                    Torror (<?php echo contarLivrosPorCategoria($livros, 'terror'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Tecnico">
@@ -246,49 +236,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $todos = livrosPorCategoria($livros, 'Todos');
                     foreach ($todos as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
-                        echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
-                        echo '<div class="detalhes">';
-                        echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
-                        echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
-                        echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                    ?>
-                </div>
-            </section>
-
-            <br>
-
-            <section class="highlight scroll-reveal" data-category="Em Alta">
-                <h2>Em Alta</h2>
-                <div class="book-list">
-                    <?php
-                    $emAlta = livrosPorCategoria($livros, 'Em Alta');
-                    foreach ($emAlta as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
-                        echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
-                        echo '<div class="detalhes">';
-                        echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
-                        echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
-                        echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                    ?>
-                </div>
-            </section>
-
-            <br>
-
-            <section class="highlight scroll-reveal" data-category="Novos">
-                <h2>Novos</h2>
-                <div class="book-list">
-                    <?php
-                    $novos = livrosPorCategoria($livros, 'Novos');
-                    foreach ($novos as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -309,7 +258,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $aventura = livrosPorCategoria($livros, 'Aventura');
                     foreach ($aventura as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -330,7 +280,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $fantasia = livrosPorCategoria($livros, 'Fantasia');
                     foreach ($fantasia as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -351,7 +302,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $romance = livrosPorCategoria($livros, 'Romance');
                     foreach ($romance as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -372,7 +324,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $suspense = livrosPorCategoria($livros, 'Suspense');
                     foreach ($suspense as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -394,7 +347,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $terror = livrosPorCategoria($livros, 'Terror');
                     foreach ($terror as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -416,7 +370,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $tecnico = livrosPorCategoria($livros, 'Técnico');
                     foreach ($tecnico as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -436,7 +391,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $gutenberg = livrosPorCategoria($livros, 'Gutenberg');
                     foreach ($gutenberg as $livro) {
-                        echo '<div onclick="openRightSidebar()" class="book">';
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';

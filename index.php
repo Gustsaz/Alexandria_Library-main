@@ -237,7 +237,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $todos = livrosPorCategoria($livros, 'Todos');
                     foreach ($todos as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -259,7 +259,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $aventura = livrosPorCategoria($livros, 'Aventura');
                     foreach ($aventura as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -281,7 +281,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $fantasia = livrosPorCategoria($livros, 'Fantasia');
                     foreach ($fantasia as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -303,7 +303,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $romance = livrosPorCategoria($livros, 'Romance');
                     foreach ($romance as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -325,7 +325,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $suspense = livrosPorCategoria($livros, 'Suspense');
                     foreach ($suspense as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -348,7 +348,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $terror = livrosPorCategoria($livros, 'terror');
                     foreach ($terror as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -371,7 +371,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $tecnico = livrosPorCategoria($livros, 'Técnico');
                     foreach ($tecnico as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -392,7 +392,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     $gutenberg = livrosPorCategoria($livros, 'Gutenberg');
                     foreach ($gutenberg as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
-                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\')">';
+                        echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
                         echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
                         echo '<div class="detalhes">';
                         echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
@@ -404,6 +404,43 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     ?>
                 </div>
             </section>
+
+            <?php if ($logado): ?>
+                <section class="highlight scroll-reveal" data-category="download">
+                    <h2>Baixados</h2>
+                    <div class="book-list">
+                        <?php
+                        $download = []; // ✅ COMEÇA AQUI
+                        if ($logado) {
+                            $usuarios = json_decode(file_get_contents('data/usuarios.json'), true);
+                            foreach ($usuarios as $usuario) {
+                                if ($usuario['ID_usuario'] == $_SESSION['ID_usuario']) {
+                                    $idsBaixados = $usuario['livros_baixados'] ?? [];
+                                    break;
+                                }
+                            }
+
+                            $download = array_filter($livros, function ($livro) use ($idsBaixados) {
+                                return isset($livro['id']) && in_array($livro['id'], $idsBaixados);
+                            });
+                        }
+
+                        foreach ($download as $livro) {
+                            $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                            echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
+                            echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                            echo '<div class="detalhes">';
+                            echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                            echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                            echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                        ?>
+                    </div>
+                </section>
+
+            <?php endif; ?>
 
             <br>
 
@@ -445,6 +482,9 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
     <br>
 
+    <script>
+        const isUserLoggedIn = <?php echo json_encode($logado); ?>;
+    </script>
 
     <script src="script.js"></script>
 

@@ -1137,3 +1137,8 @@ body.dark-mode .user-form-bubble {
   width: 100%;
   height: 100%;
 }
+
+#download-button-sidebar:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}

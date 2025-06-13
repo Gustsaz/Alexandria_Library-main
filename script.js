@@ -55,18 +55,23 @@ const sidebarR = document.querySelector(".right-sidebar");
 
 
 
-function openRightSidebar(pdfUrl) {
+function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
     const sidebar = document.getElementById("rightSidebar");
     sidebar.classList.add("expanded");
 
+    const showDownload = pdfUrl && livroId && isLoggedIn;
+
     sidebar.innerHTML = `
-        <div style="display: flex; justify-content: flex-end; width: 100%;">
-            <button onclick="closeRightSidebar()" style="
-                border: none;
-                background: none;
-                cursor: pointer;
-                padding: 10px;
-            "><img draggable="false" src="img/FecharEscuro.png" style=" width= 30px;height: 30px;" id="fechar-icon"></button>
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px;">
+            ${showDownload ? `
+                <a href="${pdfUrl}" target="_blank" onclick="registrarDownload('${livroId}')" style="background: none; border: none; cursor: pointer;">
+                    <img src="img/DownloadEscuro.png" alt="Download" style="width: 30px; height: 30px;" id="download-button-sidebar">
+                </a>
+            ` : ''}
+
+            <button onclick="closeRightSidebar()" style="border: none; background: none; cursor: pointer;">
+                <img draggable="false" src="img/FecharEscuro.png" style="width: 30px; height: 30px;" id="fechar-icon">
+            </button>
         </div>
         ${pdfUrl ? `
         <div style="width: 100%; height: calc(100% - 50px);">
@@ -77,15 +82,37 @@ function openRightSidebar(pdfUrl) {
     `;
 }
 
+
+
+function registrarDownload(livroId) {
+    if (!isUserLoggedIn) {
+        alert("Você precisa estar logado para baixar este livro.");
+        return;
+    }
+
+    fetch('registrar_download.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ livroId })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.sucesso) {
+                location.reload();
+            } else {
+                alert("Erro: " + (data.erro || "Desconhecido"));
+            }
+        })
+        .catch(err => console.error('Erro:', err));
+}
+
+
+
 function closeRightSidebar() {
     const sidebar = document.getElementById("rightSidebar");
     sidebar.classList.remove("expanded");
     sidebar.innerHTML = ""; // limpa o iframe ou mensagem
 }
-
-
-
-
 
 function toggleForm() {
     if (userForm && !userForm.classList.contains("hidden")) {

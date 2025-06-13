@@ -12,5 +12,25 @@
         "email_usuario": "luiz@gmail.com",
         "senha_usuario": "$2y$12$aumuXiaWNM.nhp9R\/wgKtOMNputCklHdSAU3JArc0LkTGOUlC2wQ.",
         "livros_baixados": []
+    },
+    {
+        "ID_usuario": 3,
+        "nome_usuario": "Julia",
+        "email_usuario": "onarrador372@gmail.com",
+        "senha_usuario": "$2y$12$EYIfJi4PAIwIkH1vuOP\/gOSCEv0Z3xI147Hcy6NGxo8O1KoJyTshO",
+        "livros_baixados": [
+            "1",
+            "2"
+        ]
+    },
+    {
+        "ID_usuario": 4,
+        "nome_usuario": "Flavio",
+        "email_usuario": "orothi1orothi@gmail.com",
+        "senha_usuario": "$2y$12$VwVAHITdt5lbwkP\/1wwXgOWkJY3YhSG.MsiM9.lpJuWTDII53ORlu",
+        "livros_baixados": [
+            "1",
+            "2"
+        ]
     }
 ]

@@ -203,7 +203,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Gutenberg">
                     <img draggable="false" src="icons/gutenberg.png" alt="Gutenberg">
-                    Clássicos (<?php echo contarLivrosPorCategoria($livros, 'Gutenberg'); ?>)
+                    Clássicos (<?php echo 20 ?>)
                 </div>
             </nav>
         <?php endif; ?>

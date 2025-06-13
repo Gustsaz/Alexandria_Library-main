@@ -314,6 +314,12 @@ header input {
 .citacao-imagem img {
   width: 300px;
   filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.citacao-imagem img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .citacao-texto {
@@ -1330,3 +1336,56 @@ body.dark-mode .user-form-bubble input{
 .citacao-livros img.fade {
   animation: fadeInOut 0.6s ease;
 }
+
+.citacao-livros .livro {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform, box-shadow;
+  border-radius: 8px;
+}
+
+.citacao-livros .livro:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4), 0 0 12px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+/* Efeito de brilho com mais intensidade */
+.citacao-livros .livro::before {
+  content: "";
+  position: absolute;
+  top: var(--mouse-y, 50%);
+  left: var(--mouse-x, 50%);
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 80%);
+  pointer-events: none;
+  transition: top 0.05s, left 0.05s;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Estilo base do brilho (invisível) */
+.citacao-livros .livro::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 80%);
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 2;
+
+  opacity: 0;
+  transition: opacity 0.2s ease, top 0.05s, left 0.05s;
+}
+
+/* Ativa brilho apenas durante hover */
+.citacao-livros .livro:hover::before {
+  opacity: 1;
+}
+
+

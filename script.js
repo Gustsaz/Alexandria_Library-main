@@ -586,34 +586,57 @@ function carregarCapasCitacao(livros) {
     });
 }
 
+let trocaInterval = null;
+
 function iniciarTrocaDeCapas() {
-    const capas = [
-        document.getElementById("citacaoLivro1"),
-        document.getElementById("citacaoLivro2"),
-        document.getElementById("citacaoLivro3")
-    ];
+  const capas = [
+    document.getElementById("citacaoLivro1"),
+    document.getElementById("citacaoLivro2"),
+    document.getElementById("citacaoLivro3")
+  ];
 
-    if (capas.some(el => !el)) return;
+  if (capas.some(el => !el)) return;
 
-    setInterval(() => {
-        // Troca os src e alt em rotação
-        const tempSrc = capas[0].src;
-        const tempAlt = capas[0].alt;
+  function trocar() {
+    const tempSrc = capas[0].src;
+    const tempAlt = capas[0].alt;
 
-        capas[0].src = capas[1].src;
-        capas[0].alt = capas[1].alt;
+    capas[0].src = capas[1].src;
+    capas[0].alt = capas[1].alt;
 
-        capas[1].src = capas[2].src;
-        capas[1].alt = capas[2].alt;
+    capas[1].src = capas[2].src;
+    capas[1].alt = capas[2].alt;
 
-        capas[2].src = tempSrc;
-        capas[2].alt = tempAlt;
+    capas[2].src = tempSrc;
+    capas[2].alt = tempAlt;
 
-        // Opcional: adicionar efeito fade (ver CSS abaixo)
-        capas.forEach(capa => {
-            capa.classList.remove("fade");
-            void capa.offsetWidth; // força reflow
-            capa.classList.add("fade");
-        });
-    }, 3000); // troca a cada 3 segundos
+    capas.forEach(capa => {
+      capa.classList.remove("fade");
+      void capa.offsetWidth;
+      capa.classList.add("fade");
+    });
+  }
+
+  trocaInterval = setInterval(trocar, 3000);
+
+  // Hover em .livro → pausa loop e ativa brilho
+  capas.forEach(capa => {
+    const livroDiv = capa.closest(".livro");
+
+    livroDiv.addEventListener("mouseenter", () => {
+      clearInterval(trocaInterval);
+    });
+
+    livroDiv.addEventListener("mouseleave", () => {
+      trocaInterval = setInterval(trocar, 3000);
+    });
+
+    livroDiv.addEventListener("mousemove", e => {
+      const rect = livroDiv.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      livroDiv.style.setProperty("--mouse-x", `${x}px`);
+      livroDiv.style.setProperty("--mouse-y", `${y}px`);
+    });
+  });
 }

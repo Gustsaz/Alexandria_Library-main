@@ -281,10 +281,8 @@ header input {
 }
 
 .user-btn {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  cursor: pointer;
+  z-index: 10;
 }
 
 
@@ -513,15 +511,15 @@ header input {
 
 .user-form-bubble {
   position: absolute;
-  top: 70px;
-  right: 8%;
-  background: #efe5da;
+  top: calc(100% + 10px); /* 10px abaixo do botão */
+  right: 0;
+  background: #fff;
+  padding: 15px;
   border: 1px solid #ccc;
   border-radius: 12px;
-  padding: 15px;
-  width: 250px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 3000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  width: 240px;
 }
 
 .user-form-bubble::before {
@@ -554,6 +552,15 @@ header input {
 }
 
 .form-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #987654;
+  color: white;
+  cursor: pointer;
+}
+
+.ja_tem {
   padding: 8px 12px;
   border: none;
   border-radius: 6px;
@@ -646,8 +653,8 @@ header input {
   }
 
   .logo-sidebar {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
   }
 
   .info-icon img {
@@ -794,11 +801,9 @@ header input {
 
 
 .user-info-container {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-wrap: nowrap;
-  white-space: nowrap;
 }
 
 .user-info-container .welcome-message {
@@ -1188,6 +1193,11 @@ body.dark-mode .login-form button:hover {
 
 body.dark-mode .user-form-bubble {
   background-color: #1e1e1e;
+  border-color: #111;
+}
+
+body.dark-mode .user-form-bubble input{
+  border-color: #111;
 }
 
 .dark-mode .search-results :hover {
@@ -1310,4 +1320,13 @@ body.dark-mode .user-form-bubble {
 .salvar-btn:hover img {
   transform: scale(1.2);
   opacity: 1;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.citacao-livros img.fade {
+  animation: fadeInOut 0.6s ease;
 }

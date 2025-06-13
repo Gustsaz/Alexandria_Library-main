@@ -135,7 +135,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
                         <hr style="margin: 10px 0;">
 
-                        <button type="button" id="alternarFormularioBtn">Já tem uma conta? Entrar</button>
+                        <button type="button" id="alternarFormularioBtn" class="ja_tem">Já tem uma conta? Entrar</button>
                     </div>
                 <?php endif; ?>
             </div>
@@ -156,15 +156,16 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
                 <div class="citacao-livros">
                     <div class="livro livro-1 scroll-reveal-cascade delay-1">
-                        <img src="/img/livros/livro19.jpg" alt="A Revolução dos Bichos">
+                        <img id="citacaoLivro1" src="/img/livros/livro19.jpg" alt="Livro aleatório 1">
                     </div>
                     <div class="livro livro-2 scroll-reveal-cascade delay-2">
-                        <img src="/img/livros/livro20.jpg" alt="Livro 2">
+                        <img id="citacaoLivro2" src="/img/livros/livro20.jpg" alt="Livro aleatório 2">
                     </div>
                     <div class="livro livro-3 scroll-reveal-cascade delay-3">
-                        <img src="/img/livros/livro22.jpg" alt="Livro 3">
+                        <img id="citacaoLivro3" src="/img/livros/livro22.jpg" alt="Livro aleatório 3">
                     </div>
                 </div>
+
             </div>
 
             <div class="barra-feia"></div>

@@ -321,15 +321,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let livros = [];
 
-    // Carregando os livros do JSON
     fetch("data/livros.json")
         .then(response => response.json())
         .then(data => {
             livros = data;
+            carregarCapasCitacao(livros);
+            iniciarTrocaDeCapas();
+
         })
         .catch(error => {
             console.error("Erro ao carregar livros.json:", error);
         });
+
 
     // Atualiza os resultados da busca
     function atualizarResultados(query) {
@@ -568,3 +571,49 @@ function loadGutenbergBooks() {
 
 // Chamada após o DOM estar pronto
 document.addEventListener("DOMContentLoaded", loadGutenbergBooks);
+
+//capas aleatórias para citações
+
+function carregarCapasCitacao(livros) {
+    const embaralhados = [...livros].sort(() => Math.random() - 0.5).slice(0, 3);
+
+    embaralhados.forEach((livro, index) => {
+        const img = document.getElementById(`citacaoLivro${index + 1}`);
+        if (img) {
+            img.src = livro.capa.replace("..", "."); // Ajusta se os caminhos começarem com ".."
+            img.alt = livro.nome;
+        }
+    });
+}
+
+function iniciarTrocaDeCapas() {
+    const capas = [
+        document.getElementById("citacaoLivro1"),
+        document.getElementById("citacaoLivro2"),
+        document.getElementById("citacaoLivro3")
+    ];
+
+    if (capas.some(el => !el)) return;
+
+    setInterval(() => {
+        // Troca os src e alt em rotação
+        const tempSrc = capas[0].src;
+        const tempAlt = capas[0].alt;
+
+        capas[0].src = capas[1].src;
+        capas[0].alt = capas[1].alt;
+
+        capas[1].src = capas[2].src;
+        capas[1].alt = capas[2].alt;
+
+        capas[2].src = tempSrc;
+        capas[2].alt = tempAlt;
+
+        // Opcional: adicionar efeito fade (ver CSS abaixo)
+        capas.forEach(capa => {
+            capa.classList.remove("fade");
+            void capa.offsetWidth; // força reflow
+            capa.classList.add("fade");
+        });
+    }, 3000); // troca a cada 3 segundos
+}

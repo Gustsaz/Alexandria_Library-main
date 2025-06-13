@@ -60,6 +60,11 @@ const sidebarR = document.querySelector(".right-sidebar");
 
 
 function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
+    if (!isLoggedIn) {
+        alert("Você precisa estar logado para ler este livro.");
+        return;
+    }
+
     const sidebar = document.getElementById("rightSidebar");
     sidebar.classList.add("expanded");
 
@@ -67,26 +72,52 @@ function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
 
     sidebar.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px;">
-            ${showDownload ? `
-                <a href="${pdfUrl}" target="_blank" onclick="registrarDownload('${livroId}')" style="background: none; border: none; cursor: pointer;">
-                    <img src="img/DownloadEscuro.png" alt="Download" style="width: 30px; height: 30px;" id="download-button-sidebar">
-                </a>
-            ` : ''}
-
+            <div style="display: flex; gap: 10px; align-items: center;">
+                ${showDownload ? `
+                    <a href="${pdfUrl}" target="_blank" onclick="registrarDownload('${livroId}')" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/DownloadEscuro.png" alt="Download" style="width: 30px; height: 30px;" id="download-button-sidebar">
+                    </a>
+                    <button onclick="marcarComoLido('${livroId}')" style="background: none; border: none; cursor: pointer;">
+                        <img src="img/EyeEscuro.png" alt="Marcar como lido" style="width: 30px; height: 30px;" id="lido-button-sidebar">
+                    </button>
+                ` : ''}
+            </div>
             <button onclick="closeRightSidebar()" style="border: none; background: none; cursor: pointer;">
                 <img draggable="false" src="img/FecharEscuro.png" style="width: 30px; height: 30px;" id="fechar-icon">
             </button>
         </div>
+
         ${pdfUrl ? `
-        <div style="width: 100%; height: calc(100% - 50px);">
-            <iframe src="${pdfUrl}" style="width: 100%; height: 100%;" frameborder="0"></iframe>
-        </div>` : `
-        <p style="padding: 1rem;">Este livro não possui PDF disponível.</p>
+            <div style="width: 100%; height: calc(100% - 50px);">
+                <iframe src="${pdfUrl}" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+            </div>` : `
+            <p style="padding: 1rem;">Este livro não possui PDF disponível.</p>
         `}
     `;
 }
 
 
+function marcarComoLido(livroId) {
+    if (!isUserLoggedIn) {
+        alert("Você precisa estar logado para marcar um livro como lido.");
+        return;
+    }
+
+    fetch('marcar_lido.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ livroId })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.sucesso) {
+                location.reload(); // ou atualizar dinamicamente
+            } else {
+                alert("Erro ao marcar como lido: " + (data.erro || "Desconhecido"));
+            }
+        })
+        .catch(err => console.error("Erro ao marcar como lido:", err));
+}
 
 function registrarDownload(livroId) {
     if (!isUserLoggedIn) {
@@ -249,43 +280,35 @@ if (bookList) {
     });
 }
 
-//scroll bunitin pras secao
+// scroll butininho pras section
+const scrollButtons = [
+    { buttonClass: ".download-button", categoria: "download" },
+    { buttonClass: ".saved-button", categoria: "salvos" },
+    { buttonClass: ".visua-button", categoria: "lidos" },
+    { buttonClass: ".info-button", seletor: ".footer" } // exceção
+];
 
-const baixados = document.querySelector(".download-button");
-const baixadosContainer = document.querySelector(".highlight-Baixados");
+scrollButtons.forEach(({ buttonClass, categoria, seletor }) => {
+    const botao = document.querySelector(buttonClass);
 
-if (baixados && baixadosContainer) {
-    baixados.addEventListener("click", () => {
-        baixadosContainer.scrollIntoView({ behavior: "smooth" });
-    });
-}
+    if (botao) {
+        botao.addEventListener("click", () => {
+            let target;
 
-const lista = document.querySelector(".saved-button");
-const listaContainer = document.querySelector(".highlight-saved");
+            if (seletor) {
+                // Caso especial como o footer
+                target = document.querySelector(seletor);
+            } else if (categoria) {
+                // Section com data-category correspondente
+                target = document.querySelector(`.highlight[data-category="${categoria}"]`);
+            }
 
-if (lista && listaContainer) {
-    lista.addEventListener("click", () => {
-        listaContainer.scrollIntoView({ behavior: "smooth" });
-    });
-}
-
-const lidos = document.querySelector(".visua-button");
-const lidosContainer = document.querySelector(".highlight-Lidos");
-
-if (lidos && lidosContainer) {
-    lidos.addEventListener("click", () => {
-        lidosContainer.scrollIntoView({ behavior: "smooth" });
-    });
-}
-
-const info = document.querySelector(".info-button");
-const infoContainer = document.querySelector(".footer");
-
-if (info && infoContainer) {
-    info.addEventListener("click", () => {
-        infoContainer.scrollIntoView({ behavior: "smooth" });
-    });
-}
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.querySelector("input[type='text']");
@@ -298,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let livros = [];
 
-    //caregano os livros do JSON
+    // Carregando os livros do JSON
     fetch("data/livros.json")
         .then(response => response.json())
         .then(data => {
@@ -308,7 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Erro ao carregar livros.json:", error);
         });
 
-    //update nos resultados
+    // Atualiza os resultados da busca
     function atualizarResultados(query) {
         resultsContainer.innerHTML = "";
 
@@ -332,18 +355,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 item.classList.add("result-item");
 
                 item.innerHTML = `
-          <div style="display: flex; align-items: center; gap: 10px;">
-            <img src="${livro.capa}" alt="${livro.nome}" style="width: 40px; height: 60px; object-fit: cover; border: 1px solid #ccc;">
-            <div>
-              <strong>${livro.nome}</strong><br>
-              <small>${livro.autor}</small>
-            </div>
-          </div>
-        `;
+                  <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="${livro.capa}" alt="${livro.nome}" style="width: 40px; height: 60px; object-fit: cover; border: 1px solid #ccc;">
+                    <div>
+                      <strong>${livro.nome}</strong><br>
+                      <small>${livro.autor}</small>
+                    </div>
+                  </div>
+                `;
 
                 item.addEventListener("click", () => {
                     searchInput.value = livro.nome;
                     resultsContainer.classList.add("hidden");
+
+                    if (livro.link) {
+                        openRightSidebar(livro.link, livro.id, typeof isUserLoggedIn !== 'undefined' ? isUserLoggedIn : false);
+                    } else {
+                        alert("Este livro não possui PDF disponível.");
+                    }
                 });
 
                 resultsContainer.appendChild(item);
@@ -353,19 +382,20 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsContainer.classList.remove("hidden");
     }
 
-    //digitando
+    // Enquanto digita
     searchInput.addEventListener("input", () => {
         const query = searchInput.value;
         atualizarResultados(query);
     });
 
-    //fechando dropwdown clicando forta 
+    // Fecha os resultados ao clicar fora
     document.addEventListener("click", (e) => {
         if (!e.target.closest(".search-container")) {
             resultsContainer.classList.add("hidden");
         }
     });
 });
+
 
 //categorias para mostrar só as que tem livros
 document.querySelectorAll('.category').forEach(cat => {
@@ -455,47 +485,86 @@ function salvarLivro(livroId, buttonElement) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ livroId })
     })
-    .then(response => response.json())
-    .then(data => {
-        if (!data.sucesso) {
-            console.error("Erro ao salvar:", data.erro || "Desconhecido");
-            return;
-        }
+        .then(response => response.json())
+        .then(data => {
+            if (!data.sucesso) {
+                console.error("Erro ao salvar:", data.erro || "Desconhecido");
+                return;
+            }
 
-        buttonElement.classList.toggle("salvo");
+            buttonElement.classList.toggle("salvo");
 
-        const bookElement = buttonElement.closest(".book");
-        const savedList = document.querySelector(".highlight-saved .book-list");
+            const bookElement = buttonElement.closest(".book");
+            const savedList = document.querySelector(".highlight-saved .book-list");
 
-        if (!savedList || !bookElement) return;
+            if (!savedList || !bookElement) return;
 
-        const existing = savedList.querySelector('#livro-' + livroId);
+            const existing = savedList.querySelector('#livro-' + livroId);
 
-        if (buttonElement.classList.contains("salvo")) {
-            // Adiciona na lista de salvos (se ainda não estiver)
-            if (!existing) {
-                const clone = bookElement.cloneNode(true);
+            if (buttonElement.classList.contains("salvo")) {
+                // Adiciona na lista de salvos (se ainda não estiver)
+                if (!existing) {
+                    const clone = bookElement.cloneNode(true);
 
-                // Corrige onclick do botão no clone
-                const newBtn = clone.querySelector(".salvar-btn");
-                if (newBtn) {
-                    newBtn.classList.add("salvo");
-                    newBtn.onclick = (e) => {
-                        e.stopPropagation();
-                        salvarLivro(livroId, newBtn);
-                    };
+                    // Corrige onclick do botão no clone
+                    const newBtn = clone.querySelector(".salvar-btn");
+                    if (newBtn) {
+                        newBtn.classList.add("salvo");
+                        newBtn.onclick = (e) => {
+                            e.stopPropagation();
+                            salvarLivro(livroId, newBtn);
+                        };
+                    }
+
+                    savedList.appendChild(clone);
                 }
-
-                savedList.appendChild(clone);
+            } else {
+                // Remove da lista de salvos
+                if (existing) {
+                    existing.remove();
+                }
             }
-        } else {
-            // Remove da lista de salvos
-            if (existing) {
-                existing.remove();
-            }
-        }
-    })
-    .catch(err => console.error("Erro ao salvar livro:", err));
+        })
+        .catch(err => console.error("Erro ao salvar livro:", err));
 }
 
+//livros gutenberg
 
+function loadGutenbergBooks() {
+    fetch('https://gutendex.com/books?languages=en&mime_type=text%2Fhtml&sort=popular')
+        .then(response => response.json())
+        .then(data => {
+            const livros = data.results.slice(0, 20);
+            const container = document.getElementById("gutenberg-list");
+
+            livros.forEach(livro => {
+                const titulo = livro.title;
+                const autores = livro.authors.map(a => a.name).join(", ") || "Desconhecido";
+                const capa = livro.formats["image/jpeg"] || "img/default.png";
+                const link = livro.formats["text/html"] || livro.formats["application/pdf"] || livro.formats["text/plain"];
+
+                if (!link) return;
+
+                const div = document.createElement("div");
+                div.classList.add("book");
+                div.innerHTML = `
+                    <img draggable="false" src="${capa}" alt="Capa de ${titulo}" width="120">
+                    <div class="detalhes">
+                        <h3>${titulo}</h3>
+                        <p><strong>Autor:</strong> ${autores}</p>
+                        <p><strong>Editora:</strong> Gutenberg</p>
+                    </div>
+                `;
+
+                div.addEventListener("click", () => {
+                    openRightSidebar(link, livro.id, typeof isUserLoggedIn !== "undefined" ? isUserLoggedIn : false);
+                });
+
+                container.appendChild(div);
+            });
+        })
+        .catch(err => console.error("Erro ao carregar livros do Gutenberg:", err));
+}
+
+// Chamada após o DOM estar pronto
+document.addEventListener("DOMContentLoaded", loadGutenbergBooks);

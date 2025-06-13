@@ -24,7 +24,12 @@
             "1",
             "2"
         ],
-        "livros_salvos": []
+        "livros_salvos": [
+            "49"
+        ],
+        "livros_lidos": [
+            "1"
+        ]
     },
     {
         "ID_usuario": 4,
@@ -42,6 +47,9 @@
             "52",
             "56",
             "22"
+        ],
+        "livros_lidos": [
+            "1"
         ]
     }
 ]

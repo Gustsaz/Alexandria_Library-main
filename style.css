@@ -1142,3 +1142,38 @@ body.dark-mode .user-form-bubble {
     transform: scale(1.1);
     opacity: 1;
 }
+
+/*botao lista leitura*/
+
+.salvar-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0;
+}
+
+.salvar-btn img {
+    width: 22px;
+    height: 22px;
+    opacity: 0.7;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.salvar-btn:hover img {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.salvar-btn .salvar-img {
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.salvar-btn.salvo .salvar-img {
+    opacity: 1;
+    transform: scale(1.1);
+}

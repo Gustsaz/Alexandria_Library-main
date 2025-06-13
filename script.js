@@ -6,6 +6,8 @@ const Visu = document.getElementById("visua-icon");
 const Salvo = document.getElementById("saved-icon");
 const Conta = document.getElementById("conta-icon");
 const Fechar = document.getElementById("fechar-icon");
+const Salvar = document.getElementById("salvar-icon");
+
 
 const toggleThemeBtn = document.querySelector(".mode-toggle");
 const themeIcon = document.getElementById("theme-icon");
@@ -36,6 +38,7 @@ function applyTheme(theme) {
         if (Salvo) Salvo.src = "img/SavedClaro.png";
         if (Conta) Conta.src = "img/ContaClaro.png";
         if (Fechar) Fechar.src = "img/FecharClaro.png";
+        if (Salvar) Salvar.src = "img/SalvarClaro.png";
     } else {
         document.body.classList.remove("dark-mode");
         if (themeIcon) themeIcon.src = "img/Escuro.png";
@@ -46,6 +49,7 @@ function applyTheme(theme) {
         if (Salvo) Salvo.src = "img/SavedEscuro.png";
         if (Conta) Conta.src = "img/ContaEscuro.png";
         if (Fechar) Fechar.src = "img/FecharEscuro.png";
+        if (Salvar) Salvar.src = "img/SalvarEscuro.png";
     }
 }
 
@@ -440,8 +444,58 @@ function applyDraggableScroll(bookListElement) {
     });
 }
 
-// Seleciona todos os elementos com a classe .book-list
 const allBookLists = document.querySelectorAll('.book-list');
 
-// Aplica a função de scroll dragável a cada um deles
 allBookLists.forEach(applyDraggableScroll);
+
+//salvar os livro
+function salvarLivro(livroId, buttonElement) {
+    fetch('salvar_livro.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ livroId })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (!data.sucesso) {
+            console.error("Erro ao salvar:", data.erro || "Desconhecido");
+            return;
+        }
+
+        buttonElement.classList.toggle("salvo");
+
+        const bookElement = buttonElement.closest(".book");
+        const savedList = document.querySelector(".highlight-saved .book-list");
+
+        if (!savedList || !bookElement) return;
+
+        const existing = savedList.querySelector('#livro-' + livroId);
+
+        if (buttonElement.classList.contains("salvo")) {
+            // Adiciona na lista de salvos (se ainda não estiver)
+            if (!existing) {
+                const clone = bookElement.cloneNode(true);
+
+                // Corrige onclick do botão no clone
+                const newBtn = clone.querySelector(".salvar-btn");
+                if (newBtn) {
+                    newBtn.classList.add("salvo");
+                    newBtn.onclick = (e) => {
+                        e.stopPropagation();
+                        salvarLivro(livroId, newBtn);
+                    };
+                }
+
+                savedList.appendChild(clone);
+            }
+        } else {
+            // Remove da lista de salvos
+            if (existing) {
+                existing.remove();
+            }
+        }
+    })
+    .catch(err => console.error("Erro ao salvar livro:", err));
+}
+
+

@@ -4,14 +4,16 @@
         "nome_usuario": "nobruzera",
         "email_usuario": "pica@gmail.com",
         "senha_usuario": "$2y$12$FIqSs9XRqYumJkzbK1Pl..Sh3F6Ol3YbuSsi0y50Wp16Ojr66MqXy",
-        "livros_baixados": []
+        "livros_baixados": [],
+        "livros_salvos": []
     },
     {
         "ID_usuario": 2,
         "nome_usuario": "luiz",
         "email_usuario": "luiz@gmail.com",
         "senha_usuario": "$2y$12$aumuXiaWNM.nhp9R\/wgKtOMNputCklHdSAU3JArc0LkTGOUlC2wQ.",
-        "livros_baixados": []
+        "livros_baixados": [],
+        "livros_salvos": []
     },
     {
         "ID_usuario": 3,
@@ -21,7 +23,8 @@
         "livros_baixados": [
             "1",
             "2"
-        ]
+        ],
+        "livros_salvos": []
     },
     {
         "ID_usuario": 4,
@@ -31,6 +34,14 @@
         "livros_baixados": [
             "1",
             "2"
+        ],
+        "livros_salvos": [
+            "49",
+            "54",
+            "55",
+            "52",
+            "56",
+            "22"
         ]
     }
 ]

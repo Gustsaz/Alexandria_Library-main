@@ -313,7 +313,9 @@ scrollButtons.forEach(({ buttonClass, categoria, seletor }) => {
 document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.querySelector("input[type='text']");
     const resultsContainer = document.querySelector(".search-results");
-
+    const form = document.getElementById("auth-form");
+    const userMessage = document.getElementById("userMessage");
+    
     if (!searchInput || !resultsContainer) {
         console.error("Elemento de busca não encontrado!");
         return;
@@ -333,6 +335,18 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Erro ao carregar livros.json:", error);
         });
 
+    if (window.authMessage) {
+        const box = document.getElementById("userMessage");
+        if (box) {
+            box.textContent = window.authMessage.text;
+            box.classList.add("user-alert", window.authMessage.type);
+            box.style.display = "block";
+
+            // Exibe o formulário se estiver oculto
+            const bubble = document.getElementById("userForm");
+            if (bubble) bubble.classList.remove("hidden");
+        }
+    }
 
     // Atualiza os resultados da busca
     function atualizarResultados(query) {
@@ -589,54 +603,54 @@ function carregarCapasCitacao(livros) {
 let trocaInterval = null;
 
 function iniciarTrocaDeCapas() {
-  const capas = [
-    document.getElementById("citacaoLivro1"),
-    document.getElementById("citacaoLivro2"),
-    document.getElementById("citacaoLivro3")
-  ];
+    const capas = [
+        document.getElementById("citacaoLivro1"),
+        document.getElementById("citacaoLivro2"),
+        document.getElementById("citacaoLivro3")
+    ];
 
-  if (capas.some(el => !el)) return;
+    if (capas.some(el => !el)) return;
 
-  function trocar() {
-    const tempSrc = capas[0].src;
-    const tempAlt = capas[0].alt;
+    function trocar() {
+        const tempSrc = capas[0].src;
+        const tempAlt = capas[0].alt;
 
-    capas[0].src = capas[1].src;
-    capas[0].alt = capas[1].alt;
+        capas[0].src = capas[1].src;
+        capas[0].alt = capas[1].alt;
 
-    capas[1].src = capas[2].src;
-    capas[1].alt = capas[2].alt;
+        capas[1].src = capas[2].src;
+        capas[1].alt = capas[2].alt;
 
-    capas[2].src = tempSrc;
-    capas[2].alt = tempAlt;
+        capas[2].src = tempSrc;
+        capas[2].alt = tempAlt;
 
+        capas.forEach(capa => {
+            capa.classList.remove("fade");
+            void capa.offsetWidth;
+            capa.classList.add("fade");
+        });
+    }
+
+    trocaInterval = setInterval(trocar, 3000);
+
+    // Hover em .livro → pausa loop e ativa brilho
     capas.forEach(capa => {
-      capa.classList.remove("fade");
-      void capa.offsetWidth;
-      capa.classList.add("fade");
+        const livroDiv = capa.closest(".livro");
+
+        livroDiv.addEventListener("mouseenter", () => {
+            clearInterval(trocaInterval);
+        });
+
+        livroDiv.addEventListener("mouseleave", () => {
+            trocaInterval = setInterval(trocar, 3000);
+        });
+
+        livroDiv.addEventListener("mousemove", e => {
+            const rect = livroDiv.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            livroDiv.style.setProperty("--mouse-x", `${x}px`);
+            livroDiv.style.setProperty("--mouse-y", `${y}px`);
+        });
     });
-  }
-
-  trocaInterval = setInterval(trocar, 3000);
-
-  // Hover em .livro → pausa loop e ativa brilho
-  capas.forEach(capa => {
-    const livroDiv = capa.closest(".livro");
-
-    livroDiv.addEventListener("mouseenter", () => {
-      clearInterval(trocaInterval);
-    });
-
-    livroDiv.addEventListener("mouseleave", () => {
-      trocaInterval = setInterval(trocar, 3000);
-    });
-
-    livroDiv.addEventListener("mousemove", e => {
-      const rect = livroDiv.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      livroDiv.style.setProperty("--mouse-x", `${x}px`);
-      livroDiv.style.setProperty("--mouse-y", `${y}px`);
-    });
-  });
 }

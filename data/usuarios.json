@@ -53,5 +53,23 @@
         "livros_lidos": [
             "1"
         ]
+    },
+    {
+        "ID_usuario": 5,
+        "nome_usuario": "joao",
+        "email_usuario": "andreia.almeida38@gmail.com",
+        "senha_usuario": "$2y$12$AGRfRVZX8hPZS.8KTqLqJuxxDh36CpcC3MVYFMpstYLmhZGxoiS6i",
+        "livros_baixados": [],
+        "livros_salvos": [],
+        "livros_lidos": []
+    },
+    {
+        "ID_usuario": 6,
+        "nome_usuario": "knas",
+        "email_usuario": "knas@gmail.com",
+        "senha_usuario": "$2y$12$OARK1jlx0.4PUyHe1qaPzOtpCcmyhuZFow.gpJSVU4Di6e7Trd4by",
+        "livros_baixados": [],
+        "livros_salvos": [],
+        "livros_lidos": []
     }
 ]

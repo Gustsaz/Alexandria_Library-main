@@ -4,12 +4,19 @@ ini_set('display_errors', 1);
 
 session_start();
 
+header('Content-Type: text/html; charset=utf-8');
+
+// Mensagem de erro/sucesso para o JS:
+if (isset($_SESSION['message'])) {
+    echo "<script>";
+    echo "window.authMessage = " . json_encode($_SESSION['message']) . ";";
+    echo "</script>";
+    unset($_SESSION['message']);
+}
 function contarLivrosPorCategoria($livros, $categoria)
 {
     return count(livrosPorCategoria($livros, $categoria));
 }
-
-header('Content-Type: text/html; charset=utf-8');
 
 $arquivo_usuarios = 'data/usuarios.json';
 if (!file_exists(dirname($arquivo_usuarios))) {
@@ -117,6 +124,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     </button>
                     <div class="user-form-bubble hidden" id="userForm">
                         <h2 id="form-title">Cadastro</h2>
+                        <div id="userMessage" class="user-alert"></div>
                         <form action="auth.php" method="POST" id="auth-form">
                             <input type="hidden" name="acao" value="cadastrar" id="acao">
 

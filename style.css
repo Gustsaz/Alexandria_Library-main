@@ -1388,4 +1388,21 @@ body.dark-mode .user-form-bubble input{
   opacity: 1;
 }
 
+.user-alert {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  display: none;
+}
 
+.user-alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.user-alert.success {
+  background-color: #d4edda;
+  color: #155724;
+}

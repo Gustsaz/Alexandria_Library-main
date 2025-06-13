@@ -11,18 +11,22 @@ if (!file_exists($arquivo_usuarios) || filesize($arquivo_usuarios) == 0) {
     file_put_contents($arquivo_usuarios, json_encode([]));
 }
 
-function carregarUsuarios($arquivo) {
+function carregarUsuarios($arquivo)
+{
     $conteudo = file_get_contents($arquivo);
     $usuarios = json_decode($conteudo, true);
     return is_array($usuarios) ? $usuarios : [];
 }
 
-function salvarUsuarios($arquivo, $usuarios) {
+function salvarUsuarios($arquivo, $usuarios)
+{
     file_put_contents($arquivo, json_encode($usuarios, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
 
-function gerarNovoId($usuarios) {
-    if (empty($usuarios)) return 1;
+function gerarNovoId($usuarios)
+{
+    if (empty($usuarios))
+        return 1;
     $ids = array_column($usuarios, 'ID_usuario');
     return max($ids) + 1;
 }
@@ -49,14 +53,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         // Validação de senha forte
-        if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$/', $senha)) {
+        if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/', $senha)) {
             $_SESSION['message'] = [
                 'type' => 'error',
-                'text' => 'A senha deve conter ao menos 8 caracteres, incluindo letra maiúscula, minúscula, número e caractere especial.'
+                'text' => 'A senha deve ter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma minúscula e um caractere especial.'
             ];
-            header('Location: index.php');
-            exit();
+            header("Location: index.php");
+            exit;
         }
+
 
         $usuarios = carregarUsuarios($arquivo_usuarios);
 

@@ -201,8 +201,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     Romance (<?php echo contarLivrosPorCategoria($livros, 'Romance'); ?>)
                 </div>
 
-                <div class="category scroll-reveal-cascade delay-7" data-category="Suspense">
+                <div class="category scroll-reveal-cascade delay-7" data-category="Scifi">
                     <img draggable="false" src="icons/ficcao.png" alt="Suspense">
+                    Sci-fi (<?php echo contarLivrosPorCategoria($livros, 'Scifi'); ?>)
+                </div>
+
+                <div class="category scroll-reveal-cascade delay-7" data-category="Suspense">
+                    <img draggable="false" src="icons/suspense.png" alt="Suspense">
                     Suspense (<?php echo contarLivrosPorCategoria($livros, 'Suspense'); ?>)
                 </div>
 
@@ -410,6 +415,40 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <br>
 
+            <section class="highlight scroll-reveal" data-category="Scifi">
+                <h2>Sci-fi</h2>
+                <div class="book-list">
+                    <?php
+                    $Scifi = livrosPorCategoria($livros, 'Scifi');
+                    foreach ($Scifi as $livro) {
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        $idLivro = $livro['id'];
+
+                        echo '<div class="book" id="livro-' . $idLivro . '" onclick="openRightSidebar(\'' . $link . '\', \'' . $idLivro . '\', ' . ($logado ? 'true' : 'false') . ')">';
+                        echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '">';
+                        echo '<div class="detalhes">';
+                        echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                        echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                        echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
+
+                        // Botão de salvar se logado
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
+
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+            </section>
+
+            <br>
+
             <section class="highlight scroll-reveal" data-category="terror">
                 <h2>Terror</h2>
                 <div class="book-list">
@@ -441,6 +480,8 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     ?>
                 </div>
             </section>
+
+            <br>
 
             <section class="highlight scroll-reveal" data-category="Gutenberg">
                 <h2>Clássicos (Gutenberg)</h2>

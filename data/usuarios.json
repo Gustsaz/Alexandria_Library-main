@@ -88,13 +88,23 @@
         "email_usuario": "lorena@gmail.com",
         "senha_usuario": "$2y$12$IV1b2GKsyQgy4kLTVc2sc.tuF0ECjcbnifbQz4tI6M9FMwRO2J6qS",
         "livros_baixados": [
-            "1"
+            "1",
+            "131",
+            "88",
+            "101",
+            "67"
         ],
         "livros_salvos": [
             "1"
         ],
         "livros_lidos": [
-            "12"
+            "12",
+            "131",
+            "62",
+            "5",
+            "72",
+            "118",
+            "67"
         ]
     }
 ]

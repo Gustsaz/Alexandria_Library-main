@@ -1103,11 +1103,83 @@
         "link": "https://mail.elginbematech.com.br/processobook/Book%20Bematech%20Fev-2020/Bematech/Leitura%20Online/Livros/34-%20O%20Orfanato%20da%20Srta%20Peregrine%20para%20Crian%E7as%20Peculiares.pdf"
     },{
         "id": "128",
-        "nome": "A Sombra do Vento",
-        "autor": "Carlos Ruiz Zafón",
-        "categoria": "Suspense",
-        "editora": "Suma",
-        "capa": "../img/livros/livro127.jpg",
-        "link": "https://mail.elginbematech.com.br/processobook/Book%20Bematech%20Fev-2020/Bematech/Leitura%20Online/Livros/34-%20O%20Orfanato%20da%20Srta%20Peregrine%20para%20Crian%E7as%20Peculiares.pdf"
+        "nome": "Neuromancer",
+        "autor": "William Gibson",
+        "categoria": "Scifi",
+        "editora": "Aleph",
+        "capa": "../img/livros/livro128.jpg",
+        "link": "https://n4.kemono.su/data/28/5a/285abf6d17ff1c0a7f26e55820357fe651911406d6ab67d23909d09a3755e162.pdf?f=Neuromancer+-+William+Gibson.pdf"
+    },
+    {
+        "id": "129",
+        "nome": "Fundação",
+        "autor": "Isaac Asimov",
+        "categoria": "Scifi",
+        "editora": "Aleph",
+        "capa": "..\/img\/livros\/livro129.jpg",
+        "link": "https://kbook.com.br/wp-content/uploads/2016/07/fundacao.pdf"
+    },
+    {
+        "id": "130",
+        "nome": "Admirável Mundo Novo",
+        "autor": "Aldous Huxley",
+        "categoria": "Scifi",
+        "editora": "Biblioteca Azul",
+        "capa": "..\/img\/livros\/livro130.jpg",
+        "link": "https://cesarmangolin.wordpress.com/wp-content/uploads/2010/08/aldous-huxley-admiravel-mundo-novo.pdf"
+    },
+    {
+        "id": "131",
+        "nome": "Fahrenheit 451",
+        "autor": "Ray Bradbury",
+        "categoria": "Scifi",
+        "editora": "Biblioteca Azul",
+        "capa": "..\/img\/livros\/livro131.jpg",
+        "link": "https://letrasufpr.wordpress.com/wp-content/uploads/2016/08/fahrenheit-451-ray-bradbury.pdf"
+    },
+    {
+        "id": "132",
+        "nome": "O Fim da Infância",
+        "autor": "Arthur C. Clarke",
+        "categoria": "Scifi",
+        "editora": "Aleph",
+        "capa": "..\/img\/livros\/livro132.jpg",
+        "link": "https://kbook.com.br/wp-content/files_mf/arthur.c.clarkeo.fim.da.inf%C3%A2ncia.doc.pdf"
+    },
+    {
+        "id": "133",
+        "nome": "Solaris",
+        "autor": "Stanisław Lem",
+        "categoria": "Scifi",
+        "editora": "Aleph",
+        "capa": "..\/img\/livros\/livro133.png",
+        "link": "https://filosevilla2012.wordpress.com/wp-content/uploads/2013/02/lem-stanislaw-solaris.pdf"
+    },
+    {
+        "id": "134",
+        "nome": "Eu, Robô",
+        "autor": "Isaac Asimov",
+        "categoria": "Scifi",
+        "editora": "Aleph",
+        "capa": "..\/img\/livros\/livro134.jpg",
+        "link": "http://kbook.com.br/wp-content/uploads/2016/07/eurobo.pdf"
+    },
+    {
+        "id": "135",
+        "nome": "Snow Crash",
+        "autor": "Neal Stephenson",
+        "categoria": "Scifi",
+        "editora": "Aleph",
+        "capa": "..\/img\/livros\/livro135.jpg",
+        "link": "https://hell.pl/agnus/anglistyka/2211/Neal%20Stephenson%20-%20Snow%20Crash.pdf"
+    },
+    {
+        "id": "136",
+        "nome": "Hyperion",
+        "autor": "Dan Simmons",
+        "categoria": "Scifi",
+        "editora": "Aleph",
+        "capa": "..\/img\/livros\/livro136.jpg",
+        "link": "https://ia804508.us.archive.org/23/items/hyperion_Dan_Simmons_202109/hyperion.pdf"
     }
 ]

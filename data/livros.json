@@ -6,7 +6,7 @@
         "categoria": "Suspense",
         "editora": "Companhia de Letras",
         "capa": "..\/img\/livros\/livro1.png",
-        "pdf":"https://multimidia.gazetadopovo.com.br/media/info/2021/202110/bichos/revolucao-dos-bichos.pdf"
+        "link":"https://multimidia.gazetadopovo.com.br/media/info/2021/202110/bichos/revolucao-dos-bichos.pdf"
     },
     {
         "id": "2",
@@ -15,7 +15,7 @@
         "categoria": "Romance",
         "editora": "Galera",
         "capa": "..\/img\/livros\/livro2.png",
-        "pdf":"https://drive.google.com/file/d/1G9cuohNuF7j7tYWBWqvgBYcrQtVf9qae/preview"
+        "link":"https://drive.google.com/file/d/1G9cuohNuF7j7tYWBWqvgBYcrQtVf9qae/preview"
     },
     {
         "id": "3",
@@ -51,7 +51,7 @@
         "categoria": "Romance",
         "editora": "Principis",
         "capa": "..\/img\/livros\/livro5.jpg",
-        "link": "hhttps://drive.google.com/file/d/196bNXuiwNDrlizqa6jZZ5hG52zMH03a7/preview"
+        "link": "https://drive.google.com/file/d/196bNXuiwNDrlizqa6jZZ5hG52zMH03a7/preview"
     },
     {
         "id": "7",

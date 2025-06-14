@@ -13,6 +13,7 @@ if (isset($_SESSION['message'])) {
     echo "</script>";
     unset($_SESSION['message']);
 }
+
 function contarLivrosPorCategoria($livros, $categoria)
 {
     return count(livrosPorCategoria($livros, $categoria));
@@ -110,7 +111,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <div class="user-info-container">
                 <?php if ($logado): ?>
-                    <span class="welcome-message">Olá, <?php echo htmlspecialchars($nome_usuario); ?>!</span>
+                    <span class="welcome-message">Olá, <?php echo htmlspecialchars($nome_usuario); ?>! &nbsp;</span>
                     <button class="user-btn" id="logoutBtn">
                         <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
                     </button>

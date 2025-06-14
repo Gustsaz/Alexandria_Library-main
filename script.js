@@ -74,9 +74,9 @@ function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px;">
             <div style="display: flex; gap: 10px; align-items: center;">
                 ${showDownload ? `
-                    <a href="${pdfUrl}" target="_blank" onclick="registrarDownload('${livroId}')" style="background: none; border: none; cursor: pointer;">
+                    <button onclick="baixarPdf('${pdfUrl}', '${livroId}')" style="background: none; border: none; cursor: pointer;">
                         <img src="img/DownloadEscuro.png" alt="Download" style="width: 30px; height: 30px;" id="download-button-sidebar">
-                    </a>
+                    </button>
                     <button onclick="marcarComoLido('${livroId}')" style="background: none; border: none; cursor: pointer;">
                         <img src="img/EyeEscuro.png" alt="Marcar como lido" style="width: 30px; height: 30px;" id="lido-button-sidebar">
                     </button>
@@ -96,6 +96,53 @@ function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
     `;
 }
 
+function baixarPdf(pdfUrl, livroId) {
+    registrarDownload(livroId);
+
+    const downloadUrl = corrigirLinkGoogleDrive(pdfUrl);
+
+    if (downloadUrl.includes('drive.google.com')) {
+        // 👉 Se for link do Google Drive: Apenas abrir em nova aba
+        window.open(downloadUrl, '_blank');
+    } else {
+        // 👉 Se for PDF local: Forçar download via PHP proxy
+        const link = document.createElement('a');
+        link.href = `download.php?url=${encodeURIComponent(downloadUrl)}`;
+        link.download = `livro_${livroId}.pdf`;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+}
+
+function registrarDownload(livroId) {
+    if (!isUserLoggedIn) {
+        alert("Você precisa estar logado para baixar este livro.");
+        return;
+    }
+
+    fetch('registrar_download.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ livroId })
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (!data.sucesso) {
+                alert("Erro: " + (data.erro || "Desconhecido"));
+            }
+        })
+        .catch(err => console.error('Erro:', err));
+}
+
+function corrigirLinkGoogleDrive(url) {
+    const match = url.match(/https:\/\/drive\.google\.com\/file\/d\/([^/]+)\//);
+    if (match) {
+        const fileId = match[1];
+        return `https://drive.google.com/uc?export=download&id=${fileId}`;
+    }
+    return url;
+}
 
 function marcarComoLido(livroId) {
     if (!isUserLoggedIn) {
@@ -118,30 +165,6 @@ function marcarComoLido(livroId) {
         })
         .catch(err => console.error("Erro ao marcar como lido:", err));
 }
-
-function registrarDownload(livroId) {
-    if (!isUserLoggedIn) {
-        alert("Você precisa estar logado para baixar este livro.");
-        return;
-    }
-
-    fetch('registrar_download.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ livroId })
-    })
-        .then(response => response.json())
-        .then(data => {
-            if (data.sucesso) {
-                location.reload();
-            } else {
-                alert("Erro: " + (data.erro || "Desconhecido"));
-            }
-        })
-        .catch(err => console.error('Erro:', err));
-}
-
-
 
 function closeRightSidebar() {
     const sidebar = document.getElementById("rightSidebar");

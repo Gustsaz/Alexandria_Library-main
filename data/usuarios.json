@@ -68,8 +68,17 @@
         "nome_usuario": "knas",
         "email_usuario": "knas@gmail.com",
         "senha_usuario": "$2y$12$OARK1jlx0.4PUyHe1qaPzOtpCcmyhuZFow.gpJSVU4Di6e7Trd4by",
-        "livros_baixados": [],
+        "livros_baixados": [
+            "7",
+            "8",
+            "4",
+            "1",
+            "6",
+            "68",
+            "10"
+        ],
         "livros_salvos": [],
-        "livros_lidos": []
+        "livros_lidos": [],
+        "ultima_pagina_livro_8": 4
     }
 ]

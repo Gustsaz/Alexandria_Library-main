@@ -181,8 +181,9 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
             <nav class="categories">
                 <div class="category active scroll-reveal-cascade delay-1" data-category="Todos">
                     <img draggable="false" src="icons/todos.png" alt="Todos">
-                    Todos (<?php echo contarLivrosPorCategoria($livros, 'Todos'); ?>)
+                    Todos (<?php echo contarLivrosPorCategoria($livros, 'Todos') + 20; ?>)
                 </div>
+
 
                 <div class="category scroll-reveal-cascade delay-4" data-category="Aventura">
                     <img draggable="false" src="icons/aventura.png" alt="Aventura">

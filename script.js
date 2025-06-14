@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultsContainer = document.querySelector(".search-results");
     const form = document.getElementById("auth-form");
     const userMessage = document.getElementById("userMessage");
-    
+
     if (!searchInput || !resultsContainer) {
         console.error("Elemento de busca não encontrado!");
         return;
@@ -633,7 +633,7 @@ function iniciarTrocaDeCapas() {
 
     trocaInterval = setInterval(trocar, 3000);
 
-    // Hover em .livro → pausa loop e ativa brilho
+    // Pausar e retomar ao hover sobre .livro
     capas.forEach(capa => {
         const livroDiv = capa.closest(".livro");
 

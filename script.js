@@ -94,6 +94,43 @@ function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
             <p style="padding: 1rem;">Este livro não possui PDF disponível.</p>
         `}
     `;
+
+    // hover fechar
+    const fecharIcon = document.getElementById("fechar-icon");
+    if (fecharIcon) {
+        const originalSrc = fecharIcon.src;
+        fecharIcon.addEventListener("mouseenter", () => {
+            fecharIcon.src = "img/FecharHover.png";
+        });
+        fecharIcon.addEventListener("mouseleave", () => {
+            fecharIcon.src = originalSrc;
+        });
+    }
+
+    // hover download
+    const downloadIcon = document.getElementById("download-button-sidebar");
+    if (downloadIcon) {
+        const originalSrc = downloadIcon.src;
+        downloadIcon.addEventListener("mouseenter", () => {
+            downloadIcon.src = "img/DownloadHover.png";
+        });
+        downloadIcon.addEventListener("mouseleave", () => {
+            downloadIcon.src = originalSrc;
+        });
+    }
+
+    // hover lido
+    const lidoIcon = document.getElementById("lido-button-sidebar");
+    if (lidoIcon) {
+        const originalSrc = lidoIcon.src;
+        lidoIcon.addEventListener("mouseenter", () => {
+            lidoIcon.src = "img/EyeHover.png";
+        });
+        lidoIcon.addEventListener("mouseleave", () => {
+            lidoIcon.src = originalSrc;
+        });
+    }
+    
 }
 
 function baixarPdf(pdfUrl, livroId) {

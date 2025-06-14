@@ -213,7 +213,7 @@
         "categoria": "Suspense",
         "editora": "Intrínseca",
         "capa": "..\/img\/livros\/livro24.jpg",
-        "link": "https://drive.google.com/file/d/1zFOshZg3fFic2yJqAZv4C85vkE5xusBd/preview"
+        "link": "https://www.intrinseca.com.br/upload/livros/1%C2%BACAP_OHomemDeGiz.pdf"
     },
     {
         "id": "25",
@@ -868,9 +868,246 @@
         "editora": "Macmillan Publishers",
         "capa": "..\/img\/livros\/livro100.jpg",
         "link": "https://reciclaleitores.com.br/wp-content/uploads/2020/02/E-o-Vento-Levou-Margaret-Mitchell.pdf"
+    },{
+        "id": "101",
+        "nome": "Percy Jackson e o Ladrão de Raios",
+        "autor": "Rick Riordan",
+        "categoria": "Aventura",
+        "editora": "Intrínseca",
+        "capa": "../img/livros/livro101.jpg",
+        "link": "https://clubdelivros.wordpress.com/wp-content/uploads/2013/09/percy-jackson-e-os-olimpianos_-o-ladrao-de-raios-vol-1-rick-riordan.pdf"
+    },
+    {
+        "id": "102",
+        "nome": "A Bússola de Ouro",
+        "autor": "Philip Pullman",
+        "categoria": "Fantasia",
+        "editora": "Objetiva",
+        "capa": "../img/livros/livro102.jpg",
+        "link": "https://www.companhiadasletras.com.br/trechos/28000483.pdf"
+    },
+    {
+        "id": "103",
+        "nome": "Romeu e Julieta",
+        "autor": "William Shakespeare",
+        "categoria": "Romance",
+        "editora": "Principis",
+        "capa": "../img/livros/livro103.jpg",
+        "link": "https://www.ebooksbrasil.org/adobeebook/romeuejulieta.pdf"
+    },
+    {
+        "id": "104",
+        "nome": "O Iluminado",
+        "autor": "Stephen King",
+        "categoria": "terror",
+        "editora": "Suma",
+        "capa": "../img/livros/livro104.jpg",
+        "link": "https://www.eecarvalhosenne.com.br/wp-content/uploads/2020/10/O-iluminado-Stephen-King.pdf"
+    },
+    {
+        "id": "105",
+        "nome": "Sherlock Holmes: O Cão dos Baskervilles",
+        "autor": "Arthur Conan Doyle",
+        "categoria": "Suspense",
+        "editora": "Zahar",
+        "capa": "../img/livros/livro105.jpg",
+        "link": "https://www.ufmg.br/centrocultural/wp-content/uploads/2020/05/7-O-C%C3%A3o-dos-Baskerville-Arthur-Conan-Doyle.pdf"
+    },
+    {
+        "id": "106",
+        "nome": "Cem Anos de Solidão",
+        "autor": "Gabriel García Márquez",
+        "categoria": "Romance",
+        "editora": "Companhia das Letras",
+        "capa": "../img/livros/livro106.jpg",
+        "link": "https://iedamagri.wordpress.com/wp-content/uploads/2014/07/gabriel_garcia_marquez_-_100_anos_de_solidao1.pdf"
+    },
+    {
+        "id": "107",
+        "nome": "It: A Coisa",
+        "autor": "Stephen King",
+        "categoria": "terror",
+        "editora": "Suma",
+        "capa": "../img/livros/livro107.jpg",
+        "link": "https://kbook.com.br/wp-content/uploads/2016/08/It_-A-coisa-Stephen-King.pdf"
+    },
+    {
+        "id": "108",
+        "nome": "O Código Da Vinci",
+        "autor": "Dan Brown",
+        "categoria": "Suspense",
+        "editora": "Sextante",
+        "capa": "../img/livros/livro108.jpg",
+        "link": "https://www.editoraarqueiro.com.br/media/upload/livros/O_Codigo_Da_Vinci_POP_CHIC_amostra.pdf"
+    },
+    {
+        "id": "109",
+        "nome": "Entrevista com o Vampiro",
+        "autor": "Anne Rice",
+        "categoria": "terror",
+        "editora": "L&PM",
+        "capa": "../img/livros/livro127.jpg",
+        "link": "https://onceuponabook.home.blog/wp-content/uploads/2019/01/anne-rice-cr%C3%B4nicas-vampirescas-1-entrevista-com-o-vampiro-pdf.pdf"
+    },
+    {
+        "id": "110",
+        "nome": "Game of Thrones: As Crônicas de Gelo e Fogo - Livro 1",
+        "autor": "George R. R. Martin",
+        "categoria": "Fantasia",
+        "editora": "Leya",
+        "capa": "../img/livros/livro110.jpg",
+        "link": "https://bibliotecaelfica.org/download/as-cronicas-de-gelo-e-fogo-livro-1-a-guerra-dos-tronos9ky3sng9v2icmf4ikulgz5qy/"
+    },
+    {
+        "id": "111",
+        "nome": "Maze Runner: Correr ou Morrer",
+        "autor": "James Dashner",
+        "categoria": "Aventura",
+        "editora": "V&R",
+        "capa": "../img/livros/livro126.jpg",
+        "link": "https://static.tumblr.com/yijpogv/Klboh6avq/correr_ou_morrer_____maze_runner_____vol.1_____james_dashner.pdf"
+    },
+    {
+        "id": "112",
+        "nome": "Fortaleza Digital",
+        "autor": "Dan Brown",
+        "categoria": "Suspense",
+        "editora": "Rocco",
+        "capa": "../img/livros/livro125.jpg",
+        "link": "https://cabana-on.com/Ler/wp-content/uploads/2017/08/Fortaleza-Digital-Dan-Brown.pdf"
+    },
+    {
+        "id": "113",
+        "nome": "O Resgate do Tigre",
+        "autor": "Colleen Houck",
+        "categoria": "Aventura",
+        "editora": "Galera Record",
+        "capa": "../img/livros/livro121.jpg",
+        "link": "https://cdn.bookey.app/files/pdf/book/pt/o-resgate-do-tigre.pdf"
+    },
+    {
+        "id": "114",
+        "nome": "A Garota no Trem",
+        "autor": "Paula Hawkins",
+        "categoria": "Suspense",
+        "editora": "Planeta",
+        "capa": "../img/livros/livro114.jpg",
+        "link": "https://static.tumblr.com/yijpogv/3pYogwl98/a_garota_no_trem_-_paula_hawkins.pdf"
+    },
+    {
+        "id": "115",
+        "nome": "Jogador Nº 1",
+        "autor": "Ernest Cline",
+        "categoria": "Fantasia",
+        "editora": "Intrínseca",
+        "capa": "../img/livros/livro115.jpg",
+        "link": "https://napontadospes693885424.wordpress.com/wp-content/uploads/2019/08/jogador-numero-1-ernest-cline.pdf"
+    },
+    {
+        "id": "116",
+        "nome": "A Hospedeira",
+        "autor": "Stephenie Meyer",
+        "categoria": "Fantasia",
+        "editora": "Intrínseca",
+        "capa": "../img/livros/livro120.jpg",
+        "link": "https://apenasumahistoria14.wordpress.com/wp-content/uploads/2014/11/a-hospedeira-stephenie-meyer.pdf"
+    },
+    {
+        "id": "117",
+        "nome": "O Mundo de Sofia",
+        "autor": "Jostein Gaarder",
+        "categoria": "Romance",
+        "editora": "Companhia das Letras",
+        "capa": "../img/livros/livro119.jpg",
+        "link": "https://www.colegioceijf.com.br/wp-content/uploads/2021/06/O-MUNDO-DE-SOFIA-JOSTEIN-GAARDEN-1-3o-B.pdf"
+    },
+    {
+        "id": "118",
+        "nome": "Jurassic Park",
+        "autor": "Michael Crichton",
+        "categoria": "Aventura",
+        "editora": "Aleph",
+        "capa": "../img/livros/livro118.jpg",
+        "link": "https://cabana-on.com/Ler/wp-content/uploads/2017/08/Michael-Crichton-O-Parque-dos-Dinossauros.pdf"
+    },{
+        "id": "119",
+        "nome": "Game of Thrones: Fogo e Sangue",
+        "autor": "George R. R. Martin",
+        "categoria": "Fantasia",
+        "editora": "Leya",
+        "capa": "../img/livros/livro119.jpg",
+        "link": "https://cdl-static.s3-sa-east-1.amazonaws.com/trechos/9788556510761.pdf"
+    },{
+        "id": "120",
+        "nome": "Game of Thrones: As Crônicas de Gelo e Fogo - Livro 2",
+        "autor": "George R. R. Martin",
+        "categoria": "Fantasia",
+        "editora": "Leya",
+        "capa": "../img/livros/livro120.jpg",
+        "link": "https://onceuponabook.home.blog/wp-content/uploads/2019/01/a-guerra-dos-tronos-2-a-furia-dos-reis-george-r-r-martin.pdf"
+    },{
+        "id": "121",
+        "nome": "Game of Thrones: A Tormenta de Espadas",
+        "autor": "George R. R. Martin",
+        "categoria": "Fantasia",
+        "editora": "Leya",
+        "capa": "../img/livros/livro121.jpg",
+        "link": "https://onceuponabook.home.blog/wp-content/uploads/2019/01/03-as-crc3b4nicas-de-gelo-e-fogo-livro-3-a-tormenta-de-espadas-george-r-r-martin.pdf"
+    },{
+        "id": "122",
+        "nome": "Game of Thrones: O Festim dos Corvos",
+        "autor": "George R. R. Martin",
+        "categoria": "Fantasia",
+        "editora": "Leya",
+        "capa": "../img/livros/livro122.jpg",
+        "link": "https://onceuponabook.home.blog/wp-content/uploads/2019/01/04-as-cronicas-de-gelo-e-fogo-o-festim-dos-corvos.pdf"
+    },{
+        "id": "123",
+        "nome": "Game of Thrones: A Dança dos Dragões",
+        "autor": "George R. R. Martin",
+        "categoria": "Fantasia",
+        "editora": "Leya",
+        "capa": "../img/livros/livro123.jpg",
+        "link": "https://mail.elginbematech.com.br/processobook/Book%20Bematech%20Fev-2020/Bematech/Leitura%20Online/Livros/96-%20A%20Danca%20dos%20Dragoes.pdf"
+    },{
+        "id": "124",
+        "nome": "As Crônicas de Nárnia",
+        "autor": "George R. R. Martin",
+        "categoria": "Fantasia",
+        "editora": "Leya",
+        "capa": "../img/livros/livro124.jpg",
+        "link": "https://itaudeminas.mg.gov.br/arquivos/ere/livros/o-Leao-a-feiticeira-e-o-guarda-roupa.pdf"
+    },{
+        "id": "125",
+        "nome": "Coraline",
+        "autor": "Neil Gaiman",
+        "categoria": "terror",
+        "editora": "Rocco",
+        "capa": "../img/livros/livro125.jpg",
+        "link": "http://ieas-szeged.hu/downtherabbithole/wp-content/uploads/2020/02/Neil-Gaiman_Coraline.pdf"
+    },{
+        "id": "126",
+        "nome": "O Silêncio dos Inocentes",
+        "autor": "Thomas Harris",
+        "categoria": "terror",
+        "editora": "Record",
+        "capa": "../img/livros/livro126.jpg",
+        "link": "https://statics-americanas.b2w.io/produtos/134561057/documentos/134561057_1.pdf"
+    },{
+        "id": "127",
+        "nome": "O Orfanato da Srta. Peregrine para Crianças Peculiares",
+        "autor": "Ransom Riggs",
+        "categoria": "Fantasia",
+        "editora": "Intrínseca",
+        "capa": "../img/livros/livro127.jpg",
+        "link": "https://mail.elginbematech.com.br/processobook/Book%20Bematech%20Fev-2020/Bematech/Leitura%20Online/Livros/34-%20O%20Orfanato%20da%20Srta%20Peregrine%20para%20Crian%E7as%20Peculiares.pdf"
+    },{
+        "id": "128",
+        "nome": "A Sombra do Vento",
+        "autor": "Carlos Ruiz Zafón",
+        "categoria": "Suspense",
+        "editora": "Suma",
+        "capa": "../img/livros/livro127.jpg",
+        "link": "https://mail.elginbematech.com.br/processobook/Book%20Bematech%20Fev-2020/Bematech/Leitura%20Online/Livros/34-%20O%20Orfanato%20da%20Srta%20Peregrine%20para%20Crian%E7as%20Peculiares.pdf"
     }
-
-
-
-
 ]

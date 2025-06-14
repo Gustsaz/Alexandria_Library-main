@@ -22,7 +22,8 @@
         "senha_usuario": "$2y$12$EYIfJi4PAIwIkH1vuOP\/gOSCEv0Z3xI147Hcy6NGxo8O1KoJyTshO",
         "livros_baixados": [
             "1",
-            "2"
+            "2",
+            "52"
         ],
         "livros_salvos": [
             "49"
@@ -80,5 +81,20 @@
         "livros_salvos": [],
         "livros_lidos": [],
         "ultima_pagina_livro_8": 4
+    },
+    {
+        "ID_usuario": 7,
+        "nome_usuario": "lorena",
+        "email_usuario": "lorena@gmail.com",
+        "senha_usuario": "$2y$12$IV1b2GKsyQgy4kLTVc2sc.tuF0ECjcbnifbQz4tI6M9FMwRO2J6qS",
+        "livros_baixados": [
+            "1"
+        ],
+        "livros_salvos": [
+            "1"
+        ],
+        "livros_lidos": [
+            "12"
+        ]
     }
 ]

@@ -1009,7 +1009,7 @@
         "autor": "Stephenie Meyer",
         "categoria": "Fantasia",
         "editora": "Intrínseca",
-        "capa": "../img/livros/livro120.jpg",
+        "capa": "../img/livros/livro116.jpg",
         "link": "https://apenasumahistoria14.wordpress.com/wp-content/uploads/2014/11/a-hospedeira-stephenie-meyer.pdf"
     },
     {
@@ -1018,7 +1018,7 @@
         "autor": "Jostein Gaarder",
         "categoria": "Romance",
         "editora": "Companhia das Letras",
-        "capa": "../img/livros/livro119.jpg",
+        "capa": "../img/livros/livro117.jpg",
         "link": "https://www.colegioceijf.com.br/wp-content/uploads/2021/06/O-MUNDO-DE-SOFIA-JOSTEIN-GAARDEN-1-3o-B.pdf"
     },
     {
@@ -1181,5 +1181,39 @@
         "editora": "Aleph",
         "capa": "..\/img\/livros\/livro136.jpg",
         "link": "https://ia804508.us.archive.org/23/items/hyperion_Dan_Simmons_202109/hyperion.pdf"
+    },{
+        "id": "137",
+        "nome": "Clube da Luta",
+        "autor": "Chuck Palahniuk",
+        "categoria": "Romance",
+        "editora": "W. W. Norton",
+        "capa": "..\/img\/livros\/livro137.jpg",
+        "link": "https://drive.google.com/file/d/1fYr7JghhairLN9Tn7hDxnZm7c-h_Q9Rc/preview"
+    },
+    {
+        "id": "138",
+        "nome": "O Sol é Para Todos",
+        "autor": "Harper Lee",
+        "categoria": "Romance",
+        "editora": "J.B. Lippincott & Co.",
+        "capa": "..\/img\/livros\/livro138.jpg",
+        "link": "https://drive.google.com/file/d/1r6FD-detPvo8vvlDxfxVUx3NyBuqIqGg/preview"
+    },
+    {
+        "id": "139",
+        "nome": "Orgulho e Preconceito",
+        "autor": "Jane Austen",
+        "categoria": "Romance",
+        "editora": "T. Egerton, Whitehall",
+        "capa": "..\/img\/livros\/livro139.jpg",
+        "link": "https://reciclaleitores.com.br/wp-content/uploads/2020/10/ORGULHO-E-PRECONCEITO-Austen-Jane.pdf"
+    },{
+        "id": "140",
+        "nome": "O Retrato de Dorian Gray",
+        "autor": "Oscar Wilde",
+        "categoria": "Romance",
+        "editora": "Lippincott's Monthly Magazine",
+        "capa": "..\/img\/livros\/livro140.jpg",
+        "link": "https://www.jaimemoniz.com/images/docs/recursos/Oscar-Wilde-livro.pdf"
     }
 ]

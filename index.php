@@ -181,43 +181,43 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
             <nav class="categories">
                 <div class="category active scroll-reveal-cascade delay-1" data-category="Todos">
-                    <img draggable="false" src="icons/todos.png" alt="Todos">
+                    <img draggable="false" src="Icons/todos.png" alt="Todos">
                     Todos (<?php echo contarLivrosPorCategoria($livros, 'Todos') + 20; ?>)
                 </div>
 
 
                 <div class="category scroll-reveal-cascade delay-4" data-category="Aventura">
-                    <img draggable="false" src="icons/aventura.png" alt="Aventura">
+                    <img draggable="false" src="Icons/aventura.png" alt="Aventura">
                     Aventura (<?php echo contarLivrosPorCategoria($livros, 'Aventura'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-5" data-category="Fantasia">
-                    <img draggable="false" src="icons/fantasia.png" alt="Fantasia">
+                    <img draggable="false" src="Icons/fantasia.png" alt="Fantasia">
                     Fantasia (<?php echo contarLivrosPorCategoria($livros, 'Fantasia'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-6" data-category="Romance">
-                    <img draggable="false" src="icons/romance.png" alt="Romance">
+                    <img draggable="false" src="Icons/romance.png" alt="Romance">
                     Romance (<?php echo contarLivrosPorCategoria($livros, 'Romance'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Scifi">
-                    <img draggable="false" src="icons/ficcao.png" alt="Suspense">
+                    <img draggable="false" src="Icons/ficcao.png" alt="Suspense">
                     Sci-fi (<?php echo contarLivrosPorCategoria($livros, 'Scifi'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Suspense">
-                    <img draggable="false" src="icons/suspense.png" alt="Suspense">
+                    <img draggable="false" src="Icons/suspense.png" alt="Suspense">
                     Suspense (<?php echo contarLivrosPorCategoria($livros, 'Suspense'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="terror">
-                    <img draggable="false" src="icons/horror.png" alt="Terror">
+                    <img draggable="false" src="Icons/horror.png" alt="Terror">
                     Terror (<?php echo contarLivrosPorCategoria($livros, 'terror'); ?>)
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Gutenberg">
-                    <img draggable="false" src="icons/gutenberg.png" alt="Gutenberg">
+                    <img draggable="false" src="Icons/gutenberg.png" alt="Gutenberg">
                     Clássicos (<?php echo 20 ?>)
                 </div>
             </nav>

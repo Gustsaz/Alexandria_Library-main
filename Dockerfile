@@ -8,7 +8,7 @@ COPY . /var/www/html/
 RUN chmod -R 755 /var/www/html/ && chown -R www-data:www-data /var/www/html/
 
 # Debug: Listar os arquivos dentro da pasta Icons
-RUN echo "Conteúdo da pasta Icons:" && ls -la /var/www/html/Icons/
+RUN echo "Conteúdo da pasta Icons:" && ls -la /var/www/html/icons/
 
 # Habilitar mod_rewrite
 RUN a2enmod rewrite

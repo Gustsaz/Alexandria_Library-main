@@ -96,7 +96,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
             <button class="visua-button"><img draggable="false" id="visua-icon" src="img/EyeEscuro.png" class="visua-icon"
                     alt="já lidos"></button>
         <?php endif; ?>
-        <button class="info-button"><img draggable="false" id="info-icon" src="img/infoEscuro.png" class="info-icon"
+        <button class="info-button"><img draggable="false" id="info-icon" src="img/InfoEscuro.png" class="info-icon"
                 alt="informação"></button>
     </div>
 

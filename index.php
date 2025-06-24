@@ -76,7 +76,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alexandria Biblioteca</title>
     <link rel="icon" href="/img/icons/LogoMiniaturaClaro.png" type="image/png">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

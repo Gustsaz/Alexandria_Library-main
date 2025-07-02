@@ -1215,5 +1215,53 @@
         "editora": "Lippincott's Monthly Magazine",
         "capa": "..\/img\/livros\/livro140.jpg",
         "link": "https://www.jaimemoniz.com/images/docs/recursos/Oscar-Wilde-livro.pdf"
+    },{
+        "id": "141",
+        "nome": "Extraordinário",
+        "autor": "R. J. Palacio",
+        "categoria": "Romance",
+        "editora": "ASA",
+        "capa": "..\/img\/livros\/livro141.png",
+        "link": "https://ima-rs.com.br/wp-content/uploads/2018/11/8o.-ano-Extraordin%C3%A1rio-R.-J.-Palacio.pdf"
+    },{
+        "id": "142",
+        "nome": "A Arte Da Guerra",
+        "autor": "Sun Tzu",
+        "categoria": "Romance",
+        "editora": "Não Restringido",
+        "capa": "..\/img\/livros\/livro142.png",
+        "link": "https://www.sogipa.com.br/web/imgs/arquivos/a-arte-da-guerra5e8e0e84.pdf"
+    },{
+        "id": "143",
+        "nome": "A Metamorfose",
+        "autor": "Franz Kafka",
+        "categoria": "Romance",
+        "editora": "Kurt Wolff Verlag, Leipzig",
+        "capa": "..\/img\/livros\/livro143.png",
+        "link": "https://colegiocngparanagua.com.br/wp-content/uploads/2021/02/A-METAMORFOSE.pdf"
+    },{
+        "id": "144",
+        "nome": "A Biblioteca da Meia-Noite",
+        "autor": "Matt Haig",
+        "categoria": "Romance",
+        "editora": "Canongate Books",
+        "capa": "..\/img\/livros\/livro144.jpg",
+        "link": "https://static.fnac-static.com/multimedia/PT/pdf/9789895645183.pdf"
+    },{
+        "id": "145",
+        "nome": "Melhor do que nos filmes",
+        "autor": "Lynn Painter",
+        "categoria": "Romance",
+        "editora": "Intrínseca",
+        "capa": "..\/img\/livros\/livro145.jpg",
+        "link": "https://drive.google.com/file/d/1DyunBWpwefIYHfJsrYODKNH52zUB0H2X/preview"
+    },{
+        "id": "146",
+        "nome": "Eu e Esse meu Coração",
+        "autor": "C. C. Hunter",
+        "categoria": "Romance",
+        "editora": "Jangada",
+        "capa": "..\/img\/livros\/livro146.jpg",
+        "link": "https://osaberdigital.com.br/wp-content/uploads/2024/11/C.-C.-Hunter-Eu-e-Esse-Meu-Coracao.pdf"
     }
 ]

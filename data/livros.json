@@ -1263,5 +1263,45 @@
         "editora": "Jangada",
         "capa": "..\/img\/livros\/livro146.jpg",
         "link": "https://osaberdigital.com.br/wp-content/uploads/2024/11/C.-C.-Hunter-Eu-e-Esse-Meu-Coracao.pdf"
+    },{
+        "id": "147",
+        "nome": "Batman: A Piada Mortal",
+        "autor": "Alan Moore & Brian Bolland",
+        "categoria": "Quadrinho",
+        "editora": "DC Comics",
+        "capa": "..\/img\/livros\/livro147.jpg",
+        "link": "https://pdfteca.com/wp-content/uploads/2024/12/Batman-A-Piada-Mortal.pdf"
+    },{
+        "id": "148",
+        "nome": "Batman: Ano Um",
+        "autor": "Frank Miller",
+        "categoria": "Quadrinho",
+        "editora": "DC Comics",
+        "capa": "..\/img\/livros\/livro148.jpg",
+        "link": "https://drive.google.com/file/d/1edBG_C7BqSoxUFu_LSPEsaWxpcpebT98/preview"
+    },{
+        "id": "149",
+        "nome": "Batman: Asilo Arkham",
+        "autor": "Grant Morrison",
+        "categoria": "Quadrinho",
+        "editora": "DC Comics",
+        "capa": "..\/img\/livros\/livro149.jpg",
+        "link": "https://drive.google.com/file/d/13ccVthCiTfuKjhAvye8Daj_4zMsaRuwx/preview"
+    },{
+        "id": "150",
+        "nome": "Coringa",
+        "autor": "Brian Azzarello",
+        "categoria": "Quadrinho",
+        "editora": "DC Comics",
+        "capa": "..\/img\/livros\/livro150.jpg",
+        "link": "https://cdn.bookey.app/files/pdf/book/pt/coringa.pdf"
+    },{
+        "id": "151",
+        "nome": "Batman: A Corte das Corujas",
+        "autor": "Scott Snyder",
+        "categoria": "Quadrinho",
+        "editora": "DC Comics",
+        "capa": "..\/img\/livros\/livro151.jpg",
+        "link": "https://drive.google.com/file/d/1APKugwsrDt59jovaL3IV1aYt7CmyQ90f/preview"
     }
 ]

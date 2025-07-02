@@ -216,15 +216,16 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     Terror (<?php echo contarLivrosPorCategoria($livros, 'terror'); ?>)
                 </div>
 
+                <div class="category scroll-reveal-cascade delay-7" data-category="Quadrinho">
+                    <img draggable="false" src="/img/icons/horror.png" alt="Quadrinho">
+                    Quadrinhos (<?php echo contarLivrosPorCategoria($livros, 'Quadrinho'); ?>)
+                </div>
+                
                 <div class="category scroll-reveal-cascade delay-7" data-category="Gutenberg">
                     <img draggable="false" src="/img/icons/gutenberg.png" alt="Gutenberg">
                     Clássicos (<?php echo 20 ?>)
                 </div>
 
-                <div class="category scroll-reveal-cascade delay-7" data-category="Quadrinho">
-                    <img draggable="false" src="/img/icons/horror.png" alt="Quadrinho">
-                    Quadrinhos (<?php echo contarLivrosPorCategoria($livros, 'Quadrinho'); ?>)
-                </div>
             </nav>
         <?php endif; ?>
 

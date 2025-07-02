@@ -220,6 +220,11 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <img draggable="false" src="/img/icons/gutenberg.png" alt="Gutenberg">
                     Clássicos (<?php echo 20 ?>)
                 </div>
+
+                <div class="category scroll-reveal-cascade delay-7" data-category="Quadrinho">
+                    <img draggable="false" src="/img/icons/horror.png" alt="Quadrinho">
+                    Quadrinhos (<?php echo contarLivrosPorCategoria($livros, 'Quadrinho'); ?>)
+                </div>
             </nav>
         <?php endif; ?>
 
@@ -455,6 +460,40 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <?php
                     $terror = livrosPorCategoria($livros, 'terror');
                     foreach ($terror as $livro) {
+                        $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                        $idLivro = $livro['id'];
+
+                        echo '<div class="book" id="livro-' . $idLivro . '" onclick="openRightSidebar(\'' . $link . '\', \'' . $idLivro . '\', ' . ($logado ? 'true' : 'false') . ')">';
+                        echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '">';
+                        echo '<div class="detalhes">';
+                        echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                        echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                        echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                        echo '</div>';
+
+                        // Botão de salvar se logado
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
+
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+            </section>
+
+            <br>
+
+            <section class="highlight scroll-reveal" data-category="Quadrinho">
+                <h2>Quadrinhos</h2>
+                <div class="book-list">
+                    <?php
+                    $Quadrinho = livrosPorCategoria($livros, 'Quadrinho');
+                    foreach ($Quadrinho as $livro) {
                         $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
                         $idLivro = $livro['id'];
 

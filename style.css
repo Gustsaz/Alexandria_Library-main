@@ -356,6 +356,11 @@ header input {
   width: 100%;
   display: block;
   border-radius: 8px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .livro-1 {
@@ -374,6 +379,30 @@ header input {
   width: 120px;
   z-index: 1;
   margin-left: -40px;
+}
+
+.livro-1 img{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.livro-2 img{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.livro-3 img{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 .livro-titulo {

@@ -130,7 +130,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                             <input type="hidden" name="acao" value="cadastrar" id="acao">
 
                             <div id="nome-field">
-                                <input type="text" name="nome" placeholder="Nome completo" required>
+                                <input type="text" name="nome" placeholder="Nome de usuário" required>
                             </div>
 
                             <input type="email" name="email" placeholder="E-mail" required>

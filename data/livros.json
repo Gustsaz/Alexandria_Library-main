@@ -1303,5 +1303,266 @@
         "editora": "DC Comics",
         "capa": "..\/img\/livros\/livro151.jpg",
         "link": "https://drive.google.com/file/d/1APKugwsrDt59jovaL3IV1aYt7CmyQ90f/preview"
-    }
+    },{
+    "id": "152",
+    "nome": "Homem-Aranha: De Volta ao Lar",
+    "autor": "J. Michael Straczynski",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro152.jpg",
+    "link": "https://drive.google.com/file/d/1snki8bWLsoDyLyb-UMxKOTDidnqzTieB/preview"
+},
+{
+    "id": "153",
+    "nome": "Vingadores: A Queda",
+    "autor": "Brian Michael Bendis",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro153.jpg",
+    "link": ""
+},
+{
+    "id": "154",
+    "nome": "X-Men: A Saga da Fênix Negra",
+    "autor": "Chris Claremont",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro154.jpg",
+    "link": ""
+},
+{
+    "id": "155",
+    "nome": "Batman: Silêncio",
+    "autor": "Jeph Loeb",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro155.jpg",
+    "link": ""
+},
+{
+    "id": "156",
+    "nome": "Superman: Entre a Foice e o Martelo",
+    "autor": "Mark Millar",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro156.jpg",
+    "link": ""
+},
+{
+    "id": "157",
+    "nome": "Watchmen",
+    "autor": "Alan Moore",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro157.jpg",
+    "link": ""
+},
+{
+    "id": "158",
+    "nome": "Homem de Ferro: Extremis",
+    "autor": "Warren Ellis",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro158.jpg",
+    "link": ""
+},
+{
+    "id": "159",
+    "nome": "Lanterna Verde: A Guerra dos Anéis",
+    "autor": "Geoff Johns",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro159.jpg",
+    "link": ""
+},
+{
+    "id": "160",
+    "nome": "Demolidor: O Homem Sem Medo",
+    "autor": "Frank Miller",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro160.jpg",
+    "link": ""
+},
+{
+    "id": "161",
+    "nome": "Batman: O Cavaleiro das Trevas",
+    "autor": "Frank Miller",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro161.jpg",
+    "link": ""
+},
+{
+    "id": "162",
+    "nome": "Capitão América: O Soldado Invernal",
+    "autor": "Ed Brubaker",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro162.jpg",
+    "link": ""
+},
+{
+    "id": "163",
+    "nome": "Mulher-Maravilha: Hiketeia",
+    "autor": "Greg Rucka",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro163.jpg",
+    "link": ""
+},
+{
+    "id": "164",
+    "nome": "X-Men: Dias de um Futuro Esquecido",
+    "autor": "Chris Claremont",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro164.jpg",
+    "link": ""
+},
+{
+    "id": "165",
+    "nome": "Superman: As Quatro Estações",
+    "autor": "Jeph Loeb",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro165.jpg",
+    "link": ""
+},
+{
+    "id": "166",
+    "nome": "Homem-Aranha: A Última Caçada de Kraven",
+    "autor": "J.M. DeMatteis",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro166.jpg",
+    "link": ""
+},
+{
+    "id": "167",
+    "nome": "Liga da Justiça: Origem",
+    "autor": "Geoff Johns",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro167.jpg",
+    "link": ""
+},
+{
+    "id": "168",
+    "nome": "Thor: O Renascer dos Deuses",
+    "autor": "J. Michael Straczynski",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro168.jpg",
+    "link": ""
+},
+{
+    "id": "169",
+    "nome": "Batman: O Longo Dia das Bruxas",
+    "autor": "Jeph Loeb",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro169.jpg",
+    "link": ""
+},
+{
+    "id": "170",
+    "nome": "Vingadores: Guerra Civil",
+    "autor": "Mark Millar",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro170.jpg",
+    "link": ""
+},
+{
+    "id": "171",
+    "nome": "Aquaman: As Profundezas",
+    "autor": "Geoff Johns",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro171.jpg",
+    "link": ""
+},
+{
+    "id": "172",
+    "nome": "Demolidor: A Queda de Murdock",
+    "autor": "Frank Miller",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro172.jpg",
+    "link": ""
+},
+{
+    "id": "173",
+    "nome": "Superman: O Que Aconteceu ao Homem de Aço?",
+    "autor": "Alan Moore",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro173.jpg",
+    "link": ""
+},
+{
+    "id": "174",
+    "nome": "Homem-Aranha: Azul",
+    "autor": "Jeph Loeb",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro174.jpg",
+    "link": ""
+},
+{
+    "id": "175",
+    "nome": "Liga da Justiça: Torre de Babel",
+    "autor": "Mark Waid",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro175.jpg",
+    "link": ""
+},
+{
+    "id": "176",
+    "nome": "X-Men: Deus Ama, o Homem Mata",
+    "autor": "Chris Claremont",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro176.jpg",
+    "link": ""
+},
+{
+    "id": "177",
+    "nome": "Batman: Ano Um",
+    "autor": "Frank Miller",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro177.jpg",
+    "link": ""
+},
+{
+    "id": "178",
+    "nome": "Capitão América: A Morte do Capitão América",
+    "autor": "Ed Brubaker",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro178.jpg",
+    "link": ""
+},
+{
+    "id": "179",
+    "nome": "Mulher-Maravilha: Sangue",
+    "autor": "Brian Azzarello",
+    "categoria": "Quadrinho",
+    "editora": "DC Comics",
+    "capa": "../img/livros/livro179.jpg",
+    "link": ""
+},
+{
+    "id": "180",
+    "nome": "Thor: O Renascer dos Deuses - Parte 2",
+    "autor": "J. Michael Straczynski",
+    "categoria": "Quadrinho",
+    "editora": "Marvel Comics",
+    "capa": "../img/livros/livro180.jpg",
+    "link": ""
+}
+
 ]

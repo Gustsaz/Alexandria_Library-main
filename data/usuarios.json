@@ -106,5 +106,38 @@
             "118",
             "67"
         ]
+    },
+    {
+        "ID_usuario": 8,
+        "nome_usuario": "Gustavo",
+        "email_usuario": "messytails4@gmail.com",
+        "senha_usuario": "$2y$12$ZagbI3POwvspuLEnWYOclOjGfPYC39z5HnVbQL1cPSI\/BzEN0Xut2",
+        "livros_baixados": [
+            "150"
+        ],
+        "livros_salvos": [],
+        "livros_lidos": [
+            "7"
+        ]
+    },
+    {
+        "ID_usuario": 9,
+        "nome_usuario": "Gustavo",
+        "email_usuario": "lol3232o@gmail.com",
+        "senha_usuario": "$2y$12$nU82l7GA7h7Z6a26P6LGKeA4IWCIA4LcpTq.985OuD3g8mv\/SQhRe",
+        "livros_baixados": [],
+        "livros_salvos": [],
+        "livros_lidos": []
+    },
+    {
+        "ID_usuario": 10,
+        "nome_usuario": "Julia",
+        "email_usuario": "asdsada@gmail.com",
+        "senha_usuario": "$2y$12$Dp\/6hBwqti3IS1lRIbd9YueSSMEYFMf81Efpv57InGm7xg59TxyEG",
+        "livros_baixados": [],
+        "livros_salvos": [],
+        "livros_lidos": [
+            "68"
+        ]
     }
 ]

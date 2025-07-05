@@ -1388,7 +1388,7 @@ body.dark-mode .user-form-bubble input{
   cursor: pointer;
 }
 
-/* Efeito de brilho com mais intensidade */
+/*birlho forte*/
 .citacao-livros .livro::before {
   content: "";
   position: absolute;
@@ -1404,7 +1404,7 @@ body.dark-mode .user-form-bubble input{
   z-index: 2;
 }
 
-/* Estilo base do brilho (invisível) */
+/*brilho base */
 .citacao-livros .livro::before {
   content: "";
   position: absolute;
@@ -1420,7 +1420,7 @@ body.dark-mode .user-form-bubble input{
   transition: opacity 0.2s ease, top 0.05s, left 0.05s;
 }
 
-/* Ativa brilho apenas durante hover */
+/* briloh hover */
 .citacao-livros .livro:hover::before {
   opacity: 1;
 }
@@ -1442,4 +1442,17 @@ body.dark-mode .user-form-bubble input{
 .user-alert.success {
   background-color: #d4edda;
   color: #155724;
+}
+
+/*icones rightsidebar*/
+.right-icon {
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.right-icon:hover {
+  opacity: 1;
+  transform: scale(1.2);
 }

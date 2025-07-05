@@ -5,9 +5,9 @@ const Down = document.getElementById("download-icon");
 const Visu = document.getElementById("visua-icon");
 const Salvo = document.getElementById("saved-icon");
 const Conta = document.getElementById("conta-icon");
-const Fechar = document.getElementById("fechar-icon");
-const Salvar = document.getElementById("salvar-icon");
-
+const rightDownload = document.querySelector(".download-btn");
+const rightFechar = document.querySelector(".fechar-btn");
+const rightLido = document.querySelector(".visua-icon");
 
 const toggleThemeBtn = document.querySelector(".mode-toggle");
 const themeIcon = document.getElementById("theme-icon");
@@ -34,31 +34,46 @@ function applyTheme(theme) {
         if (Logo) Logo.src = "img/LogoClaro.png";
         if (Info) Info.src = "img/InfoClaro.png";
         if (Down) Down.src = "img/DownloadClaro.png";
-        if (Visu) Visu.src = "img/EyeClaro.png";
         if (Salvo) Salvo.src = "img/SavedClaro.png";
         if (Conta) Conta.src = "img/ContaClaro.png";
-        if (Fechar) Fechar.src = "img/FecharClaro.png";
-        if (Salvar) Salvar.src = "img/SalvarClaro.png";
+        if (rightDownload) rightDownload.src = "img/DownloadClaro.png";
+        if (rightLido) rightLido.src = "img/EyeClaro.png";
+        if (rightFechar) rightFechar.src = "img/FecharClaro.png";
     } else {
         document.body.classList.remove("dark-mode");
         if (themeIcon) themeIcon.src = "img/Escuro.png";
         if (Logo) Logo.src = "img/LogoEscuro.png";
         if (Info) Info.src = "img/InfoEscuro.png";
         if (Down) Down.src = "img/DownloadEscuro.png";
-        if (Visu) Visu.src = "img/EyeEscuro.png";
         if (Salvo) Salvo.src = "img/SavedEscuro.png";
         if (Conta) Conta.src = "img/ContaEscuro.png";
-        if (Fechar) Fechar.src = "img/FecharEscuro.png";
-        if (Salvar) Salvar.src = "img/SalvarEscuro.png";
+        if (rightDownload) rightDownload.src = "img/DownloadEscuro.png";
+        if (rightLido) rightLido.src = "img/EyeEscuro.png";
+        if (rightFechar) rightFechar.src = "img/FecharEscuro.png";
     }
 }
 
+// Dá um beliscão (100% → 100%-1px → 100% num frame) e retorna uma Promise
+function nudgeIframeOnce(iframe) {
+    return new Promise(resolve => {
+        const originalWidth = iframe.style.width || '100%';
+        iframe.style.width = 'calc(100% - 1px)';
+        requestAnimationFrame(() => {
+            iframe.style.width = originalWidth;
+            resolve();
+        });
+    });
+}
+
+// Repete o beliscão várias vezes (tentativas) em intervalos crescentes
+async function nudgeIframeRepeated(iframe, tentativas = 8, baseDelay = 120) {
+    for (let i = 0; i < tentativas; i++) {
+        await nudgeIframeOnce(iframe);
+        await new Promise(r => setTimeout(r, baseDelay * (i + 1)));
+    }
+}
 
 /*abrir sidebars*/
-const sidebarR = document.querySelector(".right-sidebar");
-
-
-
 function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
     if (!isLoggedIn) {
         alert("Você precisa estar logado para ler este livro.");
@@ -69,68 +84,40 @@ function openRightSidebar(pdfUrl, livroId = null, isLoggedIn = false) {
     sidebar.classList.add("expanded");
 
     const showDownload = pdfUrl && livroId && isLoggedIn;
-
+        
     sidebar.innerHTML = `
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px;">
             <div style="display: flex; gap: 10px; align-items: center;">
                 ${showDownload ? `
                     <button onclick="baixarPdf('${pdfUrl}', '${livroId}')" style="background: none; border: none; cursor: pointer;">
-                        <img src="img/DownloadEscuro.png" alt="Download" style="width: 30px; height: 30px;" id="download-button-sidebar">
+                        <img src="img/DownloadEscuro.png" class="right-icon download-btn" alt="Download">
                     </button>
                     <button onclick="marcarComoLido('${livroId}')" style="background: none; border: none; cursor: pointer;">
-                        <img src="img/EyeEscuro.png" alt="Marcar como lido" style="width: 30px; height: 30px;" id="lido-button-sidebar">
+                        <img src="img/EyeEscuro.png" class="right-icon visua-icon" alt="Marcar como lido">
                     </button>
                 ` : ''}
             </div>
             <button onclick="closeRightSidebar()" style="border: none; background: none; cursor: pointer;">
-                <img draggable="false" src="img/FecharEscuro.png" style="width: 30px; height: 30px;" id="fechar-icon">
+                <img src="img/FecharEscuro.png" class="right-icon fechar-btn" alt="Fechar" draggable="false">
             </button>
         </div>
 
         ${pdfUrl ? `
             <div style="width: 100%; height: calc(100% - 50px);">
-                <iframe src="${pdfUrl}" style="width: 100%; height: 100%;" frameborder="0"></iframe>
+                <iframe id="pdf-viewer" data-livro-id="${livroId}" src="${pdfUrl}" style="width: 100%; height: 100%;" frameborder="0"></iframe>
             </div>` : `
             <p style="padding: 1rem;">Este livro não possui PDF disponível.</p>
         `}
     `;
-
-    // hover fechar
-    const fecharIcon = document.getElementById("fechar-icon");
-    if (fecharIcon) {
-        const originalSrc = fecharIcon.src;
-        fecharIcon.addEventListener("mouseenter", () => {
-            fecharIcon.src = "img/FecharHover.png";
-        });
-        fecharIcon.addEventListener("mouseleave", () => {
-            fecharIcon.src = originalSrc;
-        });
-    }
-
-    // hover download
-    const downloadIcon = document.getElementById("download-button-sidebar");
-    if (downloadIcon) {
-        const originalSrc = downloadIcon.src;
-        downloadIcon.addEventListener("mouseenter", () => {
-            downloadIcon.src = "img/DownloadHover.png";
-        });
-        downloadIcon.addEventListener("mouseleave", () => {
-            downloadIcon.src = originalSrc;
-        });
-    }
-
-    // hover lido
-    const lidoIcon = document.getElementById("lido-button-sidebar");
-    if (lidoIcon) {
-        const originalSrc = lidoIcon.src;
-        lidoIcon.addEventListener("mouseenter", () => {
-            lidoIcon.src = "img/EyeHover.png";
-        });
-        lidoIcon.addEventListener("mouseleave", () => {
-            lidoIcon.src = originalSrc;
-        });
-    }
     
+    const iframe = document.getElementById("pdf-viewer");
+if (iframe) {
+    iframe.addEventListener('load', () => {
+        // tenta várias vezes para acompanhar os resizes do Drive
+        nudgeIframeRepeated(iframe);
+    }, { once: true });
+}
+
 }
 
 function baixarPdf(pdfUrl, livroId) {
@@ -139,10 +126,10 @@ function baixarPdf(pdfUrl, livroId) {
     const downloadUrl = corrigirLinkGoogleDrive(pdfUrl);
 
     if (downloadUrl.includes('drive.google.com')) {
-        // 👉 Se for link do Google Drive: Apenas abrir em nova aba
+        // ?? Se for link do Google Drive: Apenas abrir em nova aba
         window.open(downloadUrl, '_blank');
     } else {
-        // 👉 Se for PDF local: Forçar download via PHP proxy
+        // ?? Se for PDF local: For�ar download via PHP proxy
         const link = document.createElement('a');
         link.href = `download.php?url=${encodeURIComponent(downloadUrl)}`;
         link.download = `livro_${livroId}.pdf`;
@@ -205,8 +192,43 @@ function marcarComoLido(livroId) {
 
 function closeRightSidebar() {
     const sidebar = document.getElementById("rightSidebar");
+    const iframe  = document.getElementById("pdf-viewer");
+
+    if (iframe) {
+        try {
+            const livroId = iframe.getAttribute("data-livro-id");
+
+            const scrollContainer =
+                iframe.contentWindow.document.documentElement ||
+                iframe.contentWindow.document.body;
+
+            const scrollTop    = scrollContainer.scrollTop;
+            const scrollHeight = scrollContainer.scrollHeight;
+            const progresso    = scrollHeight
+                                   ? scrollTop / scrollHeight   // evita 0 / 0
+                                   : 0;
+
+            /* >>> AQUI –‑ debug <<< */
+            console.log({ livroId, scrollTop, scrollHeight, progresso });
+            /* ---------------------- */
+
+            if (livroId && Number.isFinite(progresso) && progresso >= 0) {
+                fetch('salvar_progresso.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ livroId, progresso })
+                })
+                .then(r => r.json())
+                .then(d => console.log('salvar_progresso ⇒', d))
+                .catch(err => console.warn('Erro ao salvar progresso:', err));
+            }
+        } catch (err) {
+            console.warn("Não foi possível capturar o progresso:", err);
+        }
+    }
+
     sidebar.classList.remove("expanded");
-    sidebar.innerHTML = ""; // limpa o iframe ou mensagem
+    sidebar.innerHTML = "";
 }
 
 function toggleForm() {
@@ -287,7 +309,6 @@ window.onload = function () {
         }, 5000);
     }
 
-
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         applyTheme(savedTheme);
@@ -304,6 +325,7 @@ window.onload = function () {
             nomeInput.removeAttribute("required");
         }
     }
+    
 };
 
 
@@ -345,7 +367,7 @@ const scrollButtons = [
     { buttonClass: ".download-button", categoria: "download" },
     { buttonClass: ".saved-button", categoria: "salvos" },
     { buttonClass: ".visua-button", categoria: "lidos" },
-    { buttonClass: ".info-button", seletor: ".footer" } // exceção
+    { buttonClass: ".info-button", seletor: ".footer" } // exce��o
 ];
 
 scrollButtons.forEach(({ buttonClass, categoria, seletor }) => {
@@ -396,17 +418,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     if (window.authMessage) {
-        const box = document.getElementById("userMessage");
-        if (box) {
-            box.textContent = window.authMessage.text;
-            box.classList.add("user-alert", window.authMessage.type);
-            box.style.display = "block";
+    const box = document.getElementById("userMessage");
+    if (box) {
+        box.textContent = window.authMessage.text;
+        box.classList.add("user-alert", window.authMessage.type);
+        box.style.display = "block";
 
-            // Exibe o formulário se estiver oculto
-            const bubble = document.getElementById("userForm");
-            if (bubble) bubble.classList.remove("hidden");
-        }
+        // Exibe o formul�rio se estiver oculto
+        const bubble = document.getElementById("userForm");
+        if (bubble) bubble.classList.remove("hidden");
+
+        setTimeout(() => {
+            location.reload();
+        }, 2000);
     }
+}
+
 
     // Atualiza os resultados da busca
     function atualizarResultados(query) {
@@ -474,7 +501,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//categorias para mostrar só as que tem livros
+//categorias para mostrar s� as que tem livros
 document.querySelectorAll('.category').forEach(cat => {
     cat.addEventListener('click', () => {
         const categoriaSelecionada = cat.dataset.category;
@@ -483,7 +510,7 @@ document.querySelectorAll('.category').forEach(cat => {
         document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
         cat.classList.add('active');
 
-        // mostra/esconde as seções
+        // mostra/esconde as se��es
         document.querySelectorAll('.highlight[data-category]').forEach(section => {
             const listaLivros = section.querySelector('.book-list');
 
@@ -503,7 +530,7 @@ document.querySelectorAll('.category').forEach(cat => {
     });
 });
 
-// Animação scroll
+// Anima��o scroll
 
 const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-delay, .scroll-reveal-cascade');
 
@@ -579,11 +606,11 @@ function salvarLivro(livroId, buttonElement) {
             const existing = savedList.querySelector('#livro-' + livroId);
 
             if (buttonElement.classList.contains("salvo")) {
-                // Adiciona na lista de salvos (se ainda não estiver)
+                // Adiciona na lista de salvos (se ainda n�o estiver)
                 if (!existing) {
                     const clone = bookElement.cloneNode(true);
 
-                    // Corrige onclick do botão no clone
+                    // Corrige onclick do bot�o no clone
                     const newBtn = clone.querySelector(".salvar-btn");
                     if (newBtn) {
                         newBtn.classList.add("salvo");
@@ -643,19 +670,44 @@ function loadGutenbergBooks() {
         .catch(err => console.error("Erro ao carregar livros do Gutenberg:", err));
 }
 
-// Chamada após o DOM estar pronto
+// Chamada ap�s o DOM estar pronto
 document.addEventListener("DOMContentLoaded", loadGutenbergBooks);
 
-//capas aleatórias para citações
+//capas aleat�rias para cita��es
+
+let livrosCitacao = [];
 
 function carregarCapasCitacao(livros) {
     const embaralhados = [...livros].sort(() => Math.random() - 0.5).slice(0, 3);
+    livrosCitacao = embaralhados; // guarda os livros usados
 
     embaralhados.forEach((livro, index) => {
         const img = document.getElementById(`citacaoLivro${index + 1}`);
         if (img) {
-            img.src = livro.capa.replace("..", "."); // Ajusta se os caminhos começarem com ".."
+            img.src = livro.capa.replace("..", ".");
             img.alt = livro.nome;
+
+            // armazena id e link como atributos personalizados
+            img.setAttribute("data-id", livro.id);
+            img.setAttribute("data-link", livro.link || "");
+            img.style.cursor = "pointer";
+
+            // adiciona evento de clique
+            img.onclick = () => {
+                const id = img.getAttribute("data-id");
+                const link = img.getAttribute("data-link");
+
+                if (!link) {
+                    alert("Este livro não possui PDF disponível.");
+                    return;
+                }
+
+                if (typeof isUserLoggedIn !== "undefined" && isUserLoggedIn) {
+                    openRightSidebar(link, id, true);
+                } else {
+                    alert("Você precisa estar logado para ler este livro.");
+                }
+            };
         }
     });
 }
@@ -672,18 +724,25 @@ function iniciarTrocaDeCapas() {
     if (capas.some(el => !el)) return;
 
     function trocar() {
+        // troca os atributos visualmente
         const tempSrc = capas[0].src;
         const tempAlt = capas[0].alt;
+        const tempId = capas[0].getAttribute("data-id");
+        const tempLink = capas[0].getAttribute("data-link");
 
-        capas[0].src = capas[1].src;
-        capas[0].alt = capas[1].alt;
-
-        capas[1].src = capas[2].src;
-        capas[1].alt = capas[2].alt;
+        for (let i = 0; i < 2; i++) {
+            capas[i].src = capas[i + 1].src;
+            capas[i].alt = capas[i + 1].alt;
+            capas[i].setAttribute("data-id", capas[i + 1].getAttribute("data-id"));
+            capas[i].setAttribute("data-link", capas[i + 1].getAttribute("data-link"));
+        }
 
         capas[2].src = tempSrc;
         capas[2].alt = tempAlt;
+        capas[2].setAttribute("data-id", tempId);
+        capas[2].setAttribute("data-link", tempLink);
 
+        // anima��o fade
         capas.forEach(capa => {
             capa.classList.remove("fade");
             void capa.offsetWidth;
@@ -693,7 +752,6 @@ function iniciarTrocaDeCapas() {
 
     trocaInterval = setInterval(trocar, 3000);
 
-    // Pausar e retomar ao hover sobre .livro
     capas.forEach(capa => {
         const livroDiv = capa.closest(".livro");
 
@@ -714,3 +772,68 @@ function iniciarTrocaDeCapas() {
         });
     });
 }
+
+const logoBtn = document.querySelector(".toggle-btnL");
+
+if (logoBtn) {
+    logoBtn.addEventListener("click", () => {
+        const sidebar = document.getElementById("rightSidebar");
+
+        if (sidebar && sidebar.classList.contains("expanded")) {
+            closeRightSidebar(); // s� fecha a sidebar se estiver aberta
+        } else {
+            location.reload(); // sen�o, recarrega a p�gina
+        }
+    });
+
+    // 1. Fechar sidebar ao clicar fora
+document.addEventListener("click", (e) => {
+    const sidebar = document.getElementById("rightSidebar");
+
+    if (
+        sidebar &&
+        sidebar.classList.contains("expanded") &&
+        !sidebar.contains(e.target) &&
+        !e.target.closest(".book") &&
+        !e.target.closest(".livro") &&
+        !e.target.closest(".search-results") &&
+        !e.target.closest(".sidebar") &&
+        !e.target.closest(".category")
+    ) {
+        closeRightSidebar();
+    }
+});
+
+// 2. Reabrir a sidebar mostrando o �ltimo livro lido
+const rightSidebar = document.getElementById("rightSidebar");
+
+if (rightSidebar) {
+    rightSidebar.addEventListener("click", () => {
+        if (!rightSidebar.classList.contains("expanded")) {
+            fetch("recuperar_progresso.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ buscarUltimo: true })
+            })
+            .then(res => res.json())
+            .then(data => {
+                const ultimoId = data.ultimo_livro_id;
+                if (!ultimoId) return;
+
+                fetch("data/livros.json")
+                    .then(res => res.json())
+                    .then(livros => {
+                        const livro = livros.find(l => l.id === ultimoId);
+                        if (livro && livro.link) {
+                            openRightSidebar(livro.link, livro.id, typeof isUserLoggedIn !== "undefined" ? isUserLoggedIn : false);
+                        }
+                    });
+            })
+            .catch(err => console.error("Erro ao abrir o último livro:", err));
+        }
+    });
+}
+
+}
+
+

@@ -468,7 +468,7 @@ window.onload = function () {
 
     document.addEventListener("DOMContentLoaded", () => {
         const form = document.getElementById("auth-form");
-
+        const db = firebase.firestore();
         if (form) {
             form.addEventListener("submit", async (e) => {
                 e.preventDefault();
@@ -477,7 +477,7 @@ window.onload = function () {
                 const nome = document.querySelector("input[name='nome']").value;
                 const email = document.querySelector("input[name='email']").value;
                 const senha = document.querySelector("input[name='senha']").value;
-
+                console.log("Formulário enviado. Ação:", acao, email, senha, nome);
                 try {
                     if (acao === "cadastrar") {
                         const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, senha);
@@ -517,8 +517,6 @@ window.onload = function () {
                 }
             });
         }
-
-        const db = firebase.firestore();
 
         const userMessage = document.getElementById("userMessage");
 

@@ -27,7 +27,8 @@ if (!file_exists($arquivo_usuarios) || filesize($arquivo_usuarios) == 0) {
     file_put_contents($arquivo_usuarios, json_encode([]));
 }
 
-$logado = false; // Firebase agora cuida do login via JS
+$logado = isset($_SESSION['ID_usuario']);
+$nome_usuario = $logado ? $_SESSION['nome_usuario'] : '';
 
 $messageHtml = '';
 if (isset($_SESSION['message'])) {
@@ -75,26 +76,6 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alexandria Biblioteca</title>
     <link rel="icon" href="/img/icons/LogoMiniaturaClaro.png" type="image/png">
-    <!-- Firebase SDKs -->
-    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyBa-bqA6GWEgfOjggbjNbTpBBxb0cPIPsQ",
-            authDomain: "alexandria-biblioteca.firebaseapp.com",
-            projectId: "alexandria-biblioteca",
-            storageBucket: "alexandria-biblioteca.firebasestorage.app",
-            messagingSenderId: "302295910542",
-            appId: "1:302295910542:web:ba581cda4154ead23d61df",
-            measurementId: "G-R20PRZHZ2W"
-        };
-
-        // Inicializa Firebase
-        firebase.initializeApp(firebaseConfig);
-        const db = firebase.firestore();
-    </script>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -107,19 +88,14 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
         <button class="mode-toggle">
             <img draggable="false" id="theme-icon" src="img/Escuro.png" alt="Tema" class="tema-icone">
         </button>
-
-        <button class="download-button hidden"><img draggable="false" id="download-icon" src="img/DownloadEscuro.png"
-                class="download-icon" alt="Baixados">
-        </button>
-
-        <button class="saved-button hidden"><img draggable="false" id="saved-icon" src="img/SavedEscuro.png"
-                class="saved-icon" alt="Salvos">
-        </button>
-
-        <button class="visua-button hidden"><img draggable="false" id="visua-icon" src="img/EyeEscuro.png"
-                class="visua-icon" alt="Lidos">
-        </button>
-
+        <?php if ($logado): ?>
+            <button class="download-button"><img draggable="false" id="download-icon" src="img/DownloadEscuro.png"
+                    class="download-icon" alt="Baixados"></button>
+            <button class="saved-button"><img draggable="false" id="saved-icon" src="img/SavedEscuro.png" class="saved-icon"
+                    alt="salvos"></button>
+            <button class="visua-button"><img draggable="false" id="visua-icon" src="img/EyeEscuro.png" class="visua-icon"
+                    alt="já lidos"></button>
+        <?php endif; ?>
         <button class="info-button"><img draggable="false" id="info-icon" src="img/InfoEscuro.png" class="info-icon"
                 alt="informação"></button>
     </div>
@@ -134,47 +110,44 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
 
 
             <div class="user-info-container">
-                <!-- Mensagem de boas-vindas -->
-                <span class="welcome-message hidden" id="welcomeMessage">Olá!</span>
+                <?php if ($logado): ?>
+                    <span class="welcome-message">Olá, <?php echo htmlspecialchars($nome_usuario); ?>! &nbsp;</span>
+                    <button class="user-btn" id="logoutBtn">
+                        <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
+                    </button>
+                    <div class="user-form-bubble hidden" id="logoutBubble">
+                        <p>Você está logado como: <strong><?php echo htmlspecialchars($nome_usuario); ?></strong></p>
+                        <button onclick="logoutFirebase()">Sair</button>
+                    </div>
+                <?php else: ?>
+                    <button class="user-btn" id="userBtn">
+                        <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
+                    </button>
+                    <div class="user-form-bubble hidden" id="userForm">
+                        <h2 id="form-title">Cadastro</h2>
+                        <div id="userMessage" class="user-alert"></div>
+                        <form action="auth.php" method="POST" id="auth-form">
+                            <input type="hidden" name="acao" value="cadastrar" id="acao">
 
-                <!-- Botão para abrir o formulário de login/cadastro -->
-                <button class="user-btn" id="userBtn">
-                    <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
-                </button>
+                            <div id="nome-field">
+                                <input type="text" name="nome" placeholder="Nome de usuário" required>
+                            </div>
 
-                <!-- Botão visível apenas quando logado -->
-                <button class="user-btn hidden" id="logoutBtn">
-                    <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
-                </button>
+                            <input type="email" name="email" placeholder="E-mail" required>
+                            <input type="password" name="senha" placeholder="Senha" required>
 
-                <!-- Formulário de login/cadastro -->
-                <div class="user-form-bubble hidden" id="userForm">
-                    <h2 id="form-title">Cadastro</h2>
-                    <div id="userMessage" class="user-alert"></div>
-                    <form id="auth-form">
-                        <input type="hidden" name="acao" value="cadastrar" id="acao">
-                        <div id="nome-field">
-                            <input type="text" name="nome" placeholder="Nome de usuário" required>
-                        </div>
-                        <input type="email" name="email" placeholder="E-mail" required>
-                        <input type="password" name="senha" placeholder="Senha" required>
-                        <div class="form-buttons">
-                            <button type="submit" id="submit-button">Cadastrar</button>
-                            <button type="button" onclick="toggleForm()">Fechar</button>
-                        </div>
-                    </form>
+                            <div class="form-buttons">
+                                <button type="submit" id="submit-button">Cadastrar</button>
+                                <button type="button" onclick="toggleForm()">Fechar</button>
+                            </div>
+                        </form>
 
-                    <hr style="margin: 10px 0;">
-                    <button type="button" id="alternarFormularioBtn" class="ja_tem">Já tem uma conta? Entrar</button>
-                </div>
+                        <hr style="margin: 10px 0;">
 
-                <!-- Balão de logout -->
-                <div class="user-form-bubble hidden" id="logoutBubble">
-                    <p>Você está logado como: <strong id="userDisplayName">Usuário</strong></p>
-                    <button onclick="logoutFirebase()">Sair</button>
-                </div>
+                        <button type="button" id="alternarFormularioBtn" class="ja_tem">Já tem uma conta? Entrar</button>
+                    </div>
+                <?php endif; ?>
             </div>
-
         </header>
 
         <?php if (!$busca_ativa): ?>
@@ -247,7 +220,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <img draggable="false" src="/img/icons/horror.png" alt="Quadrinho">
                     Quadrinhos (<?php echo contarLivrosPorCategoria($livros, 'Quadrinho'); ?>)
                 </div>
-
+                
                 <div class="category scroll-reveal-cascade delay-7" data-category="Gutenberg">
                     <img draggable="false" src="/img/icons/gutenberg.png" alt="Gutenberg">
                     Clássicos (<?php echo 20 ?>)
@@ -295,12 +268,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img id="salvar-icon" src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -328,12 +302,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -361,12 +336,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -394,12 +370,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -427,12 +404,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -461,13 +439,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -495,12 +473,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -528,12 +507,13 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                         echo '</div>';
 
                         // Botão de salvar se logado
-                        $salvo = false;
-                        $classeSalvo = '';
-                        // Você pode manter isso se estiver migrando com compatibilidade local
-                        echo '<button class="salvar-btn hidden ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
-        <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
-      </button>';
+                        if ($logado) {
+                            $salvo = isset($usuarioAtual['livros_salvos']) && in_array($idLivro, $usuarioAtual['livros_salvos']);
+                            $classeSalvo = $salvo ? 'salvo' : '';
+                            echo '<button class="salvar-btn ' . $classeSalvo . '" onclick="event.stopPropagation(); salvarLivro(\'' . $idLivro . '\', this)">
+                    <img src="img/SalvarEscuro.png" alt="Salvar" class="salvar-img">
+                </button>';
+                        }
 
                         echo '</div>';
                     }
@@ -550,27 +530,99 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 </div>
             </section>
 
-            <br>
-
-            <section class="highlight scroll-reveal hidden" data-category="download">
-                <h2>Baixados</h2>
-                <div class="book-list" id="baixadosContainer"></div>
-            </section>
 
             <br>
 
-            <section class="highlight highlight-saved scroll-reveal hidden" data-category="salvos">
-                <h2>Salvos</h2>
-                <div class="book-list" id="salvosContainer"></div>
-            </section>
+            <?php if ($logado): ?>
+                <section class="highlight scroll-reveal" data-category="download">
+                    <h2>Baixados</h2>
+                    <div class="book-list">
+                        <?php
+                        $download = [];
+                        if ($logado) {
+                            $usuarios = json_decode(file_get_contents('data/usuarios.json'), true);
+                            foreach ($usuarios as $usuario) {
+                                if ($usuario['ID_usuario'] == $_SESSION['ID_usuario']) {
+                                    $idsBaixados = $usuario['livros_baixados'] ?? [];
+                                    break;
+                                }
+                            }
 
-            <br>
+                            $download = array_filter($livros, function ($livro) use ($idsBaixados) {
+                                return isset($livro['id']) && in_array($livro['id'], $idsBaixados);
+                            });
+                        }
 
-            <section class="highlight scroll-reveal hidden" data-category="lidos">
-                <h2>Já Lidos</h2>
-                <div class="book-list" id="lidosContainer"></div>
-            </section>
+                        foreach ($download as $livro) {
+                            $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                            echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', ' . ($logado ? 'true' : 'false') . ')">';
+                            echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro ' . htmlspecialchars($livro['nome']) . '" width="120">';
+                            echo '<div class="detalhes">';
+                            echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                            echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                            echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                        ?>
+                    </div>
+                </section>
 
+                <br>
+
+                <section class="highlight highlight-saved scroll-reveal" data-category="salvos">
+                    <h2>Salvos</h2>
+                    <div class="book-list">
+                        <?php
+                        $usuarioAtual = null;
+                        foreach ($usuarios as $u) {
+                            if ($u['ID_usuario'] == $_SESSION['ID_usuario']) {
+                                $usuarioAtual = $u;
+                                break;
+                            }
+                        }
+
+                        if ($usuarioAtual && isset($usuarioAtual['livros_salvos'])) {
+                            foreach ($livros as $livro) {
+                                if (in_array($livro['id'], $usuarioAtual['livros_salvos'])) {
+                                    $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                                    echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', true)">';
+                                    echo '<img draggable="false" src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro">';
+                                    echo '<div class="detalhes">';
+                                    echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                                    echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                                    echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                                    echo '</div></div>';
+                                }
+                            }
+                        }
+                        ?>
+                    </div>
+                </section>
+
+                <br>
+
+                <section class="highlight scroll-reveal" data-category="lidos">
+                    <h2>Já Lidos</h2>
+                    <div class="book-list">
+                        <?php
+                        foreach ($livros as $livro) {
+                            if (isset($usuarioAtual['livros_lidos']) && in_array($livro['id'], $usuarioAtual['livros_lidos'])) {
+                                $link = isset($livro['link']) ? htmlspecialchars($livro['link']) : '';
+                                echo '<div class="book" onclick="openRightSidebar(\'' . $link . '\', \'' . $livro['id'] . '\', true)">';
+                                echo '<img src="' . htmlspecialchars($livro['capa']) . '" alt="Capa do livro">';
+                                echo '<div class="detalhes">';
+                                echo '<h3>' . htmlspecialchars($livro['nome']) . '</h3>';
+                                echo '<p><strong>Autor:</strong> ' . htmlspecialchars($livro['autor']) . '</p>';
+                                echo '<p><strong>Editora:</strong> ' . htmlspecialchars($livro['editora']) . '</p>';
+                                echo '</div></div>';
+                            }
+                        }
+                        ?>
+                    </div>
+                </section>
+
+            <?php endif; ?>
 
             <br>
 

@@ -79,6 +79,10 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
     <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <!-- Firebase App (core SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js"></script>
 
     <script>
         const firebaseConfig = {
@@ -144,10 +148,9 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 </button>
 
                 <!-- Botão visível apenas quando logado -->
-                <button class="user-btn hidden" id="logoutBtn" onclick="logoutFirebase()">
+                <button class="user-btn hidden" id="logoutBtn">
                     <img draggable="false" src="img/ContaEscuro.png" id="conta-icon" style="width: 25px; height: 25px;">
                 </button>
-
 
                 <!-- Formulário de login/cadastro -->
                 <div class="user-form-bubble hidden" id="userForm">
@@ -175,7 +178,6 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                     <p>Você está logado como: <strong id="userDisplayName">Usuário</strong></p>
                     <button onclick="logoutFirebase()">Sair</button>
                 </div>
-
             </div>
 
         </header>

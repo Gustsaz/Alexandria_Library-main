@@ -5,7 +5,7 @@
         "autor": "George Orwell",
         "categoria": "Suspense",
         "editora": "Companhia de Letras",
-        "capa": "..\/img\/livros\/livro1.png",
+        "capa": "img/livros/livro1.png",
         "link":"https://multimidia.gazetadopovo.com.br/media/info/2021/202110/bichos/revolucao-dos-bichos.pdf"
     },
     {
@@ -14,7 +14,7 @@
         "autor": "Collen Hoover",
         "categoria": "Romance",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro2.png",
+        "capa": "img/livros/livro2.png",
         "link":"https://drive.google.com/file/d/1G9cuohNuF7j7tYWBWqvgBYcrQtVf9qae/preview"
     },
     {
@@ -23,7 +23,7 @@
         "autor": "Andrzej Sapkowski",
         "categoria": "Fantasia",
         "editora": "WMF Martins Fontes",
-        "capa": "..\/img\/livros\/livro3.jpg",
+        "capa": "img/livros/livro3.jpg",
         "link":"https://drive.google.com/file/d/1_eIyU_FOh969XxAArVAdNSSxbAQjRJ2s/preview"
     },
     {
@@ -32,7 +32,7 @@
         "autor": "Stephen King",
         "categoria": "Suspense",
         "editora": "Editora Suma",
-        "capa": "..\/img\/livros\/livro4.jpg",
+        "capa": "img/livros/livro4.jpg",
         "link":"https://drive.google.com/file/d/1um9XB4oBDgYqhXJjGVUQJkvrr31SFkWs/preview"
     },
     {
@@ -41,7 +41,7 @@
         "autor": "Machado de Assis",
         "categoria": "Romance",
         "editora": "Principis",
-        "capa": "..\/img\/livros\/livro8.jpg",
+        "capa": "img/livros/livro8.jpg",
         "link": "https://ddcus.org/pdf/summer_reading/11th_grade/Dom_Casmurro-Machado_de_Assis.pdf"
     },
     {
@@ -50,7 +50,7 @@
         "autor": "Machado de Assis",
         "categoria": "Romance",
         "editora": "Principis",
-        "capa": "..\/img\/livros\/livro5.jpg",
+        "capa": "img/livros/livro5.jpg",
         "link": "https://drive.google.com/file/d/196bNXuiwNDrlizqa6jZZ5hG52zMH03a7/preview"
     },
     {
@@ -59,7 +59,7 @@
         "autor": "Machado de Assis",
         "categoria": "Romance",
         "editora": "Principis",
-        "capa": "..\/img\/livros\/livro6.jpg",
+        "capa": "img/livros/livro6.jpg",
         "link": "https://drive.google.com/file/d/1MpI9vyRNDTwRFrXTsaNJpMzYK-DlSlwz/preview"
     },
     {
@@ -68,7 +68,7 @@
         "autor": "Machado de Assis",
         "categoria": "Romance",
         "editora": "Principis",
-        "capa": "..\/img\/livros\/livro9.jpg",
+        "capa": "img/livros/livro9.jpg",
         "link": "https://www.kufunda.net/publicdocs/O%20Alienista%20-%20Machado%20de%20Assis.pdf"
     },
     {
@@ -77,7 +77,7 @@
         "autor": "José de Alencar",
         "categoria": "Romance",
         "editora": "Martin Claret",
-        "capa": "..\/img\/livros\/livro7.jpg",
+        "capa": "img/livros/livro7.jpg",
         "link": "https://www.led.cefetmg.br/wp-content/uploads/sites/275/2021/12/O-Dem%C3%B4nio-Familiar.pdf"
     },
     {
@@ -86,7 +86,7 @@
         "autor": "Rebecca Yarros",
         "categoria": "Fantasia",
         "editora": "Planeta Minotauro",
-        "capa": "..\/img\/livros\/livro10.jpg",
+        "capa": "img/livros/livro10.jpg",
         "link": "https://drive.google.com/file/d/1Hjj0jbJgQZptADrF4d3GSjaJG9vLBlaX/preview"
     },
     {
@@ -95,7 +95,7 @@
         "autor": "Rebecca Yarros",
         "categoria": "Fantasia",
         "editora": "Planeta Minotauro",
-        "capa": "..\/img\/livros\/livro11.jpg",
+        "capa": "img/livros/livro11.jpg",
         "link": "https://drive.google.com/file/d/1UAbzpGq_yt8-tq4IezHT-Li-IRhHODDy/preview"
     },
     {
@@ -104,7 +104,7 @@
         "autor": "Kristen Ciccarelli",
         "categoria": "Fantasia",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro12.jpg",
+        "capa": "img/livros/livro12.jpg",
         "link": "https://drive.google.com/file/d/1q2P07_4gP5lUBGbyNFkYmnB769YHcMhc/preview"
     },
     {
@@ -113,7 +113,7 @@
         "autor": "Kelly-Ann Maddox",
         "categoria": "Fantasia",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro13.jpg",
+        "capa": "img/livros/livro13.jpg",
         "link": "https://drive.google.com/file/d/1TUpKBPMtIEtHAx0csfkjskZKhd8CPDuN/preview"
     },
     {
@@ -122,7 +122,7 @@
         "autor": "Holly Black",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro14.jpg",
+        "capa": "img/livros/livro14.jpg",
         "link": "https://static.fnac-static.com/multimedia/PT/pdf/9789896688493.pdf"
     },
     {
@@ -131,7 +131,7 @@
         "autor": "Holly Black",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro15.jpg",
+        "capa": "img/livros/livro15.jpg",
         "link": "https://drive.google.com/file/d/1Y3fUg_9Io8JVhWLIisxq-G5sJG9ynGDu/preview"
     },
     {
@@ -140,7 +140,7 @@
         "autor": "Holly Black",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro16.jpg",
+        "capa": "img/livros/livro16.jpg",
         "link": "https://drive.google.com/file/d/1asqFsuIYoCdAtfKGoKO9GHFS-SBkdkzp/preview"
     },
     {
@@ -149,7 +149,7 @@
         "autor": "Stephen King",
         "categoria": "Suspense",
         "editora": "Editora Suma",
-        "capa": "..\/img\/livros\/livro20.jpg",
+        "capa": "img/livros/livro20.jpg",
         "link": ""
     },
     {
@@ -158,7 +158,7 @@
         "autor": "Stephen King",
         "categoria": "Suspense",
         "editora": "Editora Suma",
-        "capa": "..\/img\/livros\/livro19.jpg",
+        "capa": "img/livros/livro19.jpg",
         "link": "https://drive.google.com/file/d/1ThTfTxWuql6zmR4ngY-WAj_It_3uhqT9/preview"
     },
     {
@@ -167,7 +167,7 @@
         "autor": "Riley Sager",
         "categoria": "Suspense",
         "editora": "Intrínseca",
-        "capa": "..\/img\/livros\/livro17.jpg",
+        "capa": "img/livros/livro17.jpg",
         "link": "https://drive.google.com/file/d/1oUXgZOeWoT_LNNuqEyAtobyaEknLWn9J/preview"
     },
     {
@@ -176,7 +176,7 @@
         "autor": "Collen Hoover",
         "categoria": "Suspense",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro18.jpg",
+        "capa": "img/livros/livro18.jpg",
         "link": "https://drive.google.com/file/d/1_UG28udQx8qhBMjNO5j1W22aE5kUIkEN/preview"
     },
     {
@@ -185,7 +185,7 @@
         "autor": "Alex Michaelides",
         "categoria": "Suspense",
         "editora": "Record",
-        "capa": "..\/img\/livros\/livro21.jpg",
+        "capa": "img/livros/livro21.jpg",
         "link": "https://drive.google.com/file/d/1jgZAuCZn4t26Um4TPuCxz74ihxgRw1At/preview"
     },
     {
@@ -194,7 +194,7 @@
         "autor": "Leslie Wolfe",
         "categoria": "terror",
         "editora": "Fato Editoral",
-        "capa": "..\/img\/livros\/livro22.jpg",
+        "capa": "img/livros/livro22.jpg",
         "link": "https://drive.google.com/file/d/1aJpq3YjknWHLabuoxxeoS7csw4IsBjcw/preview"
     },
     {
@@ -203,7 +203,7 @@
         "autor": "Lionel Shriver",
         "categoria": "Suspense",
         "editora": "Intrínseca",
-        "capa": "..\/img\/livros\/livro23.jpg",
+        "capa": "img/livros/livro23.jpg",
         "link": "https://drive.google.com/file/d/1hHL58MVnwqlhU902BeIaMVsRhrfBPeLd/preview"
     },
     {
@@ -212,7 +212,7 @@
         "autor": "C. J. Tudor",
         "categoria": "Suspense",
         "editora": "Intrínseca",
-        "capa": "..\/img\/livros\/livro24.jpg",
+        "capa": "img/livros/livro24.jpg",
         "link": "https://www.intrinseca.com.br/upload/livros/1%C2%BACAP_OHomemDeGiz.pdf"
     },
     {
@@ -221,7 +221,7 @@
         "autor": "Charlie Donle",
         "categoria": "terror",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro25.jpg",
+        "capa": "img/livros/livro25.jpg",
         "link": "https://drive.google.com/file/d/1Yaz5TrtgwlpS9V-mTkrg98ZOv6L-9Pj0/preview"
     },
     {
@@ -230,7 +230,7 @@
         "autor": "Maria Grund",
         "categoria": "Suspense",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro26.jpg",
+        "capa": "img/livros/livro26.jpg",
         "link": ""
     },
     {
@@ -239,7 +239,7 @@
         "autor": "Shari Lapena",
         "categoria": "Suspense",
         "editora": "Record",
-        "capa": "..\/img\/livros\/livro27.jpg",
+        "capa": "img/livros/livro27.jpg",
         "link": ""
     },
     {
@@ -248,7 +248,7 @@
         "autor": "Freida McFadden",
         "categoria": "Suspense",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro28.jpg",
+        "capa": "img/livros/livro28.jpg",
         "link": "https://drive.google.com/file/d/1Y92NLlsUnJOc5b9dc8UJStIGbkrnzw4I/preview"
     },
     {
@@ -257,7 +257,7 @@
         "autor": "Freida McFadden",
         "categoria": "Suspense",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro29.jpg",
+        "capa": "img/livros/livro29.jpg",
         "link": "https://drive.google.com/file/d/1Vv1J3d6PqJSiZCOa1Qz1YbwvUGfXMwEO/preview"
     },
     {
@@ -266,7 +266,7 @@
         "autor": "Freida McFadden",
         "categoria": "Suspense",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro31.jpg",
+        "capa": "img/livros/livro31.jpg",
         "link": "https://drive.google.com/file/d/1G8pOYshkDGUkjd0l4RPCoP_Im_C4E5gW/preview"
     },
     {
@@ -275,7 +275,7 @@
         "autor": "Freida McFadden",
         "categoria": "Suspense",
         "editora": "Record",
-        "capa": "..\/img\/livros\/livro30.jpg",
+        "capa": "img/livros/livro30.jpg",
         "link": "https://drive.google.com/file/d/1hCNuMpKvYSA0shxEyzyb6W0Ewj9gib4M/preview"
     },
     {
@@ -284,7 +284,7 @@
         "autor": "Freida McFadden",
         "categoria": "Suspense",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro32.jpg",
+        "capa": "img/livros/livro32.jpg",
         "link": "https://drive.google.com/file/d/1oxIdohbY7yN8Svkl1kJAS-3Elc78CcUn/preview"
     },
     {
@@ -293,7 +293,7 @@
         "autor": "Freida McFadden",
         "categoria": "Suspense",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro33.jpg",
+        "capa": "img/livros/livro33.jpg",
         "link": "https://drive.google.com/file/d/1T4_4CXsMG6FtASjErUJ3mTrA97Jy6uZe/preview"
     },
     {
@@ -302,7 +302,7 @@
         "autor": "Collen Hoover",
         "categoria": "Suspense",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro34.jpg",
+        "capa": "img/livros/livro34.jpg",
         "link": "https://drive.google.com/file/d/1vDyQKSTBseBLCkpC8uSHRtyxqEiQtAVl/preview"
     },
     {
@@ -311,7 +311,7 @@
         "autor": "Raphael Montes",
         "categoria": "Suspense",
         "editora": "Companhia de Letras",
-        "capa": "..\/img\/livros\/livro35.jpg",
+        "capa": "img/livros/livro35.jpg",
         "link": "https://drive.google.com/file/d/1cSRoceM06v6itvvIfFuIuSM2TJ8QWDdR/preview"
     },
     {
@@ -320,7 +320,7 @@
         "autor": "Raphael Montes",
         "categoria": "Suspense",
         "editora": "Companhia de Letras",
-        "capa": "..\/img\/livros\/livro36.jpg",
+        "capa": "img/livros/livro36.jpg",
         "link": "https://drive.google.com/file/d/1NGEE7O4DUUtwQazl1jjB4VBxrUrigrT5/preview"
     },
     {
@@ -329,7 +329,7 @@
         "autor": "Raphael Montes",
         "categoria": "Suspense",
         "editora": "Companhia de Letras",
-        "capa": "..\/img\/livros\/livro37.jpg",
+        "capa": "img/livros/livro37.jpg",
         "link": "https://drive.google.com/file/d/11SS2oadcEIBModiPvbnr03V9wO9v_nXW/preview"
     },
     {
@@ -338,7 +338,7 @@
         "autor": "Abigail Owen",
         "categoria": "Fantasia",
         "editora": "Editora Paralela",
-        "capa": "..\/img\/livros\/livro38.jpg",
+        "capa": "img/livros/livro38.jpg",
         "link": ""
     },
     {
@@ -347,7 +347,7 @@
         "autor": "A. O. Martins",
         "categoria": "Fantasia",
         "editora": "Daiane Duarte",
-        "capa": "..\/img\/livros\/livro39.jpg",
+        "capa": "img/livros/livro39.jpg",
         "link": ""
     },{
         "id": "40",
@@ -355,7 +355,7 @@
         "autor": "Jennifer L. Armentrout",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro40.jpg",
+        "capa": "img/livros/livro40.jpg",
         "link": ""
     },{
         "id": "41",
@@ -363,7 +363,7 @@
         "autor": "Jennifer L. Armentrout",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro41.jpg",
+        "capa": "img/livros/livro41.jpg",
         "link": "https://drive.google.com/file/d/1Fa1QgoW9DphZREfAH3oDka758TY9JLtw/preview"
     },{
         "id": "42",
@@ -371,7 +371,7 @@
         "autor": "Jennifer L. Armentrout",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro42.jpg",
+        "capa": "img/livros/livro42.jpg",
         "link": "https://drive.google.com/file/d/1nxN3RYbltxwPiIc2h0Vf1ELDra0U117X/preview"
     },{
         "id": "43",
@@ -379,7 +379,7 @@
         "autor": "Jennifer L. Armentrout",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro43.jpg",
+        "capa": "img/livros/livro43.jpg",
         "link": "https://drive.google.com/file/d/15DCGaxMMG2kD0vUXBLTMdhQtnwE6jxk2/preview"
     },{
         "id": "44",
@@ -387,7 +387,7 @@
         "autor": "Jennifer L. Armentrout",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro44.jpg",
+        "capa": "img/livros/livro44.jpg",
         "link": "https://drive.google.com/file/d/1QmKKbAJLec66UnwpBElLT5hzMLw4XLEo/preview"
     },{
         "id": "45",
@@ -395,7 +395,7 @@
         "autor": "Gustavo Machado",
         "categoria": "Fantasia",
         "editora": "Editora Viseu",
-        "capa": "..\/img\/livros\/livro45.jpg",
+        "capa": "img/livros/livro45.jpg",
         "link": ""
     },{
         "id": "46",
@@ -403,7 +403,7 @@
         "autor": "Carissa Broadbent",
         "categoria": "Fantasia",
         "editora": "Editora Suma",
-        "capa": "..\/img\/livros\/livro46.jpg",
+        "capa": "img/livros/livro46.jpg",
         "link": ""
     },{
         "id": "47",
@@ -411,7 +411,7 @@
         "autor": "Carissa Broadbent",
         "categoria": "Fantasia",
         "editora": "Editora Suma",
-        "capa": "..\/img\/livros\/livro47.jpg",
+        "capa": "img/livros/livro47.jpg",
         "link": "https://drive.google.com/file/d/1xpbapejRNhbJcSCQcdH8H37HPu1KyF7L/preview"
     },{
         "id": "48",
@@ -419,7 +419,7 @@
         "autor": "Frank Herbert",
         "categoria": "Fantasia",
         "editora": "Editora Aleph",
-        "capa": "..\/img\/livros\/livro48.jpg",
+        "capa": "img/livros/livro48.jpg",
         "link": "https://drive.google.com/file/d/1mCJHpXKReyQ2U87fkaR8JPgW0OTuM57U/preview"
     },
     {
@@ -428,7 +428,7 @@
         "autor": "Edgar Allan Poe",
         "categoria": "terror",
         "editora": "Darkside Books",
-        "capa": "..\/img\/livros\/livro49.jpg",
+        "capa": "img/livros/livro49.jpg",
         "link": ""
     },
     {
@@ -437,7 +437,7 @@
         "autor": "Katee Robert",
         "categoria": "Fantasia",
         "editora": "Astral Cultural",
-        "capa": "..\/img\/livros\/livro50.jpg",
+        "capa": "img/livros/livro50.jpg",
         "link": "https://drive.google.com/file/d/1KU-8Ms013q7q-GjjlAu3YrybGmLBargY/preview"
     },
     {
@@ -446,7 +446,7 @@
         "autor": "Sarah J. Maas",
         "categoria": "Fantasia",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro51.jpg",
+        "capa": "img/livros/livro51.jpg",
         "link": "https://drive.google.com/file/d/1Kd43r2WIihG4KDULrqnpkZ29qgrUKIx1/preview"
     },
     {
@@ -455,7 +455,7 @@
         "autor": "Bram Stoker",
         "categoria": "terror",
         "editora": "Principis",
-        "capa": "..\/img\/livros\/livro52.jpg",
+        "capa": "img/livros/livro52.jpg",
         "link": "https://www.ebooksbrasil.org/adobeebook/draculap.pdf"
     },
     {
@@ -464,7 +464,7 @@
         "autor": "Vagner Neubert",
         "categoria": "terror",
         "editora": "Neubert Books",
-        "capa": "..\/img\/livros\/livro53.jpg",
+        "capa": "img/livros/livro53.jpg",
         "link": ""
     },
     {
@@ -473,7 +473,7 @@
         "autor": "Elemental Editoriação",
         "categoria": "terror",
         "editora": "Elemental Editoriação",
-        "capa": "..\/img\/livros\/livro54.jpg",
+        "capa": "img/livros/livro54.jpg",
         "link": "https://drive.google.com/file/d/1O24Uc_OyCipNqQ1u3AKXGvo4QCjxYSwj/preview"
     },
     {
@@ -482,7 +482,7 @@
         "autor": "Elemental Editoriação",
         "categoria": "terror",
         "editora": "Elemental Editoriação",
-        "capa": "..\/img\/livros\/livro55.jpg",
+        "capa": "img/livros/livro55.jpg",
         "pdf": "https://drive.google.com/file/d/1TLsNCNI-uI4omrUJIjbXPWAqDkBGd9bT/preview"
     },
     {
@@ -491,7 +491,7 @@
         "autor": "Robert Louis Stevenson",
         "categoria": "terror",
         "editora": "Principis",
-        "capa": "..\/img\/livros\/livro56.jpg",
+        "capa": "img/livros/livro56.jpg",
         "link": "https://drive.google.com/file/d/1ABRxFpVhMVUgIYKf34MgjerYytHmHMT-/preview"
     },
     {
@@ -500,7 +500,7 @@
         "autor": "Donnefar Skedar",
         "categoria": "terror",
         "editora": "Elemental Editoriação",
-        "capa": "..\/img\/livros\/livro57.jpg",
+        "capa": "img/livros/livro57.jpg",
         "link": ""
     },
     {
@@ -509,7 +509,7 @@
         "autor": "Donnefar Skedar",
         "categoria": "terror",
         "editora": "Obook",
-        "capa": "..\/img\/livros\/livro60.jpg",
+        "capa": "img/livros/livro60.jpg",
         "link": ""
     },
     {
@@ -518,7 +518,7 @@
         "autor": "Mark Miller",
         "categoria": "terror",
         "editora": "Companhia Editora Nacional",
-        "capa": "..\/img\/livros\/livro61.jpg",
+        "capa": "img/livros/livro61.jpg",
         "link": ""
     },
     {
@@ -527,7 +527,7 @@
         "autor": "Mark Miller",
         "categoria": "terror",
         "editora": "Companhia Editora Nacional",
-        "capa": "..\/img\/livros\/livro60.jpg",
+        "capa": "img/livros/livro60.jpg",
         "link": ""
     },
     {
@@ -536,7 +536,7 @@
         "autor": "Raphael Montes",
         "categoria": "terror",
         "editora": "Editora Suma",
-        "capa": "..\/img\/livros\/livro59.jpg",
+        "capa": "img/livros/livro59.jpg",
         "link": "https://drive.google.com/file/d/1RUSp5LcgCzj1SmhUPyqVs9nvEJo3ZM0n/preview"
     },
     {
@@ -545,7 +545,7 @@
         "autor": "Emily Bronte",
         "categoria": "Romance",
         "editora": "Principis",
-        "capa": "..\/img\/livros\/livro62.jpg",
+        "capa": "img/livros/livro62.jpg",
         "link": "https://drive.google.com/file/d/1lhja9xAY6dbrVTsU3Qre-CrnvyJ9V0Kf/preview"
     },
     {
@@ -554,7 +554,7 @@
         "autor": "Ali Hazelwood",
         "categoria": "Romance",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro63.jpg",
+        "capa": "img/livros/livro63.jpg",
         "link": "https://drive.google.com/file/d/1rKRK41195s4C8NuN55lyUYAmml9Egvpd/preview"
     },
     {
@@ -563,7 +563,7 @@
         "autor": "Collen Hoover",
         "categoria": "Romance",
         "editora": "Galera",
-        "capa": "..\/img\/livros\/livro64.jpg",
+        "capa": "img/livros/livro64.jpg",
         "link": "https://drive.google.com/file/d/1u2e5vUXzvUQL-OkCx_Cixidh_OeinohW/preview"
     },
     {
@@ -572,7 +572,7 @@
         "autor": "Ali Hazelwood",
         "categoria": "Romance",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro65.jpg",
+        "capa": "img/livros/livro65.jpg",
         "link": "https://www.editoraarqueiro.com.br/media/upload/livros/No_fundo_e_amor.pdf"
     },
     {
@@ -581,7 +581,7 @@
         "autor": "Clare Leslie Hall",
         "categoria": "Romance",
         "editora": "Intrínseca",
-        "capa": "..\/img\/livros\/livro66.jpg",
+        "capa": "img/livros/livro66.jpg",
         "link": ""
     },
     {
@@ -590,7 +590,7 @@
         "autor": "Patrick Rothfuss",
         "categoria": "Aventura",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro67.jpg",
+        "capa": "img/livros/livro67.jpg",
         "link": "https://dn790008.ca.archive.org/0/items/a-cronica-do-matador-do-rei-01-o-nome-do-vento-patrick-rothfuss/A%20Cr%C3%B4nica%20do%20Matador%20do%20Rei%2001%20-%20O%20Nome%20do%20Vento%20-%20Patrick%20Rothfuss.pdf"
     },
     {
@@ -599,7 +599,7 @@
         "autor": "Patrick Rothfuss",
         "categoria": "Aventura",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro68.jpg",
+        "capa": "img/livros/livro68.jpg",
         "link": "https://dn721903.ca.archive.org/0/items/patrick-rothfuss-o-temor-do-sabio-a-cronica-do-matador-do-rei-segundo-dia/Patrick%20Rothfuss%20-%20O%20Temor%20do%20S%C3%A1bio%20A%20Cr%C3%B4nica%20do%20Matador%20do%20Rei%20-%20Segundo%20Dia.pdf"
     },
     {
@@ -608,7 +608,7 @@
         "autor": "Patrick Rothfuss",
         "categoria": "Aventura",
         "editora": "Editora Arqueiro",
-        "capa": "..\/img\/livros\/livro69.jpg",
+        "capa": "img/livros/livro69.jpg",
         "link": "https://static.fnac-static.com/multimedia/PT/pdf/9789892330716.pdf"
     },
     {
@@ -617,7 +617,7 @@
         "autor": "J. R. R. Tolkien",
         "categoria": "Aventura",
         "editora": "HarperCollins",
-        "capa": "..\/img\/livros\/livro70.jpg",
+        "capa": "img/livros/livro70.jpg",
         "link": ""
     },
     {
@@ -626,7 +626,7 @@
         "autor": "Gene Wolfe",
         "categoria": "Aventura",
         "editora": "Morro Branco",
-        "capa": "..\/img\/livros\/livro71.jpg",
+        "capa": "img/livros/livro71.jpg",
         "link": "https://cdn.bookey.app/files/pdf/book/pt/a-sombra-do-torturador.pdf"
     },
     {
@@ -635,7 +635,7 @@
         "autor": "Col Ashutosh Kale",
         "categoria": "Aventura",
         "editora": "Srishti Publishers & Distributors",
-        "capa": "..\/img\/livros\/livro72.jpg",
+        "capa": "img/livros/livro72.jpg",
         "link": "https://ia903107.us.archive.org/13/items/georgewillisthebitefight/David%20Morrell%20-%20First%20Blood.pdf"
     },
     {
@@ -644,7 +644,7 @@
         "autor": "Nat Segalof",
         "categoria": "Aventura",
         "editora": "Citadel Press",
-        "capa": "..\/img\/livros\/livro73.jpg",
+        "capa": "img/livros/livro73.jpg",
         "link": ""
     },
     {
@@ -653,7 +653,7 @@
         "autor": "Eduardo Spohr",
         "categoria": "Aventura",
         "editora": "Editora Verus",
-        "capa": "..\/img\/livros\/livro74.jpg",
+        "capa": "img/livros/livro74.jpg",
         "link": "https://drive.google.com/file/d/1CSq3TRlaGbD4QoWoesSkvEekEzCMXNxa/preview"
     },
     {
@@ -662,7 +662,7 @@
         "autor": "Eduardo Spohr",
         "categoria": "Aventura",
         "editora": "Editora Verus",
-        "capa": "..\/img\/livros\/livro75.jpg",
+        "capa": "img/livros/livro75.jpg",
         "link": ""
     },
     {
@@ -671,7 +671,7 @@
         "autor": "Eduardo Spohr",
         "categoria": "Aventura",
         "editora": "Editora Verus",
-        "capa": "..\/img\/livros\/livro76.jpg",
+        "capa": "img/livros/livro76.jpg",
         "link": "http://filosofianerd.com.br/pdf/sgprevia.pdf"
     },
     {
@@ -680,7 +680,7 @@
         "autor": "Steve Perry",
         "categoria": "Aventura",
         "editora": "Random House Worlds",
-        "capa": "..\/img\/livros\/livro77.jpg",
+        "capa": "img/livros/livro77.jpg",
         "link": ""
     },
 
@@ -690,7 +690,7 @@
         "autor": "Rob MacGregor",
         "categoria": "Aventura",
         "editora": "Random House Worlds",
-        "capa": "..\/img\/livros\/livro78.jpg",
+        "capa": "img/livros/livro78.jpg",
         "link": "https://assets.scriptslug.com/live/pdf/scripts/indiana-jones-and-the-last-crusade-1989.pdf"
     },{
         "id": "79",
@@ -698,7 +698,7 @@
         "autor": "James Kahn",
         "categoria": "Aventura",
         "editora": "Random House Worlds",
-        "capa": "..\/img\/livros\/livro79.jpg",
+        "capa": "img/livros/livro79.jpg",
         "link": "https://assets.scriptslug.com/live/pdf/scripts/indiana-jones-and-the-temple-of-doom-1984.pdf"
     },{
         "id": "80",
@@ -706,7 +706,7 @@
         "autor": "J. K. Rowling",
         "categoria": "Fantasia",
         "editora": "Bloomsbury",
-        "capa": "..\/img\/livros\/livro80.jpg",
+        "capa": "img/livros/livro80.jpg",
         "link": "https://static.tumblr.com/kvvdpco/ZNXm8ij2e/j.k._rowling_-_1_-_harry_potter_e_a_pedra_filosofal.pdf"
     },{
         "id": "81",
@@ -714,7 +714,7 @@
         "autor": "J. K. Rowling",
         "categoria": "Fantasia",
         "editora": "Bloomsbury",
-        "capa": "..\/img\/livros\/livro81.jpg",
+        "capa": "img/livros/livro81.jpg",
         "link": "https://aventurasolimpians.wordpress.com/wp-content/uploads/2013/10/j-k-rowling-2-harry-potter-e-a-cc3a2mara-secreta-revisado.pdf"
     },{
         "id": "82",
@@ -722,7 +722,7 @@
         "autor": "J. K. Rowling",
         "categoria": "Fantasia",
         "editora": "Bloomsbury",
-        "capa": "..\/img\/livros\/livro82.jpg",
+        "capa": "img/livros/livro82.jpg",
         "link": "https://aventurasolimpians.wordpress.com/wp-content/uploads/2013/10/j-k-rowling-3-harry-potter-e-o-prisioneiro-de-azkaban.pdf"
     },{
         "id": "83",
@@ -730,7 +730,7 @@
         "autor": "J. K. Rowling",
         "categoria": "Fantasia",
         "editora": "Bloomsbury",
-        "capa": "..\/img\/livros\/livro83.jpg",
+        "capa": "img/livros/livro83.jpg",
         "link": "http://szzso.web.elte.hu/Harry%20Potter%20Livros/harry_potter_e_o_calice_de_fogo_pdf.pdf"
     },{
         "id": "84",
@@ -738,7 +738,7 @@
         "autor": "J. K. Rowling",
         "categoria": "Fantasia",
         "editora": "Bloomsbury",
-        "capa": "..\/img\/livros\/livro84.jpg",
+        "capa": "img/livros/livro84.jpg",
         "link": "https://mail.elginbematech.com.br/processobook/Book%20Bematech%20Fev-2020/Bematech/Leitura%20Online/Livros/84-%20Harry%20Potter%20e%20a%20Ordem%20da%20Fenix.pdf"
     },{
         "id": "85",
@@ -746,7 +746,7 @@
         "autor": "J. K. Rowling",
         "categoria": "Fantasia",
         "editora": "Bloomsbury",
-        "capa": "..\/img\/livros\/livro85.jpg",
+        "capa": "img/livros/livro85.jpg",
         "link": "https://6bf177d284.cbaul-cdnwnd.com/c2691eea8b545be9921c779f96c03515/200000008-135e51458c/06%20-%20Harry%20Potter%20e%20o%20Enigma%20do%20Principe.pdf"
     },{
         "id": "86",
@@ -754,7 +754,7 @@
         "autor": "J. K. Rowling",
         "categoria": "Fantasia",
         "editora": "Bloomsbury",
-        "capa": "..\/img\/livros\/livro86.jpg",
+        "capa": "img/livros/livro86.jpg",
         "link": "https://mail.elginbematech.com.br/processobook/Book%20Bematech%20Fev-2020/Bematech/Leitura%20Online/Livros/86-%20Harry%20Potter%20e%20as%20Reliquias%20da%20%20Morte.pdf"
     },{
         "id": "87",
@@ -762,7 +762,7 @@
         "autor": "Suzanne Collins",
         "categoria": "Aventura",
         "editora": "Scholastic",
-        "capa": "..\/img\/livros\/livro87.jpg",
+        "capa": "img/livros/livro87.jpg",
         "link": "https://aestantedavida.wordpress.com/wp-content/uploads/2014/09/jogos-vorazes-livro-01.pdf"
     },{
         "id": "88",
@@ -770,7 +770,7 @@
         "autor": "Suzanne Collins",
         "categoria": "Aventura",
         "editora": "Scholastic",
-        "capa": "..\/img\/livros\/livro88.jpg",
+        "capa": "img/livros/livro88.jpg",
         "link": "https://aestantedavida.wordpress.com/wp-content/uploads/2014/09/jogos-vorazes-em-chamas-livro-02.pdf"
     },{
         "id": "89",
@@ -778,7 +778,7 @@
         "autor": "Suzanne Collins",
         "categoria": "Aventura",
         "editora": "Scholastic",
-        "capa": "..\/img\/livros\/livro89.jpg",
+        "capa": "img/livros/livro89.jpg",
         "link": "https://aestantedavida.wordpress.com/wp-content/uploads/2014/09/jogos-vorazes-a-esperanc3a7a-livro-03.pdf"
     },{
         "id": "90",
@@ -786,7 +786,7 @@
         "autor": "H. P. Lovecraft",
         "categoria": "terror",
         "editora": "Não Restringido",
-        "capa": "..\/img\/livros\/livro90.jpg",
+        "capa": "img/livros/livro90.jpg",
         "link": "http://www.filosofianerd.com.br/pdf/lovecraft_chamado_cthulhu.pdf"
     },{
         "id": "91",
@@ -794,7 +794,7 @@
         "autor": "H. P. Lovecraft",
         "categoria": "terror",
         "editora": "cthulhuchick",
-        "capa": "..\/img\/livros\/livro91.jpg",
+        "capa": "img/livros/livro91.jpg",
         "link": "https://arkhamarchivist.com/ebook/The%20Complete%20Works%20of%20H.P.%20Lovecraft.pdf"
     },{
         "id": "92",
@@ -802,7 +802,7 @@
         "autor": "H. P. Lovecraft",
         "categoria": "terror",
         "editora": "Não Restringido",
-        "capa": "..\/img\/livros\/livro92.jpg",
+        "capa": "img/livros/livro92.jpg",
         "link": "https://drive.google.com/file/d/16DV3W24fQHEeqcCBO5IMd8raWA8R49_Z/preview"
     },{
         "id": "93",
@@ -810,7 +810,7 @@
         "autor": "H. P. Lovecraft",
         "categoria": "terror",
         "editora": "Não Restringido",
-        "capa": "..\/img\/livros\/livro93.jpg",
+        "capa": "img/livros/livro93.jpg",
         "link": "https://drive.google.com/file/d/11F8pr2z0wTBdBDR-75c0JKf77U8LAGZt/preview"
     },{
         "id": "94",
@@ -818,7 +818,7 @@
         "autor": "Dante Alighieri",
         "categoria": "Fantasia",
         "editora": "ebooksBrasil",
-        "capa": "..\/img\/livros\/livro94.jpg",
+        "capa": "img/livros/livro94.jpg",
         "link": "http://www.dominiopublico.gov.br/download/texto/eb00002a.pdf"
     },{
         "id": "95",
@@ -826,7 +826,7 @@
         "autor": "Herman Melville",
         "categoria": "Romance",
         "editora": "Não Restringido",
-        "capa": "..\/img\/livros\/livro95.jpg",
+        "capa": "img/livros/livro95.jpg",
         "link": "http://www.lighthousebilingue.com.br/wp-content/uploads/2018/07/Moby-Dick-Herman-Melville.pdf"
     },{
         "id": "96",
@@ -834,7 +834,7 @@
         "autor": "J. R. R. Tolkien",
         "categoria": "Fantasia",
         "editora": "Allen & Unwin",
-        "capa": "..\/img\/livros\/livro96.jpg",
+        "capa": "img/livros/livro96.jpg",
         "link": "https://estdaliteratura.wordpress.com/wp-content/uploads/2017/05/li-2-o-senhor-dos-aneis-j-r-r-tolkien.pdf"
     },{
         "id": "97",
@@ -842,7 +842,7 @@
         "autor": "J. R. R. Tolkien",
         "categoria": "Fantasia",
         "editora": "George Allen & Unwin",
-        "capa": "..\/img\/livros\/livro97.jpg",
+        "capa": "img/livros/livro97.jpg",
         "link": "https://ddcus.org/pdf/summer_reading/10th_Grade/O%20Hobbit%20-%20J_%20R_%20R_%20Tolkien%20-%20BEAP%2010%20Portuguese.pdf"
     },{
         "id": "98",
@@ -850,7 +850,7 @@
         "autor": "George Orwell",
         "categoria": "Suspense",
         "editora": "Secker and Warburg",
-        "capa": "..\/img\/livros\/livro98.jpg",
+        "capa": "img/livros/livro98.jpg",
         "link": "https://www.dhnet.org.br/direitos/anthist/marcos/hdh_george_orwell_1984.pdf"
     },{
         "id": "99",
@@ -858,7 +858,7 @@
         "autor": "Antoine de Saint",
         "categoria": "Fantasia",
         "editora": "Éditions Gallimard",
-        "capa": "..\/img\/livros\/livro99.jpg",
+        "capa": "img/livros/livro99.jpg",
         "link": "https://www.sesirs.org.br/sites/default/files/paragraph--files/o_pequeno_principe_-_antoine_de_saint-exupery_1.pdf"
     },{
         "id": "100",
@@ -866,7 +866,7 @@
         "autor": "Margaret Mitchell",
         "categoria": "Romance",
         "editora": "Macmillan Publishers",
-        "capa": "..\/img\/livros\/livro100.jpg",
+        "capa": "img/livros/livro100.jpg",
         "link": "https://reciclaleitores.com.br/wp-content/uploads/2020/02/E-o-Vento-Levou-Margaret-Mitchell.pdf"
     },{
         "id": "101",
@@ -1116,7 +1116,7 @@
         "autor": "Isaac Asimov",
         "categoria": "Scifi",
         "editora": "Aleph",
-        "capa": "..\/img\/livros\/livro129.jpg",
+        "capa": "img/livros/livro129.jpg",
         "link": "https://kbook.com.br/wp-content/uploads/2016/07/fundacao.pdf"
     },
     {
@@ -1125,7 +1125,7 @@
         "autor": "Aldous Huxley",
         "categoria": "Scifi",
         "editora": "Biblioteca Azul",
-        "capa": "..\/img\/livros\/livro130.jpg",
+        "capa": "img/livros/livro130.jpg",
         "link": "https://cesarmangolin.wordpress.com/wp-content/uploads/2010/08/aldous-huxley-admiravel-mundo-novo.pdf"
     },
     {
@@ -1134,7 +1134,7 @@
         "autor": "Ray Bradbury",
         "categoria": "Scifi",
         "editora": "Biblioteca Azul",
-        "capa": "..\/img\/livros\/livro131.jpg",
+        "capa": "img/livros/livro131.jpg",
         "link": "https://letrasufpr.wordpress.com/wp-content/uploads/2016/08/fahrenheit-451-ray-bradbury.pdf"
     },
     {
@@ -1143,7 +1143,7 @@
         "autor": "Arthur C. Clarke",
         "categoria": "Scifi",
         "editora": "Aleph",
-        "capa": "..\/img\/livros\/livro132.jpg",
+        "capa": "img/livros/livro132.jpg",
         "link": "https://kbook.com.br/wp-content/files_mf/arthur.c.clarkeo.fim.da.inf%C3%A2ncia.doc.pdf"
     },
     {
@@ -1152,7 +1152,7 @@
         "autor": "Stanisław Lem",
         "categoria": "Scifi",
         "editora": "Aleph",
-        "capa": "..\/img\/livros\/livro133.png",
+        "capa": "img/livros/livro133.png",
         "link": "https://filosevilla2012.wordpress.com/wp-content/uploads/2013/02/lem-stanislaw-solaris.pdf"
     },
     {
@@ -1161,7 +1161,7 @@
         "autor": "Isaac Asimov",
         "categoria": "Scifi",
         "editora": "Aleph",
-        "capa": "..\/img\/livros\/livro134.jpg",
+        "capa": "img/livros/livro134.jpg",
         "link": "http://kbook.com.br/wp-content/uploads/2016/07/eurobo.pdf"
     },
     {
@@ -1170,7 +1170,7 @@
         "autor": "Neal Stephenson",
         "categoria": "Scifi",
         "editora": "Aleph",
-        "capa": "..\/img\/livros\/livro135.jpg",
+        "capa": "img/livros/livro135.jpg",
         "link": "https://hell.pl/agnus/anglistyka/2211/Neal%20Stephenson%20-%20Snow%20Crash.pdf"
     },
     {
@@ -1179,7 +1179,7 @@
         "autor": "Dan Simmons",
         "categoria": "Scifi",
         "editora": "Aleph",
-        "capa": "..\/img\/livros\/livro136.jpg",
+        "capa": "img/livros/livro136.jpg",
         "link": "https://ia804508.us.archive.org/23/items/hyperion_Dan_Simmons_202109/hyperion.pdf"
     },{
         "id": "137",
@@ -1187,7 +1187,7 @@
         "autor": "Chuck Palahniuk",
         "categoria": "Romance",
         "editora": "W. W. Norton",
-        "capa": "..\/img\/livros\/livro137.jpg",
+        "capa": "img/livros/livro137.jpg",
         "link": "https://drive.google.com/file/d/1fYr7JghhairLN9Tn7hDxnZm7c-h_Q9Rc/preview"
     },
     {
@@ -1196,7 +1196,7 @@
         "autor": "Harper Lee",
         "categoria": "Romance",
         "editora": "J.B. Lippincott & Co.",
-        "capa": "..\/img\/livros\/livro138.jpg",
+        "capa": "img/livros/livro138.jpg",
         "link": "https://drive.google.com/file/d/1r6FD-detPvo8vvlDxfxVUx3NyBuqIqGg/preview"
     },
     {
@@ -1205,7 +1205,7 @@
         "autor": "Jane Austen",
         "categoria": "Romance",
         "editora": "T. Egerton, Whitehall",
-        "capa": "..\/img\/livros\/livro139.jpg",
+        "capa": "img/livros/livro139.jpg",
         "link": "https://reciclaleitores.com.br/wp-content/uploads/2020/10/ORGULHO-E-PRECONCEITO-Austen-Jane.pdf"
     },{
         "id": "140",
@@ -1213,7 +1213,7 @@
         "autor": "Oscar Wilde",
         "categoria": "Romance",
         "editora": "Lippincott's Monthly Magazine",
-        "capa": "..\/img\/livros\/livro140.jpg",
+        "capa": "img/livros/livro140.jpg",
         "link": "https://www.jaimemoniz.com/images/docs/recursos/Oscar-Wilde-livro.pdf"
     },{
         "id": "141",
@@ -1221,7 +1221,7 @@
         "autor": "R. J. Palacio",
         "categoria": "Romance",
         "editora": "ASA",
-        "capa": "..\/img\/livros\/livro141.png",
+        "capa": "img/livros/livro141.png",
         "link": "https://ima-rs.com.br/wp-content/uploads/2018/11/8o.-ano-Extraordin%C3%A1rio-R.-J.-Palacio.pdf"
     },{
         "id": "142",
@@ -1229,7 +1229,7 @@
         "autor": "Sun Tzu",
         "categoria": "Romance",
         "editora": "Não Restringido",
-        "capa": "..\/img\/livros\/livro142.png",
+        "capa": "img/livros/livro142.png",
         "link": "https://www.sogipa.com.br/web/imgs/arquivos/a-arte-da-guerra5e8e0e84.pdf"
     },{
         "id": "143",
@@ -1237,7 +1237,7 @@
         "autor": "Franz Kafka",
         "categoria": "Romance",
         "editora": "Kurt Wolff Verlag, Leipzig",
-        "capa": "..\/img\/livros\/livro143.png",
+        "capa": "img/livros/livro143.png",
         "link": "https://colegiocngparanagua.com.br/wp-content/uploads/2021/02/A-METAMORFOSE.pdf"
     },{
         "id": "144",
@@ -1245,7 +1245,7 @@
         "autor": "Matt Haig",
         "categoria": "Romance",
         "editora": "Canongate Books",
-        "capa": "..\/img\/livros\/livro144.jpg",
+        "capa": "img/livros/livro144.jpg",
         "link": "https://static.fnac-static.com/multimedia/PT/pdf/9789895645183.pdf"
     },{
         "id": "145",
@@ -1253,7 +1253,7 @@
         "autor": "Lynn Painter",
         "categoria": "Romance",
         "editora": "Intrínseca",
-        "capa": "..\/img\/livros\/livro145.jpg",
+        "capa": "img/livros/livro145.jpg",
         "link": "https://drive.google.com/file/d/1DyunBWpwefIYHfJsrYODKNH52zUB0H2X/preview"
     },{
         "id": "146",
@@ -1261,7 +1261,7 @@
         "autor": "C. C. Hunter",
         "categoria": "Romance",
         "editora": "Jangada",
-        "capa": "..\/img\/livros\/livro146.jpg",
+        "capa": "img/livros/livro146.jpg",
         "link": "https://osaberdigital.com.br/wp-content/uploads/2024/11/C.-C.-Hunter-Eu-e-Esse-Meu-Coracao.pdf"
     },{
         "id": "147",
@@ -1269,7 +1269,7 @@
         "autor": "Alan Moore & Brian Bolland",
         "categoria": "Quadrinho",
         "editora": "DC Comics",
-        "capa": "..\/img\/livros\/livro147.jpg",
+        "capa": "img/livros/livro147.jpg",
         "link": "https://pdfteca.com/wp-content/uploads/2024/12/Batman-A-Piada-Mortal.pdf"
     },{
         "id": "148",
@@ -1277,7 +1277,7 @@
         "autor": "Frank Miller",
         "categoria": "Quadrinho",
         "editora": "DC Comics",
-        "capa": "..\/img\/livros\/livro148.jpg",
+        "capa": "img/livros/livro148.jpg",
         "link": "https://drive.google.com/file/d/1edBG_C7BqSoxUFu_LSPEsaWxpcpebT98/preview"
     },{
         "id": "149",
@@ -1285,7 +1285,7 @@
         "autor": "Grant Morrison",
         "categoria": "Quadrinho",
         "editora": "DC Comics",
-        "capa": "..\/img\/livros\/livro149.jpg",
+        "capa": "img/livros/livro149.jpg",
         "link": "https://drive.google.com/file/d/13ccVthCiTfuKjhAvye8Daj_4zMsaRuwx/preview"
     },{
         "id": "150",
@@ -1293,7 +1293,7 @@
         "autor": "Brian Azzarello",
         "categoria": "Quadrinho",
         "editora": "DC Comics",
-        "capa": "..\/img\/livros\/livro150.jpg",
+        "capa": "img/livros/livro150.jpg",
         "link": "https://cdn.bookey.app/files/pdf/book/pt/coringa.pdf"
     },{
         "id": "151",
@@ -1301,7 +1301,7 @@
         "autor": "Scott Snyder",
         "categoria": "Quadrinho",
         "editora": "DC Comics",
-        "capa": "..\/img\/livros\/livro151.jpg",
+        "capa": "img/livros/livro151.jpg",
         "link": "https://drive.google.com/file/d/1APKugwsrDt59jovaL3IV1aYt7CmyQ90f/preview"
     },{
     "id": "152",

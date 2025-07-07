@@ -26,6 +26,7 @@ const nomeField = document.getElementById("nome-field");
 const submitButton = document.getElementById("submit-button");
 const nomeInput = document.querySelector("#nome-field input[name='nome']");
 
+
 function applyTheme(theme) {
     if (theme === "dark") {
         document.body.classList.add("dark-mode");
@@ -51,9 +52,7 @@ function applyTheme(theme) {
         if (rightFechar) rightFechar.src = "img/FecharEscuro.png";
     }
 }
-
-
-firebase.initializeApp({
+firebase.InitializeApp({
     apiKey: "AIzaSyBa-bqA6GWEgfOjggbjNbTpBBxb0cPIPsQ",
     authDomain: "alexandria-biblioteca.firebaseapp.com",
     projectId: "alexandria-biblioteca",
@@ -128,9 +127,6 @@ function openRightSidebar(pdfUrl, livroId = null) {
         }, { once: true });
     }
 }
-
-firebase.initializeApp(firebaseConfig); // com "i" minúsculo, não "InitializeApp"
-const db = firebase.firestore();
 
 async function registrarDownload(livroId) {
     const user = firebase.auth().currentUser;
@@ -335,7 +331,7 @@ window.onload = function () {
                     const livrosLidos = dados.livros_lidos || [];
 
                     // Carrega a lista completa de livros (como se fosse o $livros do PHP)
-                    const livros = await fetch("data/livros.json").then(res => res.json());
+                    const livros = await fetch("livros.json").then(res => res.json());
 
                     preencherSecao("baixadosContainer", livros, livrosBaixados);
                     preencherSecao("salvosContainer", livros, livrosSalvos);
@@ -938,7 +934,7 @@ async function salvarLivro(livroId, botao) {
         document.querySelector('[data-category="salvos"]')?.classList.remove("hidden");
 
         // Carrega livros do catálogo (livros.json)
-        const livros = await fetch("data/livros.json").then(res => res.json());
+        const livros = await fetch("/data/livros.json").then(res => res.json());
         const livro = livros.find(l => String(l.id) === String(livroId));
         if (!livro) return;
 
@@ -975,7 +971,7 @@ async function atualizarLivrosSalvos() {
     const dados = doc.data();
     const salvos = dados.livros_salvos || [];
 
-    const livros = await fetch("data/livros.json").then(res => res.json());
+    const livros = await fetch("/data/livros.json").then(res => res.json());
 
     preencherSecao("salvosContainer", livros, salvos);
 }

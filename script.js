@@ -52,6 +52,15 @@ function applyTheme(theme) {
         if (rightFechar) rightFechar.src = "img/FecharEscuro.png";
     }
 }
+firebase.InitializeApp({
+    apiKey: "AIzaSyBa-bqA6GWEgfOjggbjNbTpBBxb0cPIPsQ",
+    authDomain: "alexandria-biblioteca.firebaseapp.com",
+    projectId: "alexandria-biblioteca",
+    storageBucket: "alexandria-biblioteca.firebasestorage.app",
+    messagingSenderId: "302295910542",
+    appId: "1:302295910542:web:ba581cda4154ead23d61df",
+    measurementId: "G-R20PRZHZ2W"
+})
 
 // Dá um beliscão (100% → 100%-1px → 100% num frame) e retorna uma Promise
 function nudgeIframeOnce(iframe) {

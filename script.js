@@ -513,8 +513,10 @@ window.onload = function () {
 
                     location.reload();
                 } catch (error) {
+                    console.error("Erro no cadastro/login:", error);
                     alert("Erro: " + error.message);
                 }
+
             });
         }
 

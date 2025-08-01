@@ -53,7 +53,7 @@ function applyTheme(theme) {
     }
 }
 
-// Dá um beliscão (100% → 100%-1px → 100% num frame) e retorna uma Promise
+// arummano o pdf da tela
 function nudgeIframeOnce(iframe) {
     return new Promise(resolve => {
         const originalWidth = iframe.style.width || '100%';
@@ -65,7 +65,6 @@ function nudgeIframeOnce(iframe) {
     });
 }
 
-// Repete o beliscão várias vezes (tentativas) em intervalos crescentes
 async function nudgeIframeRepeated(iframe, tentativas = 8, baseDelay = 120) {
     for (let i = 0; i < tentativas; i++) {
         await nudgeIframeOnce(iframe);
@@ -126,10 +125,10 @@ function baixarPdf(pdfUrl, livroId) {
     const downloadUrl = corrigirLinkGoogleDrive(pdfUrl);
 
     if (downloadUrl.includes('drive.google.com')) {
-        // ?? Se for link do Google Drive: Apenas abrir em nova aba
+        // se for link do google drive
         window.open(downloadUrl, '_blank');
     } else {
-        // ?? Se for PDF local: For�ar download via PHP proxy
+        // Se for PDF local:
         const link = document.createElement('a');
         link.href = `download.php?url=${encodeURIComponent(downloadUrl)}`;
         link.download = `livro_${livroId}.pdf`;
@@ -208,7 +207,7 @@ function closeRightSidebar() {
                                    ? scrollTop / scrollHeight   // evita 0 / 0
                                    : 0;
 
-            /* >>> AQUI –‑ debug <<< */
+            /* debug*/
             console.log({ livroId, scrollTop, scrollHeight, progresso });
             /* ---------------------- */
 
@@ -367,7 +366,7 @@ const scrollButtons = [
     { buttonClass: ".download-button", categoria: "download" },
     { buttonClass: ".saved-button", categoria: "salvos" },
     { buttonClass: ".visua-button", categoria: "lidos" },
-    { buttonClass: ".info-button", seletor: ".footer" } // exce��o
+    { buttonClass: ".info-button", seletor: ".footer" } // excecao
 ];
 
 scrollButtons.forEach(({ buttonClass, categoria, seletor }) => {
@@ -378,10 +377,10 @@ scrollButtons.forEach(({ buttonClass, categoria, seletor }) => {
             let target;
 
             if (seletor) {
-                // Caso especial como o footer
+                // footer
                 target = document.querySelector(seletor);
             } else if (categoria) {
-                // Section com data-category correspondente
+                //data-category q corresponde
                 target = document.querySelector(`.highlight[data-category="${categoria}"]`);
             }
 
@@ -424,7 +423,7 @@ document.addEventListener("DOMContentLoaded", () => {
         box.classList.add("user-alert", window.authMessage.type);
         box.style.display = "block";
 
-        // Exibe o formul�rio se estiver oculto
+        // mostr ao forms
         const bubble = document.getElementById("userForm");
         if (bubble) bubble.classList.remove("hidden");
 
@@ -435,7 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 
-    // Atualiza os resultados da busca
+    // atualiza a bubsca
     function atualizarResultados(query) {
         resultsContainer.innerHTML = "";
 
@@ -486,13 +485,13 @@ document.addEventListener("DOMContentLoaded", () => {
         resultsContainer.classList.remove("hidden");
     }
 
-    // Enquanto digita
+    // aparacer enquanto digita
     searchInput.addEventListener("input", () => {
         const query = searchInput.value;
         atualizarResultados(query);
     });
 
-    // Fecha os resultados ao clicar fora
+    // fecha se cluicar fora
     document.addEventListener("click", (e) => {
         if (!e.target.closest(".search-container")) {
             resultsContainer.classList.add("hidden");
@@ -501,7 +500,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//categorias para mostrar s� as que tem livros
+//categorias para mostrar só as que tem livros
 document.querySelectorAll('.category').forEach(cat => {
     cat.addEventListener('click', () => {
         const categoriaSelecionada = cat.dataset.category;
@@ -510,7 +509,7 @@ document.querySelectorAll('.category').forEach(cat => {
         document.querySelectorAll('.category').forEach(c => c.classList.remove('active'));
         cat.classList.add('active');
 
-        // mostra/esconde as se��es
+        // mostra/esconde as secoes
         document.querySelectorAll('.highlight[data-category]').forEach(section => {
             const listaLivros = section.querySelector('.book-list');
 
@@ -530,7 +529,7 @@ document.querySelectorAll('.category').forEach(cat => {
     });
 });
 
-// Anima��o scroll
+// animacao scroll
 
 const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-delay, .scroll-reveal-cascade');
 
@@ -670,10 +669,10 @@ function loadGutenbergBooks() {
         .catch(err => console.error("Erro ao carregar livros do Gutenberg:", err));
 }
 
-// Chamada ap�s o DOM estar pronto
+// chamada apis o DOM estar pronto
 document.addEventListener("DOMContentLoaded", loadGutenbergBooks);
 
-//capas aleat�rias para cita��es
+//capas aleatorias para citacoes
 
 let livrosCitacao = [];
 
@@ -835,5 +834,3 @@ if (rightSidebar) {
 }
 
 }
-
-

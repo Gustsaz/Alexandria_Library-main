@@ -217,7 +217,7 @@ if (isset($_GET['busca']) && !empty(trim($_GET['busca']))) {
                 </div>
 
                 <div class="category scroll-reveal-cascade delay-7" data-category="Quadrinho">
-                    <img draggable="false" src="/img/icons/horror.png" alt="Quadrinho">
+                    <img draggable="false" src="/img/icons/quadrinho.png" alt="Quadrinho">
                     Quadrinhos (<?php echo contarLivrosPorCategoria($livros, 'Quadrinho'); ?>)
                 </div>
                 
